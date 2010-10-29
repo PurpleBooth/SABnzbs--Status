@@ -13,7 +13,7 @@ module SabnzbdPlusModel
       
     end
 
-    def eachSlots
+    def each_slots
       query = self.api.queue
 
       query["queue"]["slots"].each { |slot|
