@@ -1,5 +1,3 @@
-require 'pp'
-
 module SabnzbdPlusModel
   class SabnzbdPlusMapper
     protected
@@ -13,12 +11,9 @@ module SabnzbdPlusModel
       
     end
 
-    def each_slots
+    def current_queue
       query = self.api.queue
-
-      query["queue"]["slots"].each { |slot|
-        yield SabnzbdPlusSlot.from_hash(slot)
-      }
+      return SabnzbdPlusQueue.from_hash(query["queue"])
     end
   end
 end
