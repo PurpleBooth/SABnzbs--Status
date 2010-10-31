@@ -1,8 +1,9 @@
+
 module SabnzbdPlusModel
-  class SabnzbdPlusMapper
+  class Mapper
     protected
     def api
-      @api = SabnzbdPlusApi.new if @api.nil?
+      @api = Api.new if @api.nil?
       return @api
     end
 
@@ -13,7 +14,7 @@ module SabnzbdPlusModel
 
     def current_queue
       query = self.api.queue
-      return SabnzbdPlusQueue.from_hash(query["queue"])
+      return Queue.from_hash(query["queue"])
     end
   end
 end

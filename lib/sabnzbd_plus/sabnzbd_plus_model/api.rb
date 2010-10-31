@@ -4,7 +4,7 @@ require 'cgi'
 require 'json'
 
 module SabnzbdPlusModel
-  class SabnzbdPlusApi
+  class Api
     API_KEY = "48e93e8b1aaf946f541cc5118a531f48"
     API_ENDPOINT = "http://127.0.0.1:8880/api";
     API_JSON_OUTPUT = "json"

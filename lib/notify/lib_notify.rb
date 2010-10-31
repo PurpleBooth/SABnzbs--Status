@@ -1,5 +1,4 @@
-# To change this template, choose Tools | Templates
-# and open the template in the editor.
+require 'escape'
 
 module Notify
   class LibNotify
@@ -8,7 +7,12 @@ module Notify
     end
 
     def send(msg)
-      system("notify-send", "SABnzbd+ Status", msg)
+      announce = "notify-send -i "+Escape.shell_command(self.icon).to_s+" "+Escape.shell_command("SABnzbd+ Status").to_s+" "+ Escape.shell_command(msg).to_s
+      system(announce)
+    end
+
+    def icon
+      return File.dirname(File.expand_path(__FILE__)) + '/../../resources/images/favicon.ico'
     end
   end
 end

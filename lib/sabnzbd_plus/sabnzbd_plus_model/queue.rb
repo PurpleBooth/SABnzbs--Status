@@ -1,8 +1,6 @@
-# To change this template, choose Tools | Templates
-# and open the template in the editor.
 
 module SabnzbdPlusModel
-  class SabnzbdPlusQueue
+  class Queue
     attr_accessor :cache_limit, :categories, :scripts, :paused, :new_rel_url
     attr_accessor :restart_req, :slots, :help_uri, :uptime, :refresh_rate
     attr_accessor :is_verbose, :start, :version, :disk_space_total_2
@@ -27,7 +25,7 @@ module SabnzbdPlusModel
       item.restart_req        = queue["restart_req"]
 
       queue["slots"].each { |slot|
-        item.slots = item.slots << SabnzbdPlusSlot.from_hash(slot)
+        item.slots = item.slots << Slot.from_hash(slot)
       }
 
       item.help_uri           = queue["helpuri"]

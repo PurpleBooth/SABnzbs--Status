@@ -1,6 +1,6 @@
 
 module SabnzbdPlusModel
-  class SabnzbdPlusSlot
+  class Slot
     attr_accessor :status, :index, :eta, :timeleft, :avg_age, :script, :msg_id
     attr_accessor :verbosity, :mb, :filename, :priority, :cat, :mb_left
     attr_accessor :percentage, :nzo_id, :unpack_opts, :size
