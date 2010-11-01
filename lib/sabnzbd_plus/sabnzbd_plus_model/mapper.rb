@@ -16,5 +16,10 @@ module SabnzbdPlusModel
       query = self.api.queue
       return Queue.from_hash(query["queue"])
     end
+
+    def history
+      query = self.api.history
+      return History.from_hash(query["history"])
+    end
   end
 end
