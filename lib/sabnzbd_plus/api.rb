@@ -11,6 +11,7 @@ require File.dirname(__FILE__) + '/sabnzbd_plus_model/queue'
 require File.dirname(__FILE__) + '/sabnzbd_plus_model/api'
 require File.dirname(__FILE__) + '/sabnzbd_plus_api/current_queue'
 require File.dirname(__FILE__) + '/sabnzbd_plus_api/unannounced_added'
+require File.dirname(__FILE__) + '/sabnzbd_plus_api/unannounced_complete'
 
 module SabnzbdPlus
   class Api
@@ -23,7 +24,7 @@ module SabnzbdPlus
     end
 
     def self.unannounced_complete
-
+      return SabnzbdPlusApi::UnannouncedComplete.new.process
     end
 
 
