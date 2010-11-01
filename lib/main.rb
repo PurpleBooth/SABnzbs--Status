@@ -17,7 +17,7 @@ while true
   queue = SabnzbdPlus::Api.current_queue
   
   queue.slots.each { |slot|
-    announce = slot.name + " ["+slot.mb_left+"MB/" + slot.mb + "MB @ "+queue.kb_per_sec+"KB/S ("+slot.timeleft+" timeleft)]"
+    announce = slot.name + " ["+slot.mb_left+"MB/" + slot.mb + "MB @ "+queue.kb_per_sec+"KB/S "+slot.timeleft+" timeleft]"
     puts announce
     Notify::LibNotify.new.send announce
   }
