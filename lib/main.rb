@@ -2,8 +2,6 @@
 
 require File.dirname(__FILE__) + '/notify/lib_notify'
 require File.dirname(__FILE__) + '/sabnzbd_plus/api'
-require 'pp'
-
 
 CHECK_EVERY_SECONDS = 60*5
 ## Tick Tock
