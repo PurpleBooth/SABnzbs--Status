@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require File.dirname(__FILE__) + '/notify/lib_notify'
+require File.dirname(__FILE__) + '/notify/api'
 require File.dirname(__FILE__) + '/sabnzbd_plus/api'
 
 CHECK_EVERY_SECONDS = 60*5
@@ -9,25 +9,19 @@ while true
   added = SabnzbdPlus::Api.unannounced_added
 
   added.each { |slot|
-    announce = "Added job " + slot.name
-    puts announce
-    Notify::LibNotify.new.send announce
+    Notify::Api.added_nzb slot.name
   }
 
   queue = SabnzbdPlus::Api.current_queue
   
   queue.slots.each { |slot|
-    announce = slot.name + " ["+slot.mb_left+"MB/" + slot.mb + "MB @ "+queue.kb_per_sec+"KB/S "+slot.timeleft+" timeleft]"
-    puts announce
-    Notify::LibNotify.new.send announce
+    Notify::Api.current_status(slot.name, slot.mb_left, slot.mb, queue.kb_per_sec, slot.timeleft)
   }
 
   complete = SabnzbdPlus::Api.unannounced_complete
 
   complete.each { |slot|
-    announce = "Job " + slot.name + " " + slot.status
-    puts announce
-    Notify::LibNotify.new.send announce
+    Notify::Api.completed_nzb(slot.name, slot.status)
   }
   
   sleep CHECK_EVERY_SECONDS

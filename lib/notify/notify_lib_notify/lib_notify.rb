@@ -1,6 +1,6 @@
 require 'escape'
 
-module Notify
+module NotifyLibNotify
   class LibNotify
     def initialize
       
