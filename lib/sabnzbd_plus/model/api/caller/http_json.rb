@@ -25,7 +25,12 @@ module SabnzbdPlusModelApiCaller
 
       parameterised_path = "#{url.path}?".concat(params.collect { |key,value| "#{key}=#{CGI::escape(value.to_s)}" }.join('&'))
 
-      return JSON.parse Net::HTTP.get(url.host, parameterised_path, url.port)
+      response = Net::HTTP.get(url.host, parameterised_path, url.port)
+
+      my_file = File.new("/tmp/"+method, "w+")
+      my_file.puts response
+
+      return JSON.parse response
     end
   end
 end

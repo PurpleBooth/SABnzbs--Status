@@ -11,10 +11,6 @@ module SabnzbdPlusModelApiCaller
 
     public
 
-    def initialize
-
-    end
-
     def call(method, params, api_key = API_KEY)
       unique = {:method => method, :params => params, :api_key => api_key}.to_json
       digest = Digest::SHA2.new(512).hexdigest(unique)
@@ -33,9 +29,9 @@ module SabnzbdPlusModelApiCaller
           fixture = fixture + line
           line = file.gets
         end
-
-        return fixture
       end
+
+      return JSON.parse(fixture)
     end
   end
 end
