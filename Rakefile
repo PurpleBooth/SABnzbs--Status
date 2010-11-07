@@ -12,16 +12,16 @@ require 'rake/testtask'
 require 'spec/rake/spectask'
 
 spec = Gem::Specification.new do |s|
-  s.name = 'notifier'
+  s.name = 'SABnzbd+ Notify'
   s.version = '0.0.1'
   s.has_rdoc = true
   s.extra_rdoc_files = ['README', 'LICENSE']
-  s.summary = 'Your summary here'
+  s.summary = 'Notifies the user using native status popups when SABnzbd+ reaches versious statuses'
   s.description = s.summary
-  s.author = ''
-  s.email = ''
+  s.author = 'William Alan Booth'
+  s.email = 'sabnotify@purplebooth.co.uk'
   # s.executables = ['your_executable_here']
-  s.files = %w(LICENSE README Rakefile) + Dir.glob("{bin,lib,spec}/**/*")
+  s.files = %w(LICENSE README Rakefile) + Dir.glob("{bin,lib,spec,resources}/**/*")
   s.require_path = "lib"
   s.bindir = "bin"
 end
@@ -36,7 +36,7 @@ Rake::RDocTask.new do |rdoc|
   files =['README', 'LICENSE', 'lib/**/*.rb']
   rdoc.rdoc_files.add(files)
   rdoc.main = "README" # page to start on
-  rdoc.title = "notifier Docs"
+  rdoc.title = "SABnzbd+ Notify Docs"
   rdoc.rdoc_dir = 'doc/rdoc' # rdoc output folder
   rdoc.options << '--line-numbers'
 end

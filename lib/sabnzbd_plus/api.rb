@@ -1,32 +1,41 @@
-# To change this template, choose Tools | Templates
-# and open the template in the editor.
-require File.dirname(__FILE__) + '/sabnzbd_plus_model/mapper'
-require File.dirname(__FILE__) + '/sabnzbd_plus_model/verbose'
-require File.dirname(__FILE__) + '/sabnzbd_plus_model/slot'
-require File.dirname(__FILE__) + '/sabnzbd_plus_model/queue_slot'
-require File.dirname(__FILE__) + '/sabnzbd_plus_model/stage_log'
-require File.dirname(__FILE__) + '/sabnzbd_plus_model/history_slot'
-require File.dirname(__FILE__) + '/sabnzbd_plus_model/history'
-require File.dirname(__FILE__) + '/sabnzbd_plus_model/queue'
-require File.dirname(__FILE__) + '/sabnzbd_plus_model/api'
-require File.dirname(__FILE__) + '/sabnzbd_plus_api/current_queue'
-require File.dirname(__FILE__) + '/sabnzbd_plus_api/unannounced_added'
-require File.dirname(__FILE__) + '/sabnzbd_plus_api/unannounced_complete'
+$:.unshift File.join(File.expand_path(File.dirname(__FILE__)),'..','..','lib')
+
+require 'sabnzbd_plus/api/current_queue'
+require 'sabnzbd_plus/api/unannounced_added'
+require 'sabnzbd_plus/api/unannounced_complete'
+require 'sabnzbd_plus/model/mapper'
 
 module SabnzbdPlus
   class Api
-    def self.current_queue
-      return SabnzbdPlusApi::CurrentQueue.new.process
+    protected
+
+    def initialize(mapper = SabnzbdPlusModel::Mapper.new)
+      @api = {}
+      @mapper = mapper
     end
 
-    def self.unannounced_added
-      return SabnzbdPlusApi::UnannouncedAdded.new.process
+    def call_method(api_method)
+      unless @api.key?(api_method)
+        class_name = api_method.to_s.gsub(/\/(.?)/) { "::#{$1.upcase}" }.gsub(/(?:^|_)(.)/) { $1.upcase }
+
+        @api[api_method] = SabnzbdPlusApi.const_get(class_name).new(@mapper)
+      end
+
+      return @api[api_method].process
+    end
+    
+    public
+
+    def current_queue
+      return self.call_method "current_queue"
     end
 
-    def self.unannounced_complete
-      return SabnzbdPlusApi::UnannouncedComplete.new.process
+    def unannounced_added
+      return self.call_method "unannounced_added"
     end
 
-
+    def unannounced_complete
+      return self.call_method "unannounced_complete"
+    end
   end
 end

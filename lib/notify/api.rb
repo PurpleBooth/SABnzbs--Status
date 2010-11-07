@@ -1,18 +1,21 @@
-# To change this template, choose Tools | Templates
-# and open the template in the editor.
-require File.dirname(__FILE__) + '/notify_api/added_nzb'
-require File.dirname(__FILE__) + '/notify_api/completed_nzb'
-require File.dirname(__FILE__) + '/notify_api/current_status'
-require File.dirname(__FILE__) + '/notify_lib_notify/lib_notify'
+$:.unshift File.join(File.expand_path(File.dirname(__FILE__)),'..','..','lib')
+
+require 'notify/api/added_nzb'
+require 'notify/api/completed_nzb'
+require 'notify/api/current_status'
+require 'notify/lib_notify/lib_notify'
+
 
 module Notify
   class Api
-    def initialize
-      
+    attr_accessor :notifier
+
+    def initialize(notifier = NotifyLibNotify::LibNotify.new)
+      self.notifier = notifier
     end
 
-    def self.current_status(name, mb_left, mb, kb_per_sec, timeleft)
-      announcer = NotifyApi::CurrentStatus.new
+    def current_status(name, mb_left, mb, kb_per_sec, timeleft)
+      announcer = NotifyApi::CurrentStatus.new(self.notifier)
       announcer.name = name
       announcer.mb_left = mb_left
       announcer.mb = mb
@@ -21,14 +24,14 @@ module Notify
       announcer.process
     end
 
-    def self.added_nzb(name)
-      announcer = NotifyApi::AddedNzb.new
+    def added_nzb(name)
+      announcer = NotifyApi::AddedNzb.new(self.notifier)
       announcer.name = name
       announcer.process
     end
 
-    def self.completed_nzb(name, status)
-      announcer = NotifyApi::CompletedNzb.new
+    def completed_nzb(name, status)
+      announcer = NotifyApi::CompletedNzb.new(self.notifier)
       announcer.name = name
       announcer.status = status
       announcer.process
