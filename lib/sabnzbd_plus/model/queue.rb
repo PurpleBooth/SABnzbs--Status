@@ -12,6 +12,26 @@ module SabnzbdPlusModel
       self.slots = []
     end
 
+    def ==(item)
+      unless(
+        item.categories      == self.categories &&
+        item.scripts         == self.scripts &&
+        item.slots           == self.slots &&
+        item.refresh_rate    == self.refresh_rate &&
+        item.is_verbose      == self.is_verbose &&
+        item.start           == self.start &&
+        item.status          == self.status &&
+        item.finish          == self.finish &&
+        item.newzbin_details == self.newzbin_details &&
+        item.limit           == self.limit &&
+        item.queue_details   == self.queue_details)
+
+        return false
+      end
+
+      return super item
+    end
+
     def self.from_hash(queue)
       item = super queue
       item.categories         = queue["categories"]
@@ -22,7 +42,6 @@ module SabnzbdPlusModel
       }
 
       item.refresh_rate       = queue["refresh_rate"]
-      item.is_verbose         = queue["isvebose"]
       item.start              = queue["start"]
       item.status             = queue["status"]
       item.finish             = queue["finish"]

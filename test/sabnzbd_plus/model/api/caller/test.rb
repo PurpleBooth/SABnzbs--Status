@@ -1,20 +1,21 @@
+$:.unshift File.join(File.dirname(__FILE__),'..','..','..','..','..')
+
 require 'json'
 require 'digest/sha2'
+require 'config/config'
 
 module SabnzbdPlusModelApiCaller
   class Test
-    protected
-
-    API_KEY = "Mock API Key"
-    FIXTURES_DIRECTORY = File.expand_path(File.join(File.dirname(__FILE__),'..','..','..','..','fixtures','SABnzbd+'))
-    
-
     public
 
-    def call(method, params, api_key = API_KEY)
+    def initialize
+      @config = Config::Config.instance["sabnzbd_plus"]["model"]["api"]["caller"]["test"]
+    end
+
+    def call(method, params, api_key = @config["api_key"])
       unique = {:method => method, :params => params, :api_key => api_key}.to_json
       digest = Digest::SHA2.new(512).hexdigest(unique)
-      path   = File.join(File.expand_path(FIXTURES_DIRECTORY), method, digest + ".json")
+      path   = File.join(File.expand_path(@config["fixtures_directory"]), method, digest + ".json")
 
       unless File.exists? path
         raise FixtureNotFoundException, "Could not find fixture ["+path+"]"

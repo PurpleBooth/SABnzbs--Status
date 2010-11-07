@@ -1,33 +1,30 @@
+$:.unshift File.join(File.dirname(__FILE__),'..','..','..','..','..','lib')
+
 require 'net/http'
 require 'uri'
 require 'cgi'
 require 'json'
+require 'config/config'
 
 module SabnzbdPlusModelApiCaller
   class HttpJson
-    protected
-
-    API_KEY = "48e93e8b1aaf946f541cc5118a531f48"
-    API_ENDPOINT = "http://127.0.0.1:8880/api";
-    API_JSON_OUTPUT = "json"
-
     public
 
     def initialize
-      
+      @config = Config::Config.instance["sabnzbd_plus"]["model"]["api"]["caller"]["http_json"]
     end
 
-    def call(method, params, api_key = API_KEY)
+    def call(method, params, api_key = @config["api_key"])
       url = URI.parse(API_ENDPOINT);
       params[:mode] = method
       params[:apikey] = api_key
-      params[:output] = API_JSON_OUTPUT
+      params[:output] = @config["api_output"]
 
       parameterised_path = "#{url.path}?".concat(params.collect { |key,value| "#{key}=#{CGI::escape(value.to_s)}" }.join('&'))
 
       response = Net::HTTP.get(url.host, parameterised_path, url.port)
 
-      my_file = File.new("/tmp/"+method, "w+")
+      my_file = File.new(File.join("tmp", method), "w+")
       my_file.puts response
 
       return JSON.parse response

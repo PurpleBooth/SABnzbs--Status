@@ -10,6 +10,20 @@ module SabnzbdPlusModel
       self.slots = []
     end
 
+
+    def ==(item)
+      unless(
+        item.total_size   == self.total_size &&
+        item.month_size   == self.month_size &&
+        item.week_size    == self.week_size &&
+        item.color_scheme == self.color_scheme)
+
+        return false
+      end
+
+      return super item
+    end
+
     def self.from_hash(history)
       item = super history
 

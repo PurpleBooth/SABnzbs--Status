@@ -14,5 +14,20 @@ module SabnzbdPlusModel
 
       return item
     end
+
+    def ==(item)
+      unless(
+        item.name    == self.name &&
+        item.actions == self.actions)
+
+        return false
+      end
+
+      return true
+    end
+
+    def eql?(item)
+      return (item.class == self.class && self == item)
+    end
   end
 end

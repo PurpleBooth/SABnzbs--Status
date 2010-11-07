@@ -1,0 +1,49 @@
+{
+    "history":
+        {
+        "active_lang":"us-en",
+        "session":"48e93e8b1aaf946f541cc5118a531f48",
+        "slots":
+            [
+            {
+                "action_line":"",
+                "show_details":"True",
+                "script_log":"",
+                "meta":null,
+                "fail_message":"",
+                "loaded":false,
+                "id":19,
+                "size":"389.45 MB",
+                "category":"tv",
+                "pp":"D",
+                "completeness":0,
+                "script":"",
+                "nzb_name":"Ubuntu.10.10.nzb",
+                "download_time":7284,
+                "storage":"/home/wab/SABnzbd+/Complete/Software/Ubuntu.10.10",
+                "status":"Completed",
+                "script_line":"",
+                "completed":1289106460,
+                "nzo_id":"SABnzbd_nzo__09l_P",
+                "downloaded":408371029,
+                "report":"",
+                "path":"/Ubuntu.10.10",
+                "postproc_time":0,
+                "name":"Ubuntu.10.10",
+                "url":"",
+                "bytes":408371029,
+                "url_info":"",
+                "stage_log":
+                    [
+                    {
+                        "name":"Download",
+                        "actions":
+                            [
+                            "Downloaded in 2 hours 1 minute 24 seconds at an average of 54.75 KB/s"
+                            ]
+                    }
+                    ]
+            }
+            ]
+        }
+}

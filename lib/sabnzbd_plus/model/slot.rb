@@ -29,6 +29,23 @@ module SabnzbdPlusModel
 
       return item
     end
+
+    def ==(item)
+      unless(
+        item.size   == self.size &&
+        item.script == self.script &&
+        item.status == self.status &&
+        item.nzo_id == self.nzo_id)
+
+        return false
+      end
+
+      return true
+    end
+
+    def eql?(item)
+      return (item.class == self.class && self == item)
+    end
   end
 end
 

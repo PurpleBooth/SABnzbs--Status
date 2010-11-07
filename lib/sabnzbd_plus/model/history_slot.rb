@@ -8,7 +8,7 @@ module SabnzbdPlusModel
 
     attr_accessor :action_line, :show_details, :script_log, :meta
     attr_accessor :loaded, :id, :category, :pp, :completeness, :fail_message
-    attr_accessor :nzb_name, :download_time, :storage, :script_line
+    attr_accessor :nzb_name, :download_time, :storage, :script_line, :filename
     attr_accessor :completed, :downloaded, :report, :path, :stage_log
     attr_accessor :post_proc_time, :name, :url, :bytes, :url_info
 
@@ -43,12 +43,52 @@ module SabnzbdPlusModel
       item.url             = slot["url"]
       item.bytes           = slot["bytes"]
       item.url_info        = slot["url_info"]
+      item.filename        = slot["filename"]
 
       slot["stage_log"].each { |log|
         item.stage_log = item.stage_log << StageLog.from_hash(log)
       }
 
       return item
+    end
+
+    def ==(item)
+
+      unless(
+        item.action_line    == self.action_line &&
+        item.show_details   == self.show_details &&
+        item.script_log     == self.script_log &&
+        item.meta           == self.meta &&
+        item.loaded         == self.loaded &&
+        item.id             == self.id &&
+        item.category       == self.category &&
+        item.filename       == self.filename &&
+        item.pp             == self.pp &&
+        item.completeness   == self.completeness &&
+        item.fail_message   == self.fail_message &&
+        item.nzb_name       == self.nzb_name &&
+        item.download_time  == self.download_time &&
+        item.script_line    == self.script_line &&
+        item.completed      == self.completed &&
+        item.downloaded     == self.downloaded &&
+        item.report         == self.report &&
+        item.path           == self.path &&
+        item.stage_log      == self.stage_log &&
+        item.post_proc_time == self.post_proc_time &&
+        item.name           == self.name &&
+        item.url            == self.url &&
+        item.bytes          == self.bytes &&
+        item.url_info       == self.url_info &&
+        item.storage        == self.storage)
+
+        return false
+      end
+
+      return super item
+    end
+
+    def eql?(item)
+      return (item.class == self.class && self == item)
     end
   end
 end
