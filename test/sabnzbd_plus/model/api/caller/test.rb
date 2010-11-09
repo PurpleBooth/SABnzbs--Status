@@ -6,20 +6,31 @@ require 'config/config'
 
 module SabnzbdPlusModelApiCaller
   class Test
-    public
+
+
+    attr_accessor :fixture_name
 
     def initialize
       @config = Config::Config.instance["sabnzbd_plus"]["model"]["api"]["caller"]["test"]
+      self.fixture_name = nil
     end
 
     def call(method, params, api_key = @config["api_key"])
       unique = {:method => method, :params => params, :api_key => api_key}.to_json
-      digest = Digest::SHA2.new(512).hexdigest(unique)
-      path   = File.join(File.expand_path(@config["fixtures_directory"]), method, digest + ".json")
+
+      if self.fixture_name.nil?
+        self.fixture_name = Digest::SHA2.new(512).hexdigest(unique)
+      end
+
+      Log::Log.instance.log("SabnzbdPlusModelApiCaller", "Test","Loading fixture for request \"" +unique+"\"")
+      path   = File.join(File.expand_path(@config["fixtures_directory"]), method, self.fixture_name + ".json")
 
       unless File.exists? path
+        Log::Log.instance.log("SabnzbdPlusModelApiCaller", "Test","Could not find fixture \""+path+"\"")
         raise FixtureNotFoundException, "Could not find fixture ["+path+"]"
       end
+
+      Log::Log.instance.log("SabnzbdPlusModelApiCaller", "Test","Loading fixture \""+path+"\"")
 
       fixture = ""
 

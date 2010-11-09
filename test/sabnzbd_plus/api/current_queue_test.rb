@@ -7,8 +7,9 @@ require 'test/sabnzbd_plus/model/api/caller/test'
 module SabnzbdPlusApi
   class CurrentQueueTest < Test::Unit::TestCase
     def setup
-      caller   = SabnzbdPlusModelApiCaller::Test.new
-      api      = SabnzbdPlusModelApi::Api.new(caller)
+      @caller   = SabnzbdPlusModelApiCaller::Test.new
+      @caller.fixture_name = "queue_empty"
+      api      = SabnzbdPlusModelApi::Api.new(@caller)
       mapper   = SabnzbdPlusModel::Mapper.new(api)
       @fixture = SabnzbdPlusApi::CurrentQueue.new(mapper)
     end

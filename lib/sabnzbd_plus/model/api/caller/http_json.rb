@@ -1,5 +1,6 @@
 $:.unshift File.join(File.dirname(__FILE__),'..','..','..','..','..','lib')
 
+require 'log/log'
 require 'net/http'
 require 'uri'
 require 'cgi'

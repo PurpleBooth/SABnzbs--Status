@@ -11,13 +11,15 @@ require 'test/sabnzbd_plus/model/api/caller/test'
 module SabnzbdPlus
   class ApiTest < Test::Unit::TestCase
     def setup
-      caller   = SabnzbdPlusModelApiCaller::Test.new
-      api      = SabnzbdPlusModelApi::Api.new(caller)
+      @caller   = SabnzbdPlusModelApiCaller::Test.new
+      api      = SabnzbdPlusModelApi::Api.new(@caller)
       mapper   = SabnzbdPlusModel::Mapper.new(api)
       @fixture = SabnzbdPlus::Api.new(mapper)
     end
 
     def test_current_queue
+      @caller.fixture_name = "queue_empty"
+
       actual = @fixture.current_queue
       
       expected = SabnzbdPlusModel::Queue.new
@@ -91,6 +93,7 @@ module SabnzbdPlus
     end
 
     def test_unannounced_added
+      @caller.fixture_name = "unannounced_added"
       actual = @fixture.unannounced_added
       expected = []
       expected[0] = SabnzbdPlusModel::HistorySlot.new
@@ -132,7 +135,9 @@ module SabnzbdPlus
     end
 
     def test_unannounced_complete
-      actual = @fixture.unannounced_added
+      @caller.fixture_name = "unannounced_complete"
+      actual = @fixture.unannounced_complete
+
       expected = []
       expected[0] = SabnzbdPlusModel::HistorySlot.new
       expected[0].action_line = ""
@@ -168,7 +173,7 @@ module SabnzbdPlus
 
       assert_equal(expected, actual)
 
-      actual = @fixture.unannounced_added
+      actual = @fixture.unannounced_complete
       assert_equal([], actual)
     end
   end

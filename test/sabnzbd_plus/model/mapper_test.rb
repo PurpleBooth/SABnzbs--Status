@@ -11,8 +11,8 @@ module SabnzbdPlusModelTest
   class Mapper < Test::Unit::TestCase
 
     def setup
-      caller = SabnzbdPlusModelApiCaller::Test.new
-      api = SabnzbdPlusModelApi::Api.new(caller)
+      @caller = SabnzbdPlusModelApiCaller::Test.new
+      api = SabnzbdPlusModelApi::Api.new(@caller)
       @fixture = SabnzbdPlusModel::Mapper.new(api)
     end
 
@@ -83,6 +83,7 @@ module SabnzbdPlusModelTest
         "queue_details" => "0"
       }
 
+      @caller.fixture_name = "queue_empty"
       actual = @fixture.current_queue
       expected = SabnzbdPlusModel::Queue.from_hash(queue)
 
@@ -133,6 +134,8 @@ module SabnzbdPlusModelTest
           }
         ]
       }
+
+      @caller.fixture_name = "ubuntu"
 
       actual = @fixture.history
       expected = SabnzbdPlusModel::History.from_hash(history)

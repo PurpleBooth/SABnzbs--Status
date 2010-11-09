@@ -9,3 +9,6 @@ sabnzbd_plus:
         test:
           api_key: "Mock API Key"
           fixtures_directory: "test/fixtures/SABnzbd+"
+log:
+  log:
+    file: "log/application.log"

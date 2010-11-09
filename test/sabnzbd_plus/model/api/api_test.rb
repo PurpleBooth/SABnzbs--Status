@@ -7,8 +7,10 @@ require 'test/sabnzbd_plus/model/api/caller/test'
 module SabnzbdPlusModelApi
   class ApiTest < Test::Unit::TestCase
     def setup
-      caller = SabnzbdPlusModelApiCaller::Test.new
-      @fixture = SabnzbdPlusModelApi::Api.new(caller)
+      @caller = SabnzbdPlusModelApiCaller::Test.new
+      @caller.fixture_name = "empty"
+
+      @fixture = SabnzbdPlusModelApi::Api.new(@caller)
     end
 
     def test_qstatus
@@ -19,6 +21,8 @@ module SabnzbdPlusModelApi
     end
 
     def test_queue_1
+      @caller.fixture_name = "queue_empty"
+
       expected = @fixture.queue
       actual = {"queue"=>
   {"queue_details"=>"0",

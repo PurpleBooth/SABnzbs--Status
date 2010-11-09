@@ -7,13 +7,14 @@ require 'test/sabnzbd_plus/model/api/caller/test'
 module SabnzbdPlusApi
   class UnannouncedAddedTest < Test::Unit::TestCase
     def setup
-      caller   = SabnzbdPlusModelApiCaller::Test.new
-      api      = SabnzbdPlusModelApi::Api.new(caller)
+      @caller   = SabnzbdPlusModelApiCaller::Test.new
+      api      = SabnzbdPlusModelApi::Api.new(@caller)
       mapper   = SabnzbdPlusModel::Mapper.new(api)
       @fixture = SabnzbdPlusApi::UnannouncedAdded.new(mapper)
     end
 
     def test_unannounced_added
+      @caller.fixture_name = "unannounced_added"
       actual = @fixture.process
       expected = []
       expected[0] = SabnzbdPlusModel::HistorySlot.new
