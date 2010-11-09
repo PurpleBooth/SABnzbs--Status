@@ -5,6 +5,7 @@ module SabnzbdPlusModel
 
     def initialize
       self.actions = []
+      self.name    = nil
     end
 
     def self.from_hash(hash)

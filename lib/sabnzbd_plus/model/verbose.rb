@@ -17,6 +17,47 @@ module SabnzbdPlusModel
 
     def initialize
       self.slots = []
+      self.cache_limit        = nil
+      self.paused             = nil
+      self.new_rel_url        = nil
+      self.restart_req        = nil
+      self.is_verbose         = nil
+      self.help_uri           = nil
+      self.uptime             = nil
+      self.version            = nil
+      self.disk_space_total_2 = nil
+      self.color_scheme       = nil
+      self.darwin             = nil
+      self.nt                 = nil
+      self.status             = nil
+      self.last_warning       = nil
+      self.have_warnings      = nil
+      self.cache_art          = nil
+      self.finish_action      = nil
+      self.no_of_slots        = nil
+      self.cache_size         = nil
+      self.new_release        = nil
+      self.pause_int          = nil
+      self.mb_left            = nil
+      self.disk_space_2       = nil
+      self.disk_space_1       = nil
+      self.disk_space_total_1 = nil
+      self.time_left          = nil
+      self.mb                 = nil
+      self.eta                = nil
+      self.nzb_quota          = nil
+      self.load_avg           = nil
+      self.kb_per_sec         = nil
+      self.speed_limit        = nil
+      self.web_dir            = nil
+      self.active_lang        = nil
+      self.session            = nil
+      self.speed              = nil
+      self.size               = nil
+      self.cache_max          = nil
+      self.power_options      = nil
+      self.paused_all         = nil
+      self.size_left          = nil
     end
 
     def self.from_hash(response)
@@ -75,6 +116,7 @@ module SabnzbdPlusModel
 
     def ==(item)
       unless(
+        item.is_verbose         == self.is_verbose &&
         item.cache_limit        == self.cache_limit &&
         item.paused             == self.paused &&
         item.new_rel_url        == self.new_rel_url &&

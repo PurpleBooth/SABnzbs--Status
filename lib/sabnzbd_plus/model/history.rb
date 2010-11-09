@@ -8,8 +8,13 @@ module SabnzbdPlusModel
 
     def initialize
       self.slots = []
-    end
+      self.total_size = nil
+      self.month_size = nil
+      self.week_size = nil
+      self.color_scheme = nil
 
+      super
+    end
 
     def ==(item)
       unless(

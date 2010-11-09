@@ -19,7 +19,7 @@ while true
   queue = @api.current_queue
   
   queue.slots.each { |slot|
-    Notify::Api.new.current_status(slot.name, slot.mb_left, slot.mb, queue.kb_per_sec, slot.timeleft)
+    Notify::Api.new.current_status(slot.name, slot.mb_left, slot.mb, queue.kb_per_sec, slot.time_left)
   }
 
   complete = @api.unannounced_complete

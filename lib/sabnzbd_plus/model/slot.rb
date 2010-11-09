@@ -6,7 +6,10 @@ module SabnzbdPlusModel
     attr_accessor :size, :script, :status, :nzo_id
 
     def initialize
-      
+      self.size   = nil
+      self.script = nil
+      self.status = nil
+      self.nzo_id = nil
     end
 
     def self.factory(slot)

@@ -4,9 +4,9 @@ require 'sabnzbd_plus/model/slot'
 
 module SabnzbdPlusModel
   class QueueSlot < Slot
-    attr_accessor :index, :eta, :timeleft, :avg_age, :msg_id
+    attr_accessor :index, :eta, :time_left, :avg_age, :msg_id
     attr_accessor :verbosity, :mb, :filename, :priority, :cat, :mb_left
-    attr_accessor :percentage, :unpack_opts
+    attr_accessor :percentage, :unpack_opts, :size_left
 
     def initialize
       
@@ -27,6 +27,7 @@ module SabnzbdPlusModel
       item.mb_left     = slot["mbleft"]
       item.percentage  = slot["percentage"]
       item.unpack_opts = slot["unpackopts"]
+      item.size_left = slot["sizeleft"]
 
       return item
     end
@@ -48,13 +49,12 @@ module SabnzbdPlusModel
         item.msg_id      == self.msg_id &&
         item.verbosity   == self.verbosity &&
         item.mb          == self.mb &&
-        item.file_name   == self.file_name &&
+        item.filename    == self.filename &&
         item.priority    == self.priority &&
         item.cat         == self.cat &&
         item.mb_left     == self.mb_left &&
         item.percentage  == self.percentage &&
-        item.unpack_opts == self.unpack_opts &&
-        item.actions     == self.actions)
+        item.unpack_opts == self.unpack_opts)
 
         return false
       end

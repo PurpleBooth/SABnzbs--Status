@@ -15,7 +15,7 @@ module SabnzbdPlusModelApiCaller
     end
 
     def call(method, params, api_key = @config["api_key"])
-      url = URI.parse(API_ENDPOINT);
+      url = URI.parse(@config["api_endpoint"]);
       params[:mode] = method
       params[:apikey] = api_key
       params[:output] = @config["api_output"]
@@ -23,9 +23,6 @@ module SabnzbdPlusModelApiCaller
       parameterised_path = "#{url.path}?".concat(params.collect { |key,value| "#{key}=#{CGI::escape(value.to_s)}" }.join('&'))
 
       response = Net::HTTP.get(url.host, parameterised_path, url.port)
-
-      my_file = File.new(File.join("tmp", method), "w+")
-      my_file.puts response
 
       return JSON.parse response
     end

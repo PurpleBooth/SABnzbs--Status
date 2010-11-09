@@ -47,7 +47,7 @@ module SabnzbdPlusModel
 
       slot["stage_log"].each { |log|
         item.stage_log = item.stage_log << StageLog.from_hash(log)
-      }
+      } if slot.key? "stage_log"
 
       return item
     end

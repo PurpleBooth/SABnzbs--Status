@@ -10,6 +10,19 @@ module SabnzbdPlusModel
 
     def initialize
       self.slots = []
+      self.categories = nil
+      self.scripts = nil
+      self.slots = nil
+      self.refresh_rate = nil
+      self.is_verbose = nil
+      self.start = nil
+      self.status = nil
+      self.finish = nil
+      self.newzbin_details = nil
+      self.limit = nil
+      self.queue_details = nil
+
+      super
     end
 
     def ==(item)
@@ -39,7 +52,7 @@ module SabnzbdPlusModel
 
       queue["slots"].each { |slot|
         item.slots = item.slots << QueueSlot.from_hash(slot)
-      }
+      } if queue["slots"].nil?
 
       item.refresh_rate       = queue["refresh_rate"]
       item.start              = queue["start"]
