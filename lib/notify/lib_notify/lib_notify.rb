@@ -2,8 +2,11 @@ require 'escape'
 
 module NotifyLibNotify
   class LibNotify
-    def initialize
-      
+
+    NOTIFY_LIB_NOTIFY_ICON_DIRECTORY = File.expand_path(File.join(File.dirname(__FILE__), '..', '..', '..', 'resources', 'images'))
+
+    def initialize(config = Config::Config.new["notify"]["lib_notify"])
+      @config = config
     end
 
     def send(msg)
@@ -11,7 +14,7 @@ module NotifyLibNotify
     end
 
     def icon
-      return File.expand_path(File.dirname(__FILE__) + '/../../../resources/images/favicon.ico')
+      return File.join(NOTIFY_LIB_NOTIFY_ICON_DIRECTORY, @config["icon"])
     end
 
     def shell_command(msg)

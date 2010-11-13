@@ -8,10 +8,6 @@ module SabnzbdPlusModel
     attr_accessor :verbosity, :mb, :filename, :priority, :cat, :mb_left
     attr_accessor :percentage, :unpack_opts, :size_left
 
-    def initialize
-      
-    end
-
     def self.from_hash(slot)
       item = super slot
       item.index       = slot["index"]

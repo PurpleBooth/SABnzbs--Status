@@ -16,21 +16,21 @@ module Notify
     end
 
     def test_added_nzb
-      actual = @fixture.added_nzb("Test")
+      actual = @fixture.added_nzb({:name => "Test"})
       expected = "Added job " + "Test"
 
       assert_equal(expected, actual)
     end
 
     def test_completed_nzb
-      actual = @fixture.completed_nzb("Test Name", "Test Status")
+      actual = @fixture.completed_nzb({:name => "Test Name", :status => "Test Status"})
       expected = "Job " + "Test Name" + " " + "Test Status"
 
       assert_equal(expected, actual)
     end
 
     def test_current_status
-      actual = @fixture.current_status("Test Name", "100", "991", "1212", "Testing")
+      actual = @fixture.current_status({:name => "Test Name",:mb_left => "100",:mb => "991",:kb_per_sec => "1212",:timeleft => "Testing"})
       expected = "Test Name" + " ["+"100"+"MB/" + "991" + "MB @ "+"1212"+"KB/S "+"Testing"+" timeleft]"
 
       assert_equal(expected, actual)

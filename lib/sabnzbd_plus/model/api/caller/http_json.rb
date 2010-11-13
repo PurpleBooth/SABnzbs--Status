@@ -11,8 +11,8 @@ module SabnzbdPlusModelApiCaller
   class HttpJson
     public
 
-    def initialize
-      @config = Config::Config.instance["sabnzbd_plus"]["model"]["api"]["caller"]["http_json"]
+    def initialize(config = Config::Config.instance["sabnzbd_plus"]["model"]["api"]["caller"]["http_json"])
+      @config = config
     end
 
     def call(method, params, api_key = @config["api_key"])

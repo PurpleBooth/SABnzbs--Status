@@ -12,3 +12,6 @@ sabnzbd_plus:
 log:
   log:
     file: "log/application.log"
+notify:
+  lib_notify:
+    icon: "favicon.ico"
