@@ -1,2 +1,3 @@
 reek=Check for code smells
 test=Run tests
+yard=Generate YARD Documentation

@@ -1,0 +1,1255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="Content-Type" content="text/html; charset=utf8" />
+<title>Class: SabnzbdPlusModel::Queue</title>
+<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '..';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (Q)</a> &raquo; 
+    <span class='title'><span class='object_link'><a href="../SabnzbdPlusModel.html" title="SabnzbdPlusModel (module)">SabnzbdPlusModel</a></span></span>
+     &raquo; 
+    <span class="title">Queue</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: SabnzbdPlusModel::Queue
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName"><span class='object_link'><a href="Verbose.html" title="SabnzbdPlusModel::Verbose (class)">Verbose</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="Verbose.html" title="SabnzbdPlusModel::Verbose (class)">Verbose</a></span></li>
+          
+            <li class="next">SabnzbdPlusModel::Queue</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/sabnzbd_plus/model/queue.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+  
+  
+  
+  
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#categories-instance_method" title="#categories (instance method)">- (Object) <strong>categories</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute categories.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#finish-instance_method" title="#finish (instance method)">- (Object) <strong>finish</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute finish.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#is_verbose-instance_method" title="#is_verbose (instance method)">- (Object) <strong>is_verbose</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute is_verbose.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#limit-instance_method" title="#limit (instance method)">- (Object) <strong>limit</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute limit.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#newzbin_details-instance_method" title="#newzbin_details (instance method)">- (Object) <strong>newzbin_details</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute newzbin_details.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#queue_details-instance_method" title="#queue_details (instance method)">- (Object) <strong>queue_details</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute queue_details.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#refresh_rate-instance_method" title="#refresh_rate (instance method)">- (Object) <strong>refresh_rate</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute refresh_rate.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#scripts-instance_method" title="#scripts (instance method)">- (Object) <strong>scripts</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute scripts.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#slots-instance_method" title="#slots (instance method)">- (Object) <strong>slots</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute slots.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#start-instance_method" title="#start (instance method)">- (Object) <strong>start</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute start.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#status-instance_method" title="#status (instance method)">- (Object) <strong>status</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute status.
+</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#from_hash-class_method" title="from_hash (class method)">+ (Object) <strong>from_hash</strong>(queue) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%3D%3D-instance_method" title="#== (instance method)">- (Object) <strong>==</strong>(item) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Queue) <strong>initialize</strong> </a>
+    
+
+    
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+A new instance of Queue.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#verbose%3F-instance_method" title="#verbose? (instance method)">- (Boolean) <strong>verbose?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Verbose.html" title="SabnzbdPlusModel::Verbose (class)">Verbose</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Verbose.html#eql%3F-instance_method" title="SabnzbdPlusModel::Verbose#eql? (method)">#eql?</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="SabnzbdPlusModel::Queue (class)">Queue</a></span></tt>) <strong>initialize</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+A new instance of Queue
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/queue.rb', line 11</span>
+
+<span class='def def kw'>def</span> <span class='initialize identifier id'>initialize</span>
+  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='slots identifier id'>slots</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
+  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='categories identifier id'>categories</span> <span class='assign token'>=</span> <span class='nil nil kw'>nil</span>
+  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='scripts identifier id'>scripts</span> <span class='assign token'>=</span> <span class='nil nil kw'>nil</span>
+  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='slots identifier id'>slots</span> <span class='assign token'>=</span> <span class='nil nil kw'>nil</span>
+  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='refresh_rate identifier id'>refresh_rate</span> <span class='assign token'>=</span> <span class='nil nil kw'>nil</span>
+  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='is_verbose identifier id'>is_verbose</span> <span class='assign token'>=</span> <span class='nil nil kw'>nil</span>
+  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='start identifier id'>start</span> <span class='assign token'>=</span> <span class='nil nil kw'>nil</span>
+  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='status identifier id'>status</span> <span class='assign token'>=</span> <span class='nil nil kw'>nil</span>
+  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='finish identifier id'>finish</span> <span class='assign token'>=</span> <span class='nil nil kw'>nil</span>
+  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='newzbin_details identifier id'>newzbin_details</span> <span class='assign token'>=</span> <span class='nil nil kw'>nil</span>
+  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='limit identifier id'>limit</span> <span class='assign token'>=</span> <span class='nil nil kw'>nil</span>
+  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='queue_details identifier id'>queue_details</span> <span class='assign token'>=</span> <span class='nil nil kw'>nil</span>
+
+  <span class='super super kw'>super</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="categories=-instance_method"></span>
+      <span id="categories-instance_method"></span>
+      <div class="method_details first">
+  <p class="signature first" id="categories-instance_method">
+  
+    - (<tt>Object</tt>) <strong>categories</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute categories
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+7
+8
+9</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/queue.rb', line 7</span>
+
+<span class='def def kw'>def</span> <span class='categories identifier id'>categories</span>
+  <span class='@categories ivar id'>@categories</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="finish=-instance_method"></span>
+      <span id="finish-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="finish-instance_method">
+  
+    - (<tt>Object</tt>) <strong>finish</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute finish
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9
+10</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/queue.rb', line 8</span>
+
+<span class='def def kw'>def</span> <span class='finish identifier id'>finish</span>
+  <span class='@finish ivar id'>@finish</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="is_verbose=-instance_method"></span>
+      <span id="is_verbose-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="is_verbose-instance_method">
+  
+    - (<tt>Object</tt>) <strong>is_verbose</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute is_verbose
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+7
+8
+9</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/queue.rb', line 7</span>
+
+<span class='def def kw'>def</span> <span class='is_verbose identifier id'>is_verbose</span>
+  <span class='@is_verbose ivar id'>@is_verbose</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="limit=-instance_method"></span>
+      <span id="limit-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="limit-instance_method">
+  
+    - (<tt>Object</tt>) <strong>limit</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute limit
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9
+10</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/queue.rb', line 8</span>
+
+<span class='def def kw'>def</span> <span class='limit identifier id'>limit</span>
+  <span class='@limit ivar id'>@limit</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="newzbin_details=-instance_method"></span>
+      <span id="newzbin_details-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="newzbin_details-instance_method">
+  
+    - (<tt>Object</tt>) <strong>newzbin_details</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute newzbin_details
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9
+10</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/queue.rb', line 8</span>
+
+<span class='def def kw'>def</span> <span class='newzbin_details identifier id'>newzbin_details</span>
+  <span class='@newzbin_details ivar id'>@newzbin_details</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="queue_details=-instance_method"></span>
+      <span id="queue_details-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="queue_details-instance_method">
+  
+    - (<tt>Object</tt>) <strong>queue_details</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute queue_details
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+9
+10
+11</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/queue.rb', line 9</span>
+
+<span class='def def kw'>def</span> <span class='queue_details identifier id'>queue_details</span>
+  <span class='@queue_details ivar id'>@queue_details</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="refresh_rate=-instance_method"></span>
+      <span id="refresh_rate-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="refresh_rate-instance_method">
+  
+    - (<tt>Object</tt>) <strong>refresh_rate</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute refresh_rate
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+7
+8
+9</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/queue.rb', line 7</span>
+
+<span class='def def kw'>def</span> <span class='refresh_rate identifier id'>refresh_rate</span>
+  <span class='@refresh_rate ivar id'>@refresh_rate</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="scripts=-instance_method"></span>
+      <span id="scripts-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="scripts-instance_method">
+  
+    - (<tt>Object</tt>) <strong>scripts</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute scripts
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+7
+8
+9</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/queue.rb', line 7</span>
+
+<span class='def def kw'>def</span> <span class='scripts identifier id'>scripts</span>
+  <span class='@scripts ivar id'>@scripts</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="slots=-instance_method"></span>
+      <span id="slots-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="slots-instance_method">
+  
+    - (<tt>Object</tt>) <strong>slots</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute slots
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+7
+8
+9</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/queue.rb', line 7</span>
+
+<span class='def def kw'>def</span> <span class='slots identifier id'>slots</span>
+  <span class='@slots ivar id'>@slots</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="start=-instance_method"></span>
+      <span id="start-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="start-instance_method">
+  
+    - (<tt>Object</tt>) <strong>start</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute start
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9
+10</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/queue.rb', line 8</span>
+
+<span class='def def kw'>def</span> <span class='start identifier id'>start</span>
+  <span class='@start ivar id'>@start</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="status=-instance_method"></span>
+      <span id="status-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="status-instance_method">
+  
+    - (<tt>Object</tt>) <strong>status</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute status
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9
+10</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/queue.rb', line 8</span>
+
+<span class='def def kw'>def</span> <span class='status identifier id'>status</span>
+  <span class='@status ivar id'>@status</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="from_hash-class_method">
+  
+    + (<tt>Object</tt>) <strong>from_hash</strong>(queue) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/queue.rb', line 48</span>
+
+<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='from_hash identifier id'>from_hash</span><span class='lparen token'>(</span><span class='queue identifier id'>queue</span><span class='rparen token'>)</span>
+  <span class='item identifier id'>item</span> <span class='assign token'>=</span> <span class='super super kw'>super</span> <span class='queue identifier id'>queue</span>
+  <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='categories identifier id'>categories</span>         <span class='assign token'>=</span> <span class='queue identifier id'>queue</span><span class='lbrack token'>[</span><span class='string val'>&quot;categories&quot;</span><span class='rbrack token'>]</span>
+  <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='scripts identifier id'>scripts</span>            <span class='assign token'>=</span> <span class='queue identifier id'>queue</span><span class='lbrack token'>[</span><span class='string val'>&quot;scripts&quot;</span><span class='rbrack token'>]</span>
+
+  <span class='queue identifier id'>queue</span><span class='lbrack token'>[</span><span class='string val'>&quot;slots&quot;</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='slot identifier id'>slot</span><span class='bitor op'>|</span>
+    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='slots identifier id'>slots</span> <span class='assign token'>=</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='slots identifier id'>slots</span> <span class='lshft op'>&lt;&lt;</span> <span class='QueueSlot constant id'>QueueSlot</span><span class='dot token'>.</span><span class='from_hash identifier id'>from_hash</span><span class='lparen token'>(</span><span class='slot identifier id'>slot</span><span class='rparen token'>)</span>
+  <span class='rbrace token'>}</span> <span class='if if_mod kw'>if</span> <span class='queue identifier id'>queue</span><span class='lbrack token'>[</span><span class='string val'>&quot;slots&quot;</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
+
+  <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='refresh_rate identifier id'>refresh_rate</span>       <span class='assign token'>=</span> <span class='queue identifier id'>queue</span><span class='lbrack token'>[</span><span class='string val'>&quot;refresh_rate&quot;</span><span class='rbrack token'>]</span>
+  <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='start identifier id'>start</span>              <span class='assign token'>=</span> <span class='queue identifier id'>queue</span><span class='lbrack token'>[</span><span class='string val'>&quot;start&quot;</span><span class='rbrack token'>]</span>
+  <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='status identifier id'>status</span>             <span class='assign token'>=</span> <span class='queue identifier id'>queue</span><span class='lbrack token'>[</span><span class='string val'>&quot;status&quot;</span><span class='rbrack token'>]</span>
+  <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='finish identifier id'>finish</span>             <span class='assign token'>=</span> <span class='queue identifier id'>queue</span><span class='lbrack token'>[</span><span class='string val'>&quot;finish&quot;</span><span class='rbrack token'>]</span>
+  <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='newzbin_details identifier id'>newzbin_details</span>    <span class='assign token'>=</span> <span class='queue identifier id'>queue</span><span class='lbrack token'>[</span><span class='string val'>&quot;newzbinDetails&quot;</span><span class='rbrack token'>]</span>
+  <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='limit identifier id'>limit</span>              <span class='assign token'>=</span> <span class='queue identifier id'>queue</span><span class='lbrack token'>[</span><span class='string val'>&quot;limit&quot;</span><span class='rbrack token'>]</span>
+  <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='queue_details identifier id'>queue_details</span>      <span class='assign token'>=</span> <span class='queue identifier id'>queue</span><span class='lbrack token'>[</span><span class='string val'>&quot;queue_details&quot;</span><span class='rbrack token'>]</span>
+
+  <span class='return return kw'>return</span> <span class='item identifier id'>item</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="==-instance_method">
+  
+    - (<tt>Object</tt>) <strong>==</strong>(item) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/queue.rb', line 28</span>
+
+<span class='def def kw'>def</span> <span class='eq op'>==</span><span class='lparen token'>(</span><span class='item identifier id'>item</span><span class='rparen token'>)</span>
+  <span class='unless unless kw'>unless</span><span class='lparen token'>(</span>
+    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='categories identifier id'>categories</span>      <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='categories identifier id'>categories</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='scripts identifier id'>scripts</span>         <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='scripts identifier id'>scripts</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='slots identifier id'>slots</span>           <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='slots identifier id'>slots</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='refresh_rate identifier id'>refresh_rate</span>    <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='refresh_rate identifier id'>refresh_rate</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='is_verbose identifier id'>is_verbose</span>      <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='is_verbose identifier id'>is_verbose</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='start identifier id'>start</span>           <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='start identifier id'>start</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='status identifier id'>status</span>          <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='status identifier id'>status</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='finish identifier id'>finish</span>          <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='finish identifier id'>finish</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='newzbin_details identifier id'>newzbin_details</span> <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='newzbin_details identifier id'>newzbin_details</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='limit identifier id'>limit</span>           <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='limit identifier id'>limit</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='queue_details identifier id'>queue_details</span>   <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='queue_details identifier id'>queue_details</span><span class='rparen token'>)</span>
+
+    <span class='return return kw'>return</span> <span class='false false kw'>false</span>
+  <span class='end end kw'>end</span>
+
+  <span class='return return kw'>return</span> <span class='super super kw'>super</span> <span class='item identifier id'>item</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="verbose?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>verbose?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+68
+69
+70</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/queue.rb', line 68</span>
+
+<span class='def def kw'>def</span> <span class='verbose? fid id'>verbose?</span>
+  <span class='return return kw'>return</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='is_verbose identifier id'>is_verbose</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Sun Nov 14 14:11:27 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.1 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

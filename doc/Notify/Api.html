@@ -1,0 +1,679 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="Content-Type" content="text/html; charset=utf8" />
+<title>Class: Notify::Api</title>
+<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '..';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (A)</a> &raquo; 
+    <span class='title'><span class='object_link'><a href="../Notify.html" title="Notify (module)">Notify</a></span></span>
+     &raquo; 
+    <span class="title">Api</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Notify::Api
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Notify::Api</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/notify/api.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+Make various notifications regarding the state of SABnzbd
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div>
+
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#notifier-instance_method" title="#notifier (instance method)">- (NotifyLibNotify::LibNotify) <strong>notifier</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#added_nzb-instance_method" title="#added_nzb (instance method)">- (Object) <strong>added_nzb</strong>(options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Announce that a file has been added.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#completed_nzb-instance_method" title="#completed_nzb (instance method)">- (Object) <strong>completed_nzb</strong>(options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Announce that a file has been completed.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#current_status-instance_method" title="#current_status (instance method)">- (Object) <strong>current_status</strong>(options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Announce the current speed, mb left, kb per sec, and time left.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Api) <strong>initialize</strong>(notifier = NotifyLibNotify::LibNotify.new) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Set the notifier to use.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Notify::Api (class)">Api</a></span></tt>) <strong>initialize</strong>(notifier = NotifyLibNotify::LibNotify.new) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Set the notifier to use. Defaults to LibNotify
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="../NotifyLibNotify/LibNotify.html" title="NotifyLibNotify::LibNotify (class)">NotifyLibNotify::LibNotify</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+38
+39
+40</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/notify/api.rb', line 38</span>
+
+<span class='def def kw'>def</span> <span class='initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='notifier identifier id'>notifier</span> <span class='assign token'>=</span> <span class='NotifyLibNotify constant id'>NotifyLibNotify</span><span class='colon2 op'>::</span><span class='LibNotify constant id'>LibNotify</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='rparen token'>)</span>
+  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='notifier identifier id'>notifier</span> <span class='assign token'>=</span> <span class='notifier identifier id'>notifier</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="notifier=-instance_method"></span>
+      <span id="notifier-instance_method"></span>
+      <div class="method_details first">
+  <p class="signature first" id="notifier-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../NotifyLibNotify/LibNotify.html" title="NotifyLibNotify::LibNotify (class)">NotifyLibNotify::LibNotify</a></span></tt>) <strong>notifier</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../NotifyLibNotify/LibNotify.html" title="NotifyLibNotify::LibNotify (class)">NotifyLibNotify::LibNotify</a></span></tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+33
+34
+35</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/notify/api.rb', line 33</span>
+
+<span class='def def kw'>def</span> <span class='notifier identifier id'>notifier</span>
+  <span class='@notifier ivar id'>@notifier</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="added_nzb-instance_method">
+  
+    - (<tt>Object</tt>) <strong>added_nzb</strong>(options = {}) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Announce that a file has been added
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>options</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the options to create a announcement with
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <h3>Options Hash (<tt>options</tt>):</h3>
+    <ul class="option">
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:name</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+    </ul>
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+58
+59
+60</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/notify/api.rb', line 58</span>
+
+<span class='def def kw'>def</span> <span class='added_nzb identifier id'>added_nzb</span><span class='lparen token'>(</span><span class='options identifier id'>options</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='call_method identifier id'>call_method</span><span class='lparen token'>(</span><span class='symbol val'>:added_nzb</span><span class='comma token'>,</span> <span class='options identifier id'>options</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="completed_nzb-instance_method">
+  
+    - (<tt>Object</tt>) <strong>completed_nzb</strong>(options = {}) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Announce that a file has been completed
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>options</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the options to create a announcement with
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <h3>Options Hash (<tt>options</tt>):</h3>
+    <ul class="option">
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:name</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:status</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+    </ul>
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+67
+68
+69</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/notify/api.rb', line 67</span>
+
+<span class='def def kw'>def</span> <span class='completed_nzb identifier id'>completed_nzb</span><span class='lparen token'>(</span><span class='options identifier id'>options</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='call_method identifier id'>call_method</span><span class='lparen token'>(</span><span class='symbol val'>:completed_nzb</span><span class='comma token'>,</span> <span class='options identifier id'>options</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="current_status-instance_method">
+  
+    - (<tt>Object</tt>) <strong>current_status</strong>(options = {}) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Announce the current speed, mb left, kb per sec, and time left
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>options</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the options to create a announcement with
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <h3>Options Hash (<tt>options</tt>):</h3>
+    <ul class="option">
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:name</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;<div class='inline'><p>
+Name of the current download
+</p>
+</div>
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:mb_left</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;<div class='inline'><p>
+MB left to download
+</p>
+</div>
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:mb</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;<div class='inline'><p>
+Total MB of file
+</p>
+</div>
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:kb_per_sec</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;<div class='inline'><p>
+Current speed of NZB
+</p>
+</div>
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:timeleft</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;<div class='inline'><p>
+The time left in the download
+</p>
+</div>
+        </tr>
+      
+    </ul>
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+50
+51
+52</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/notify/api.rb', line 50</span>
+
+<span class='def def kw'>def</span> <span class='current_status identifier id'>current_status</span><span class='lparen token'>(</span><span class='options identifier id'>options</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='call_method identifier id'>call_method</span><span class='lparen token'>(</span><span class='symbol val'>:current_status</span><span class='comma token'>,</span> <span class='options identifier id'>options</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Sun Nov 14 14:11:21 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.1 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>
