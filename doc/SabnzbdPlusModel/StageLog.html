@@ -79,7 +79,18 @@
 </dl>
 <div class="clear"></div>
 
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+Log messages regarding the scripts exit status
+</p>
 
+
+  </div>
+</div>
+<div class="tags">
+  
+</div>
 
   <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
   <ul class="summary">
@@ -87,7 +98,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#actions-instance_method" title="#actions (instance method)">- (Object) <strong>actions</strong> </a>
+      <a href="#actions-instance_method" title="#actions (instance method)">- (Array&lt;String&gt;) <strong>actions</strong> </a>
     
 
     
@@ -103,10 +114,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Returns the value of attribute actions.
-</p>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -114,7 +122,7 @@ Returns the value of attribute actions.
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#name-instance_method" title="#name (instance method)">- (Object) <strong>name</strong> </a>
+      <a href="#name-instance_method" title="#name (instance method)">- (String) <strong>name</strong> </a>
     
 
     
@@ -130,10 +138,7 @@ Returns the value of attribute actions.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Returns the value of attribute name.
-</p>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -152,7 +157,7 @@ Returns the value of attribute name.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#from_hash-class_method" title="from_hash (class method)">+ (Object) <strong>from_hash</strong>(hash) </a>
+      <a href="#from_hash-class_method" title="from_hash (class method)">+ (SabnzbdPlusModel::StageLog) <strong>from_hash</strong>(hash) </a>
     
 
     
@@ -165,7 +170,10 @@ Returns the value of attribute name.
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>
+Initialise an object from an array.
+</p>
+</div></span>
   
 </li>
 
@@ -182,7 +190,7 @@ Returns the value of attribute name.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3D%3D-instance_method" title="#== (instance method)">- (Object) <strong>==</strong>(item) </a>
+      <a href="#%3D%3D-instance_method" title="#== (instance method)">- (Boolean) <strong>==</strong>(item) </a>
     
 
     
@@ -195,28 +203,11 @@ Returns the value of attribute name.
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#eql%3F-instance_method" title="#eql? (instance method)">- (Boolean) <strong>eql?</strong>(item) </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>
+Compare this object with another stage object comparing only the values in
+it&#8217;s attributes.
+</p>
+</div></span>
   
 </li>
 
@@ -240,7 +231,7 @@ Returns the value of attribute name.
 
   
     <span class="summary_desc"><div class='inline'><p>
-A new instance of StageLog.
+Initialise the object.
 </p>
 </div></span>
   
@@ -263,7 +254,7 @@ A new instance of StageLog.
 </p><div class="docstring">
   <div class="discussion">
     <p>
-A new instance of StageLog
+Initialise the object
 </p>
 
 
@@ -277,13 +268,13 @@ A new instance of StageLog
       <pre class="lines">
 
 
-6
-7
-8
-9</pre>
+13
+14
+15
+16</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/stage_log.rb', line 6</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/stage_log.rb', line 13</span>
 
 <span class='def def kw'>def</span> <span class='initialize identifier id'>initialize</span>
   <span class='self self kw'>self</span><span class='dot token'>.</span><span class='actions identifier id'>actions</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
@@ -306,33 +297,43 @@ A new instance of StageLog
       <div class="method_details first">
   <p class="signature first" id="actions-instance_method">
   
-    - (<tt>Object</tt>) <strong>actions</strong> 
+    - (<tt>Array&lt;String&gt;</tt>) <strong>actions</strong> 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Returns the value of attribute actions
-</p>
-
+    
 
   </div>
 </div>
 <div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
   
+    <li>
+      
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-4
-5
-6</pre>
+10
+11
+12</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/stage_log.rb', line 4</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/stage_log.rb', line 10</span>
 
 <span class='def def kw'>def</span> <span class='actions identifier id'>actions</span>
   <span class='@actions ivar id'>@actions</span>
@@ -349,33 +350,43 @@ Returns the value of attribute actions
       <div class="method_details ">
   <p class="signature " id="name-instance_method">
   
-    - (<tt>Object</tt>) <strong>name</strong> 
+    - (<tt>String</tt>) <strong>name</strong> 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Returns the value of attribute name
-</p>
-
+    
 
   </div>
 </div>
 <div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
   
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-4
-5
-6</pre>
+7
+8
+9</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/stage_log.rb', line 4</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/stage_log.rb', line 7</span>
 
 <span class='def def kw'>def</span> <span class='name identifier id'>name</span>
   <span class='@name ivar id'>@name</span>
@@ -396,26 +407,65 @@ Returns the value of attribute name
       <div class="method_details first">
   <p class="signature first" id="from_hash-class_method">
   
-    + (<tt>Object</tt>) <strong>from_hash</strong>(hash) 
+    + (<tt><span class='object_link'><a href="" title="SabnzbdPlusModel::StageLog (class)">SabnzbdPlusModel::StageLog</a></span></tt>) <strong>from_hash</strong>(hash) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Initialise an object from an array
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>hash</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="SabnzbdPlusModel::StageLog (class)">SabnzbdPlusModel::StageLog</a></span></tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-11
-12
-13
-14
-15
-16
-17</pre>
+22
+23
+24
+25
+26
+27
+28</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/stage_log.rb', line 11</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/stage_log.rb', line 22</span>
 
 <span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='from_hash identifier id'>from_hash</span><span class='lparen token'>(</span><span class='hash identifier id'>hash</span><span class='rparen token'>)</span>
   <span class='item identifier id'>item</span> <span class='assign token'>=</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='new identifier id'>new</span>
@@ -439,61 +489,37 @@ Returns the value of attribute name
       <div class="method_details first">
   <p class="signature first" id="==-instance_method">
   
-    - (<tt>Object</tt>) <strong>==</strong>(item) 
-  
-
-  
-</p><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/stage_log.rb', line 19</span>
-
-<span class='def def kw'>def</span> <span class='eq op'>==</span><span class='lparen token'>(</span><span class='item identifier id'>item</span><span class='rparen token'>)</span>
-  <span class='unless unless kw'>unless</span><span class='lparen token'>(</span>
-    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='name identifier id'>name</span>    <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='name identifier id'>name</span> <span class='andop op'>&amp;&amp;</span>
-    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='actions identifier id'>actions</span> <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='actions identifier id'>actions</span><span class='rparen token'>)</span>
-
-    <span class='return return kw'>return</span> <span class='false false kw'>false</span>
-  <span class='end end kw'>end</span>
-
-  <span class='return return kw'>return</span> <span class='true true kw'>true</span>
-<span class='end end kw'>end</span>
-</pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <p class="signature " id="eql?-instance_method">
-  
-    - (<tt>Boolean</tt>) <strong>eql?</strong>(item) 
+    - (<tt>Boolean</tt>) <strong>==</strong>(item) 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-    
+    <p>
+Compare this object with another stage object comparing only the values in
+it&#8217;s attributes.
+</p>
+
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="SabnzbdPlusModel::StageLog (class)">SabnzbdPlusModel::StageLog</a></span></tt>)</span>
+      
+      
+        <span class='name'>item</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
@@ -513,15 +539,29 @@ Returns the value of attribute name
       <pre class="lines">
 
 
-30
-31
-32</pre>
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/stage_log.rb', line 30</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/stage_log.rb', line 35</span>
 
-<span class='def def kw'>def</span> <span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='item identifier id'>item</span><span class='rparen token'>)</span>
-  <span class='return return kw'>return</span> <span class='lparen token'>(</span><span class='item identifier id'>item</span><span class='dot token'>.</span><span class='class identifier id'>class</span> <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='class identifier id'>class</span> <span class='andop op'>&amp;&amp;</span> <span class='self self kw'>self</span> <span class='eq op'>==</span> <span class='item identifier id'>item</span><span class='rparen token'>)</span>
+<span class='def def kw'>def</span> <span class='eq op'>==</span><span class='lparen token'>(</span><span class='item identifier id'>item</span><span class='rparen token'>)</span>
+  <span class='unless unless kw'>unless</span><span class='lparen token'>(</span>
+    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='name identifier id'>name</span>    <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='name identifier id'>name</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='actions identifier id'>actions</span> <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='actions identifier id'>actions</span><span class='rparen token'>)</span>
+
+    <span class='return return kw'>return</span> <span class='false false kw'>false</span>
+  <span class='end end kw'>end</span>
+
+  <span class='return return kw'>return</span> <span class='true true kw'>true</span>
 <span class='end end kw'>end</span>
 </pre>
     </td>
@@ -534,7 +574,7 @@ Returns the value of attribute name
 </div>
     
     <div id="footer">
-  Generated on Sun Nov 14 14:11:26 2010 by 
+  Generated on Sun Nov 14 23:26:43 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.8.7).
 </div>

@@ -27,7 +27,6 @@ module SabnzbdPlusModel
       fixture_2.color_scheme = "Test"
 
       assert_equal(true, @fixture == fixture_2)
-      assert_equal(true, @fixture.eql?(fixture_2))
     end
 
     def test_compare_false_1

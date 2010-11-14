@@ -1,5 +1,6 @@
 require 'yaml'
 
+# Classes responsible for accessing the configuration
 module Config
   # Access and manipulate the configuration file for this project
   class Config

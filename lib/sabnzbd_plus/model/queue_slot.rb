@@ -2,40 +2,88 @@ $:.unshift File.expand_path(File.join(File.dirname(__FILE__),'..','..','..','lib
 
 require 'sabnzbd_plus/model/slot'
 
+# Abstraction layer for interacting with SABnzbd+
 module SabnzbdPlusModel
+  # A single queue slot item returned by SAB
   class QueueSlot < Slot
-    attr_accessor :index, :eta, :time_left, :avg_age, :msg_id
-    attr_accessor :verbosity, :mb, :filename, :priority, :cat, :mb_left
-    attr_accessor :percentage, :unpack_opts, :size_left
+    # @return [String]
+    attr_accessor :index
 
-    def self.from_hash(slot)
-      item = super slot
-      item.index       = slot["index"]
-      item.eta         = slot["eta"]
-      item.time_left   = slot["timeleft"]
-      item.avg_age     = slot["avg_age"]
-      item.msg_id      = slot["msgid"]
-      item.verbosity   = slot["verbosity"]
-      item.mb          = slot["mb"]
-      item.filename    = slot["filename"]
-      item.priority    = slot["priority"]
-      item.cat         = slot["cat"]
-      item.mb_left     = slot["mbleft"]
-      item.percentage  = slot["percentage"]
-      item.unpack_opts = slot["unpackopts"]
-      item.size_left = slot["sizeleft"]
+    # @return [String]
+    attr_accessor :eta
 
-      return item
+    # @return [String]
+    attr_accessor :time_left
+
+    # @return [String]
+    attr_accessor :avg_age
+
+    # @return [String]
+    attr_accessor :msg_id
+
+    # @return [String]
+    attr_accessor :verbosity
+
+    # @return [String]
+    attr_accessor :mb
+
+    # @return [String]
+    attr_accessor :filename
+
+    # @return [String]
+    attr_accessor :priority
+
+    # @return [String]
+    attr_accessor :cat
+
+    # @return [String]
+    attr_accessor :mb_left
+
+    # @return [String]
+    attr_accessor :percentage
+
+    # @return [String]
+    attr_accessor :unpack_opts
+
+    # @return [String]
+    attr_accessor :size_left
+
+    # Get the parameter mapping that maps the SABnzbd+ API parameter names to
+    # their Rubyish equivalent
+    #
+    # @return [Hash<String, Label>]
+    def self.parameter_mapping
+      return super.merge({
+          "msgid" => :msg_id,
+          "mbleft" => :mb_left,
+          "unpackopts" => :unpack_opts,
+          "sizeleft" => :size_left,
+          "timeleft" => :time_left
+        })
     end
 
+    # Maps filename onto Name, so history and queue have a common name.
+    #
+    # @see SabnzbdPlusModel::QueueSlot#filename
+    # @return [String]
     def name
       return self.filename
     end
 
+    # Maps filename onto Name, so history and queue have a common name.
+    #
+    # @see SabnzbdPlusModel::QueueSlot#filename
+    # @param [String] name
     def name=(name)
       self.filename = name
     end
 
+    # Compare this object with another queue object comparing only the
+    # values in it's attributes.
+    #
+    # @see SabnzbdPlusModel::Slot#==
+    # @param [SabnzbdPlusModel::QueueSlot] item
+    # @return [Boolean]
     def ==(item)
       unless(
         item.index       == self.index &&
@@ -56,10 +104,6 @@ module SabnzbdPlusModel
       end
 
       return super item
-    end
-
-    def eql?(item)
-      return (item.class == self.class && self == item)
     end
   end
 end

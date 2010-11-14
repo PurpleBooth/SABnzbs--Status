@@ -2,12 +2,44 @@ $:.unshift File.expand_path(File.join(File.dirname(__FILE__),'..','..','..','lib
 
 require 'sabnzbd_plus/model/verbose'
 
+# Abstraction layer for interacting with SABnzbd+
 module SabnzbdPlusModel
+  # Queue object returned by the SAB API
   class Queue < Verbose
-    attr_accessor :categories, :scripts, :slots, :refresh_rate, :is_verbose
-    attr_accessor :start, :status, :finish, :newzbin_details, :limit
+    # @return [Array<String>]
+    attr_accessor :categories
+
+    # @return [Array<String>]
+    attr_accessor :scripts
+
+    # @return [Array<SabnzbdPlusModel::Slot>]
+    attr_accessor :slots
+
+    # @return [String]
+    attr_accessor :refresh_rate
+
+    # @return [Boolean]
+    attr_accessor :is_verbose
+
+    # @return [Integer]
+    attr_accessor :start
+
+    # @return [String]
+    attr_accessor :status
+
+    # @return [Integer]
+    attr_accessor :finish
+
+    # @return [Boolean]
+    attr_accessor :newzbin_details
+
+    # @return [Integer]
+    attr_accessor :limit
+
+    # @return [String]
     attr_accessor :queue_details
 
+    # Initialize the default values
     def initialize
       self.slots = []
       self.categories = nil
@@ -25,6 +57,12 @@ module SabnzbdPlusModel
       super
     end
 
+    # Compare this object with another queue object comparing only the
+    # values in it's attributes.
+    #
+    # @see SabnzbdPlusModel::Verbose#==
+    # @param [SabnzbdPlusModel::Verbose] item
+    # @return [Boolean]
     def ==(item)
       unless(
         item.categories      == self.categories &&
@@ -45,28 +83,21 @@ module SabnzbdPlusModel
       return super item
     end
 
-    def self.from_hash(queue)
-      item = super queue
-      item.categories         = queue["categories"]
-      item.scripts            = queue["scripts"]
-
-      queue["slots"].each { |slot|
-        item.slots = item.slots << QueueSlot.from_hash(slot)
-      } if queue["slots"].nil?
-
-      item.refresh_rate       = queue["refresh_rate"]
-      item.start              = queue["start"]
-      item.status             = queue["status"]
-      item.finish             = queue["finish"]
-      item.newzbin_details    = queue["newzbinDetails"]
-      item.limit              = queue["limit"]
-      item.queue_details      = queue["queue_details"]
-
-      return item
-    end
-
+    # Alias for is_verbose
+    # @see SabnzbdPlusModel::Verbose#is_verbose
+    # @return [Boolean]
     def verbose?
       return self.is_verbose
+    end
+
+    # Get the parameter mapping that maps the SABnzbd+ API parameter names to
+    # their Rubyish equivalent
+    #
+    # @return [Hash<String, Label>]
+    def self.parameter_mapping
+      return super.merge({
+          "newzbinDetails" => :newzbin_details
+        })
     end
   end
 end

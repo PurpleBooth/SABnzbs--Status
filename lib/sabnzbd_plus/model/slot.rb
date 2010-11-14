@@ -1,10 +1,23 @@
 $:.unshift File.expand_path(File.join(File.dirname(__FILE__),'..','..','..','lib'))
 
+# Abstraction layer for interacting with SABnzbd+
 module SabnzbdPlusModel
+  # Single slot that could be returned by the API
   class Slot
 
-    attr_accessor :size, :script, :status, :nzo_id
+    # @return [String]
+    attr_accessor :size
 
+    # @return [String]
+    attr_accessor :script
+
+    # @return [String]
+    attr_accessor :status
+
+    # @return [String]
+    attr_accessor :nzo_id
+
+    # Initialise the object
     def initialize
       self.size   = nil
       self.script = nil
@@ -12,6 +25,13 @@ module SabnzbdPlusModel
       self.nzo_id = nil
     end
 
+    # From a Hash create the appropriate QueueSlot, HistorySlot, or Slot
+    #
+    # @see SabnzbdPlusModel::QueueSlot#from_hash
+    # @see SabnzbdPlusModel::HistorySlot#from_hash
+    # @see SabnzbdPlusModel::Slot#from_hash
+    # @param [Hash] slot
+    # @return [Slot]
     def self.factory(slot)
       if(slot.has_key?("filename"))
         return QueueSlot.from_hash(slot)
@@ -22,17 +42,29 @@ module SabnzbdPlusModel
       return self.from_hash(slot)
     end
 
+    # Initialize a slot from an hash
+    #
+    # @param [Hash] slot
+    # @return [SabnzbdPlusModel::Slot]
     def self.from_hash(slot)
       item = self.new
 
-      item.size            = slot["size"]
-      item.script          = slot["script"]
-      item.status          = slot["status"]
-      item.nzo_id          = slot["nzo_id"]
+      slot.each { |key, value|
+        unless self.parameter_mapping.key? key
+          item.send(key.to_s+"=", value)
+        else
+          item.send(self.parameter_mapping[key].to_s+"=", value)
+        end
+      }
 
       return item
     end
 
+    # Compare this object with another slot object comparing only the
+    # values in it's attributes.
+    #
+    # @param [SabnzbdPlusModel::Slot] item
+    # @return [Boolean]
     def ==(item)
       unless(
         item.size   == self.size &&
@@ -46,8 +78,12 @@ module SabnzbdPlusModel
       return true
     end
 
-    def eql?(item)
-      return (item.class == self.class && self == item)
+    # Get the parameter mapping that maps the SABnzbd+ API parameter names to
+    # their Rubyish equivalent
+    #
+    # @return [Hash<String, Label>]
+    def self.parameter_mapping
+      return {}
     end
   end
 end

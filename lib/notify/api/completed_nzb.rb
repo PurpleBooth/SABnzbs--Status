@@ -1,4 +1,4 @@
-
+# Classes for creating an abstraction layer for notifications
 module NotifyApi
 
   # Announce that a file has been completed

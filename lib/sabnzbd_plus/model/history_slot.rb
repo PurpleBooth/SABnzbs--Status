@@ -3,57 +3,125 @@ $:.unshift File.join(File.dirname(__FILE__),'..','..','..','lib')
 require 'sabnzbd_plus/model/slot'
 require 'sabnzbd_plus/model/stage_log'
 
+# Abstraction layer for interacting with SABnzbd+
 module SabnzbdPlusModel
+  # Represents a single item in the slot field of a history
   class HistorySlot < Slot
+    # @return [String]
+    attr_accessor :action_line
 
-    attr_accessor :action_line, :show_details, :script_log, :meta
-    attr_accessor :loaded, :id, :category, :pp, :completeness, :fail_message
-    attr_accessor :nzb_name, :download_time, :storage, :script_line, :filename
-    attr_accessor :completed, :downloaded, :report, :path, :stage_log
-    attr_accessor :post_proc_time, :name, :url, :bytes, :url_info
+    # @return [String] "False"/"True"
+    attr_accessor :show_details
 
+    # @return [String]
+    attr_accessor :script_log
 
+    # @return [String]
+    attr_accessor :meta
+
+    # @return [Boolean]
+    attr_accessor :loaded
+
+    # @return [String]
+    attr_accessor :id
+
+    # @return [String]
+    attr_accessor :category
+
+    # @return [String]
+    attr_accessor :pp
+
+    # @return [Integer]
+    attr_accessor :completeness
+
+    # @return [String]
+    attr_accessor :fail_message
+
+    # @return [String]
+    attr_accessor :nzb_name
+
+    # @return [Integer]
+    attr_accessor :download_time
+
+    # @return [String]
+    attr_accessor :storage
+
+    # @return [String]
+    attr_accessor :script_line
+
+    # @return [String]
+    attr_accessor :filename
+    
+    # @return [Integer]
+    attr_accessor :completed
+    
+    # @return [Integer]
+    attr_accessor :downloaded
+
+    # @return [String]
+    attr_accessor :report
+
+    # @return [String]
+    attr_accessor :path
+
+    # @return [SabnzbdPlusModel::StageLog]
+    attr_accessor :stage_log
+
+    # @return [Integer]
+    attr_accessor :post_proc_time
+
+    # @return [String]
+    attr_accessor :name
+
+    # @return [String]
+    attr_accessor :url
+    
+    # @return [Integer]
+    attr_accessor :bytes
+
+    # @return [String]
+    attr_accessor :url_info
+
+    # Set the stage_log to an empty array
     def initialize
       self.stage_log = []
     end
 
+    # Initialize a history slot from an hash
+    #
+    # @param [Hash] slot
+    # @return [SabnzbdPlusModel::HistorySlot]
     def self.from_hash(slot)
-      item = super slot
-      
-      item.action_line     = slot["action_line"]
-      item.show_details    = slot["show_details"]
-      item.script_log      = slot["script_log"]
-      item.meta            = slot["meta"]
-      item.fail_message    = slot["fail_message"]
-      item.loaded          = slot["loaded"]
-      item.id              = slot["id"]
-      item.category        = slot["category"]
-      item.pp              = slot["pp"]
-      item.completeness    = slot["completeness"]
-      item.nzb_name        = slot["nzb_name"]
-      item.download_time   = slot["download_time"]
-      item.storage         = slot["storage"]
-      item.script_line     = slot["script_line"]
-      item.completed       = slot["completed"]
-      item.downloaded      = slot["downloaded"]
-      item.report          = slot["report"]
-      item.path            = slot["path"]
-      item.post_proc_time  = slot["postproc_time"]
-      item.name            = slot["name"]
-      item.url             = slot["url"]
-      item.bytes           = slot["bytes"]
-      item.url_info        = slot["url_info"]
-      item.filename        = slot["filename"]
+      item = super(slot)
 
-      slot["stage_log"].each { |log|
-        item.stage_log = item.stage_log << StageLog.from_hash(log)
-      } if slot.key? "stage_log"
+      if slot.key? "stage_log"
+        item.stage_log = []
+
+        slot["stage_log"].each { |log|
+          item.stage_log = item.stage_log << StageLog.from_hash(log)
+        }
+      end
 
       return item
     end
 
-    def ==(item)
+    # Get the parameter mapping that maps the SABnzbd+ API parameter names to
+    # their Rubyish equivalent
+    #
+    # @return [Hash<String, Label>]
+    def self.parameter_mapping
+      return super.merge({
+          "postproc_time" => :post_proc_time
+        })
+    end
 
+    # Compare this object with another history slot object comparing only the
+    # values in it's attributes.
+    #
+    # @see SabnzbdPlusModel::Slot#==
+    # @param [SabnzbdPlusModel::HistorySlot] item
+    # @return [Boolean]
+    def ==(item)
       unless(
         item.action_line    == self.action_line &&
         item.show_details   == self.show_details &&
@@ -85,10 +153,6 @@ module SabnzbdPlusModel
       end
 
       return super item
-    end
-
-    def eql?(item)
-      return (item.class == self.class && self == item)
     end
   end
 end

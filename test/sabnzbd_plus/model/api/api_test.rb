@@ -108,7 +108,7 @@ module SabnzbdPlusModelApi
     end
 
     def test_queue_3
-      expected = @fixture.queue(nil, nil, "3")
+      expected = @fixture.queue({:name => nil, :value=> nil, :start => "3"})
       actual = {}
 
       assert_equal(expected, actual)
@@ -122,21 +122,21 @@ module SabnzbdPlusModelApi
     end
     
     def test_history_2
-      expected = @fixture.history(nil, "2")
+      expected = @fixture.history({:name => nil, :value => "2"})
       actual = {}
 
       assert_equal(expected, actual)
     end
     
     def test_history_3
-      expected = @fixture.history(nil, nil, "3")
+      expected = @fixture.history({:name => nil, :value => nil, :start => "3"})
       actual = {}
 
       assert_equal(expected, actual)
     end
     
     def test_history_4
-      expected = @fixture.history(nil, nil, nil, "4")
+      expected = @fixture.history({:name => nil, :value => nil, :start => nil, :limit => "4"})
       actual = {}
 
       assert_equal(expected, actual)
@@ -172,13 +172,13 @@ module SabnzbdPlusModelApi
 
     def test_restart
       expected = @fixture.restart
-      actual = {}
+      actual = "ok\n"
 
       assert_equal(expected, actual)
     end
 
     def test_switch
-      expected = @fixture.switch("test 1", "test 2")
+      expected = @fixture.switch({:value => "test 1", :value => "test 2"})
       actual = {}
 
       assert_equal(expected, actual)
@@ -192,7 +192,7 @@ module SabnzbdPlusModelApi
     end
 
     def test_config
-      expected = @fixture.config("Test", "tseT")
+      expected = @fixture.config({:name => "Test", :value => "tseT"})
       actual = {}
 
       assert_equal(expected, actual)
@@ -213,126 +213,126 @@ module SabnzbdPlusModelApi
     end
 
     def test_addurl_1
-      expected = @fixture.addurl("Test 1", "Test 2")
+      expected = @fixture.addurl({:name => "Test 1", :nzbname => "Test 2"})
       actual = {}
 
       assert_equal(expected, actual)
     end
 
     def test_addurl_2
-      expected = @fixture.addurl("Test 1", "Test 2", "Test 3")
+      expected = @fixture.addurl({:name => "Test 1", :nzbname => "Test 2", :pp => "Test 3"})
       actual = {}
 
       assert_equal(expected, actual)
     end
 
     def test_addurl_3
-      expected = @fixture.addurl("Test 1", "Test 2", "Test 3", "Test 4")
+      expected = @fixture.addurl({:name => "Test 1", :nzbname => "Test 2", :pp => "Test 3", :script => "Test 4"})
       actual = {}
 
       assert_equal(expected, actual)
     end
 
     def test_addurl_4
-      expected = @fixture.addurl("Test 1", "Test 2", "Test 3", "Test 4", "Test 5")
+      expected = @fixture.addurl({:name => "Test 1", :nzbname => "Test 2", :pp => "Test 3", :script => "Test 4", :cat => "Test 5"})
       actual = {}
 
       assert_equal(expected, actual)
     end
 
     def test_addurl_5
-      expected = @fixture.addurl("Test 1", "Test 2", "Test 3", "Test 4", "Test 5", "Test 6")
+      expected = @fixture.addurl({:name => "Test 1", :nzbname => "Test 2", :pp => "Test 3", :script => "Test 4", :cat => "Test 5", :priority => "Test 6"})
       actual = {}
 
       assert_equal(expected, actual)
     end
 
     def test_addid_1
-      expected = @fixture.addid("Test 1")
+      expected = @fixture.addid({:name => "Test 1"})
       actual = {}
 
       assert_equal(expected, actual)
     end
 
     def test_addid_2
-      expected = @fixture.addid("Test 1", "Test 2")
+      expected = @fixture.addid({:name => "Test 1", :pp => "Test 2"})
       actual = {}
 
       assert_equal(expected, actual)
     end
 
     def test_addid_3
-      expected = @fixture.addid("Test 1", "Test 2", "Test 3")
+      expected = @fixture.addid({:name => "Test 1", :pp => "Test 2", :script => "Test 3"})
       actual = {}
 
       assert_equal(expected, actual)
     end
 
     def test_addid_4
-      expected = @fixture.addid("Test 1", "Test 2", "Test 3", "Test 4")
+      expected = @fixture.addid({:name => "Test 1", :pp => "Test 2", :script => "Test 3", :cat => "Test 4"})
       actual = {}
 
       assert_equal(expected, actual)
     end
 
     def test_addid_5
-      expected = @fixture.addid("Test 1", "Test 2", "Test 3", "Test 4", "Test 5")
+      expected = @fixture.addid({:name => "Test 1", :pp => "Test 2", :script => "Test 3", :cat => "Test 4", :priority => "Test 5"})
       actual = {}
 
       assert_equal(expected, actual)
     end
 
     def test_addlocalfile_1
-      expected = @fixture.addlocalfile("Test 1")
+      expected = @fixture.addlocalfile(:name => "Test 1")
       actual = {}
 
       assert_equal(expected, actual)
     end
 
     def test_addlocalfile_2
-      expected = @fixture.addlocalfile("Test 1", "Test 2")
+      expected = @fixture.addlocalfile(:name => "Test 1", :pp => "Test 2")
       actual = {}
 
       assert_equal(expected, actual)
     end
 
     def test_addlocalfile_3
-      expected = @fixture.addlocalfile("Test 1", "Test 2", "Test 3")
+      expected = @fixture.addlocalfile(:name => "Test 1", :pp => "Test 2", :script => "Test 3")
       actual = {}
 
       assert_equal(expected, actual)
     end
 
     def test_addlocalfile_4
-      expected = @fixture.addlocalfile("Test 1", "Test 2", "Test 3", "Test 4")
+      expected = @fixture.addlocalfile(:name => "Test 1", :pp => "Test 2", :script => "Test 3", :cat => "Test 4")
       actual = {}
 
       assert_equal(expected, actual)
     end
 
     def test_addlocalfile_5
-      expected = @fixture.addlocalfile("Test 1", "Test 2", "Test 3", "Test 4", "Test 5")
+      expected = @fixture.addlocalfile(:name => "Test 1", :pp => "Test 2", :script => "Test 3", :cat => "Test 4", :priority => "Test 5")
       actual = {}
 
       assert_equal(expected, actual)
     end
 
     def test_change_script
-      expected = @fixture.change_script("Test 1", "Test 2")
+      expected = @fixture.change_script({:value => "Test 1", :value2 => "Test 2"})
       actual = {}
 
       assert_equal(expected, actual)
     end
 
     def test_change_cat
-      expected = @fixture.change_cat("Test 1", "Test 2")
+      expected = @fixture.change_cat({:value => "Test 1", :value2 => "Test 2"})
       actual = {}
 
       assert_equal(expected, actual)
     end
 
     def test_change_opts
-      expected = @fixture.change_opts("Test 1", "Test 2")
+      expected = @fixture.change_opts({:value => "Test 1", :value2 => "Test 2"})
       actual = {}
 
       assert_equal(expected, actual)

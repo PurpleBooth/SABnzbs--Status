@@ -61,7 +61,6 @@ module SabnzbdPlusModel
       expected_1.nzo_id          = "Test"
       
       assert(expected_1 == expected_2)
-      assert(expected_1.eql?(expected_2))
     end
 
     def test_equal_failure_1

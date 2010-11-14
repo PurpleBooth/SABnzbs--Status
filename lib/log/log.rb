@@ -1,5 +1,6 @@
 require 'time'
 
+# Classes for writing a log
 module Log
   # Write an informative message about the state of the program to a file
   class Log

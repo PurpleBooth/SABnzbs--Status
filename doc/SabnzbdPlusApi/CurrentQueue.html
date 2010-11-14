@@ -79,7 +79,18 @@
 </dl>
 <div class="clear"></div>
 
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+Get the current items that are being processed by SABnzbd+
+</p>
 
+
+  </div>
+</div>
+<div class="tags">
+  
+</div>
 
 
   
@@ -109,7 +120,7 @@
 
   
     <span class="summary_desc"><div class='inline'><p>
-A new instance of CurrentQueue.
+Load the mapper.
 </p>
 </div></span>
   
@@ -119,7 +130,7 @@ A new instance of CurrentQueue.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#process-instance_method" title="#process (instance method)">- (Object) <strong>process</strong> </a>
+      <a href="#process-instance_method" title="#process (instance method)">- (Array&lt;Verbose&gt;) <strong>process</strong> </a>
     
 
     
@@ -132,7 +143,10 @@ A new instance of CurrentQueue.
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>
+Get the current queue.
+</p>
+</div></span>
   
 </li>
 
@@ -153,26 +167,49 @@ A new instance of CurrentQueue.
 </p><div class="docstring">
   <div class="discussion">
     <p>
-A new instance of CurrentQueue
+Load the mapper
 </p>
 
 
   </div>
 </div>
 <div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
   
+    <li>
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../SabnzbdPlusModel/Mapper.html" title="SabnzbdPlusModel::Mapper (class)">SabnzbdPlusModel::Mapper</a></span></tt>)</span>
+      
+      
+        <span class='name'>mapper</span>
+      
+      
+        <em class="default">(defaults to: <tt>SabnzbdPlusModel::Mapper.new</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>
+defaults to new SabnzbdPlusModel::Mapper
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-6
-7
-8</pre>
+10
+11
+12</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/api/current_queue.rb', line 6</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/api/current_queue.rb', line 10</span>
 
 <span class='def def kw'>def</span> <span class='initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='mapper identifier id'>mapper</span> <span class='assign token'>=</span> <span class='SabnzbdPlusModel constant id'>SabnzbdPlusModel</span><span class='colon2 op'>::</span><span class='Mapper constant id'>Mapper</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='rparen token'>)</span>
   <span class='@mapper ivar id'>@mapper</span> <span class='assign token'>=</span> <span class='mapper identifier id'>mapper</span>
@@ -193,22 +230,53 @@ A new instance of CurrentQueue
       <div class="method_details first">
   <p class="signature first" id="process-instance_method">
   
-    - (<tt>Object</tt>) <strong>process</strong> 
+    - (<tt>Array&lt;Verbose&gt;</tt>) <strong>process</strong> 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Get the current queue
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Array&lt;Verbose&gt;</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="../SabnzbdPlusModel/Mapper.html#current_queue-instance_method" title="SabnzbdPlusModel::Mapper#current_queue (method)">SabnzbdPlusModel::Mapper#current_queue</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-10
-11
-12</pre>
+18
+19
+20</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/api/current_queue.rb', line 10</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/api/current_queue.rb', line 18</span>
 
 <span class='def def kw'>def</span> <span class='process identifier id'>process</span>
   <span class='return return kw'>return</span> <span class='@mapper ivar id'>@mapper</span><span class='dot token'>.</span><span class='current_queue identifier id'>current_queue</span>
@@ -224,7 +292,7 @@ A new instance of CurrentQueue
 </div>
     
     <div id="footer">
-  Generated on Sun Nov 14 14:11:27 2010 by 
+  Generated on Sun Nov 14 23:26:43 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.8.7).
 </div>

@@ -145,7 +145,6 @@ module SabnzbdPlusModel
       fixture_2.size_left          = "Test"
 
       assert (@fixture == fixture_2)
-      assert (@fixture.eql?(fixture_2))
     end
 
     def test_compare_false_1
@@ -237,7 +236,6 @@ module SabnzbdPlusModel
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
     end
 
     def test_compare_false_2
@@ -329,7 +327,6 @@ module SabnzbdPlusModel
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
     end
 
     def test_compare_false_3
@@ -421,7 +418,7 @@ module SabnzbdPlusModel
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_compare_false_4
@@ -513,7 +510,7 @@ module SabnzbdPlusModel
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+       
     end
 
     def test_compare_false_5
@@ -605,7 +602,7 @@ module SabnzbdPlusModel
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_compare_false_6
@@ -697,7 +694,7 @@ module SabnzbdPlusModel
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_compare_false_7
@@ -789,7 +786,7 @@ module SabnzbdPlusModel
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_compare_false_8
@@ -881,7 +878,7 @@ module SabnzbdPlusModel
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_compare_false_9
@@ -973,7 +970,7 @@ module SabnzbdPlusModel
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_compare_false_10
@@ -1065,7 +1062,7 @@ module SabnzbdPlusModel
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_compare_false_11
@@ -1157,7 +1154,7 @@ module SabnzbdPlusModel
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_compare_false_12
@@ -1249,7 +1246,7 @@ module SabnzbdPlusModel
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_compare_false_13
@@ -1341,7 +1338,7 @@ module SabnzbdPlusModel
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_compare_false_14
@@ -1433,7 +1430,7 @@ module SabnzbdPlusModel
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
     
     def test_compare_false_15
@@ -1525,7 +1522,7 @@ module SabnzbdPlusModel
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_compare_false_16
@@ -1617,7 +1614,7 @@ module SabnzbdPlusModel
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_compare_false_17
@@ -1709,7 +1706,7 @@ module SabnzbdPlusModel
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_compare_false_18
@@ -1801,7 +1798,7 @@ module SabnzbdPlusModel
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_compare_false_19
@@ -1893,7 +1890,7 @@ module SabnzbdPlusModel
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_compare_false_20
@@ -1985,7 +1982,7 @@ module SabnzbdPlusModel
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_compare_false_21
@@ -2077,7 +2074,7 @@ module SabnzbdPlusModel
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_compare_false_22
@@ -2169,7 +2166,7 @@ module SabnzbdPlusModel
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_compare_false_23
@@ -2261,7 +2258,7 @@ module SabnzbdPlusModel
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_compare_false_24
@@ -2353,7 +2350,7 @@ module SabnzbdPlusModel
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_compare_false_25
@@ -2445,7 +2442,7 @@ module SabnzbdPlusModel
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_compare_false_26
@@ -2537,7 +2534,7 @@ module SabnzbdPlusModel
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 def test_compare_false_27
       @fixture.slots              = "Test"
@@ -2628,7 +2625,7 @@ def test_compare_false_27
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_compare_false_28
@@ -2720,7 +2717,7 @@ def test_compare_false_27
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_compare_false_29
@@ -2812,7 +2809,7 @@ def test_compare_false_27
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_compare_false_30
@@ -2904,7 +2901,7 @@ def test_compare_false_27
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_compare_false_31
@@ -2996,7 +2993,7 @@ def test_compare_false_27
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
   
     def test_compare_false_32
@@ -3088,7 +3085,7 @@ def test_compare_false_27
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_compare_false_33
@@ -3180,7 +3177,7 @@ def test_compare_false_27
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_compare_false_34
@@ -3272,7 +3269,7 @@ def test_compare_false_27
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_compare_false_35
@@ -3364,7 +3361,7 @@ def test_compare_false_27
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_compare_false_36
@@ -3456,7 +3453,7 @@ def test_compare_false_27
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_compare_false_37
@@ -3548,7 +3545,7 @@ def test_compare_false_27
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_compare_false_38
@@ -3640,7 +3637,7 @@ def test_compare_false_27
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_compare_false_39
@@ -3732,7 +3729,7 @@ def test_compare_false_27
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_compare_false_40
@@ -3824,7 +3821,7 @@ def test_compare_false_27
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_compare_false_41
@@ -3916,7 +3913,7 @@ def test_compare_false_27
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_compare_false_42
@@ -4008,7 +4005,7 @@ def test_compare_false_27
       fixture_2.size_left          = "Test"
 
       assert !(@fixture == fixture_2)
-      assert !(@fixture.eql?(fixture_2))
+
     end
 
     def test_from_hash

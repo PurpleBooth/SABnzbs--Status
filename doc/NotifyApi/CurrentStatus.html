@@ -79,7 +79,18 @@
 </dl>
 <div class="clear"></div>
 
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+Announce the current speed, mb left, kb per sec, and time left
+</p>
 
+
+  </div>
+</div>
+<div class="tags">
+  
+</div>
 
   <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
   <ul class="summary">
@@ -87,7 +98,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#kb_per_sec-instance_method" title="#kb_per_sec (instance method)">- (Object) <strong>kb_per_sec</strong> </a>
+      <a href="#kb_per_sec-instance_method" title="#kb_per_sec (instance method)">- (String) <strong>kb_per_sec</strong> </a>
     
 
     
@@ -104,7 +115,7 @@
 
   
     <span class="summary_desc"><div class='inline'><p>
-Returns the value of attribute kb_per_sec.
+:kb_per_sec Current speed of NZB.
 </p>
 </div></span>
   
@@ -114,7 +125,7 @@ Returns the value of attribute kb_per_sec.
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#mb-instance_method" title="#mb (instance method)">- (Object) <strong>mb</strong> </a>
+      <a href="#mb-instance_method" title="#mb (instance method)">- (String) <strong>mb</strong> </a>
     
 
     
@@ -131,7 +142,7 @@ Returns the value of attribute kb_per_sec.
 
   
     <span class="summary_desc"><div class='inline'><p>
-Returns the value of attribute mb.
+:mb Total MB of file.
 </p>
 </div></span>
   
@@ -141,7 +152,7 @@ Returns the value of attribute mb.
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#mb_left-instance_method" title="#mb_left (instance method)">- (Object) <strong>mb_left</strong> </a>
+      <a href="#mb_left-instance_method" title="#mb_left (instance method)">- (String) <strong>mb_left</strong> </a>
     
 
     
@@ -158,7 +169,7 @@ Returns the value of attribute mb.
 
   
     <span class="summary_desc"><div class='inline'><p>
-Returns the value of attribute mb_left.
+:mb_left MB left to download.
 </p>
 </div></span>
   
@@ -168,7 +179,7 @@ Returns the value of attribute mb_left.
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#name-instance_method" title="#name (instance method)">- (Object) <strong>name</strong> </a>
+      <a href="#name-instance_method" title="#name (instance method)">- (String) <strong>name</strong> </a>
     
 
     
@@ -185,7 +196,7 @@ Returns the value of attribute mb_left.
 
   
     <span class="summary_desc"><div class='inline'><p>
-Returns the value of attribute name.
+Name of the current download.
 </p>
 </div></span>
   
@@ -195,7 +206,7 @@ Returns the value of attribute name.
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#notifier-instance_method" title="#notifier (instance method)">- (Object) <strong>notifier</strong> </a>
+      <a href="#notifier-instance_method" title="#notifier (instance method)">- (NotifyLibNotify::LibNotify) <strong>notifier</strong> </a>
     
 
     
@@ -211,10 +222,7 @@ Returns the value of attribute name.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Returns the value of attribute notifier.
-</p>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -222,7 +230,7 @@ Returns the value of attribute notifier.
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#timeleft-instance_method" title="#timeleft (instance method)">- (Object) <strong>timeleft</strong> </a>
+      <a href="#timeleft-instance_method" title="#timeleft (instance method)">- (String) <strong>timeleft</strong> </a>
     
 
     
@@ -239,7 +247,7 @@ Returns the value of attribute notifier.
 
   
     <span class="summary_desc"><div class='inline'><p>
-Returns the value of attribute timeleft.
+:timeleft The time left in the download.
 </p>
 </div></span>
   
@@ -276,7 +284,7 @@ Returns the value of attribute timeleft.
 
   
     <span class="summary_desc"><div class='inline'><p>
-A new instance of CurrentStatus.
+Set the notification library to use, defaults to libnotify.
 </p>
 </div></span>
   
@@ -286,7 +294,7 @@ A new instance of CurrentStatus.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#process-instance_method" title="#process (instance method)">- (Object) <strong>process</strong> </a>
+      <a href="#process-instance_method" title="#process (instance method)">- (String) <strong>process</strong> </a>
     
 
     
@@ -299,7 +307,11 @@ A new instance of CurrentStatus.
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>
+Announce the job status with the name set in the class Returns the message
+announced.
+</p>
+</div></span>
   
 </li>
 
@@ -320,26 +332,43 @@ A new instance of CurrentStatus.
 </p><div class="docstring">
   <div class="discussion">
     <p>
-A new instance of CurrentStatus
+Set the notification library to use, defaults to libnotify
 </p>
 
 
   </div>
 </div>
 <div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
   
+    <li>
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../NotifyLibNotify/LibNotify.html" title="NotifyLibNotify::LibNotify (class)">NotifyLibNotify::LibNotify</a></span></tt>)</span>
+      
+      
+        <span class='name'>notifier</span>
+      
+      
+        <em class="default">(defaults to: <tt>NotifyLibNotify::LibNotify.new</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-7
-8
-9</pre>
+26
+27
+28</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/notify/api/current_status.rb', line 7</span>
+      <pre class="code"><span class="info file"># File 'lib/notify/api/current_status.rb', line 26</span>
 
 <span class='def def kw'>def</span> <span class='initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='notifier identifier id'>notifier</span> <span class='assign token'>=</span> <span class='NotifyLibNotify constant id'>NotifyLibNotify</span><span class='colon2 op'>::</span><span class='LibNotify constant id'>LibNotify</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='rparen token'>)</span>
   <span class='self self kw'>self</span><span class='dot token'>.</span><span class='notifier identifier id'>notifier</span> <span class='assign token'>=</span> <span class='notifier identifier id'>notifier</span>
@@ -361,33 +390,52 @@ A new instance of CurrentStatus
       <div class="method_details first">
   <p class="signature first" id="kb_per_sec-instance_method">
   
-    - (<tt>Object</tt>) <strong>kb_per_sec</strong> 
+    - (<tt>String</tt>) <strong>kb_per_sec</strong> 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
     <p>
-Returns the value of attribute kb_per_sec
+:kb_per_sec Current speed of NZB
 </p>
 
 
   </div>
 </div>
 <div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
   
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+:kb_per_sec Current speed of NZB
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-4
-5
-6</pre>
+16
+17
+18</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/notify/api/current_status.rb', line 4</span>
+      <pre class="code"><span class="info file"># File 'lib/notify/api/current_status.rb', line 16</span>
 
 <span class='def def kw'>def</span> <span class='kb_per_sec identifier id'>kb_per_sec</span>
   <span class='@kb_per_sec ivar id'>@kb_per_sec</span>
@@ -404,33 +452,52 @@ Returns the value of attribute kb_per_sec
       <div class="method_details ">
   <p class="signature " id="mb-instance_method">
   
-    - (<tt>Object</tt>) <strong>mb</strong> 
+    - (<tt>String</tt>) <strong>mb</strong> 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
     <p>
-Returns the value of attribute mb
+:mb Total MB of file
 </p>
 
 
   </div>
 </div>
 <div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
   
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+:mb Total MB of file
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-4
-5
-6</pre>
+13
+14
+15</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/notify/api/current_status.rb', line 4</span>
+      <pre class="code"><span class="info file"># File 'lib/notify/api/current_status.rb', line 13</span>
 
 <span class='def def kw'>def</span> <span class='mb identifier id'>mb</span>
   <span class='@mb ivar id'>@mb</span>
@@ -447,33 +514,52 @@ Returns the value of attribute mb
       <div class="method_details ">
   <p class="signature " id="mb_left-instance_method">
   
-    - (<tt>Object</tt>) <strong>mb_left</strong> 
+    - (<tt>String</tt>) <strong>mb_left</strong> 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
     <p>
-Returns the value of attribute mb_left
+:mb_left MB left to download
 </p>
 
 
   </div>
 </div>
 <div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
   
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+:mb_left MB left to download
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-4
-5
-6</pre>
+10
+11
+12</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/notify/api/current_status.rb', line 4</span>
+      <pre class="code"><span class="info file"># File 'lib/notify/api/current_status.rb', line 10</span>
 
 <span class='def def kw'>def</span> <span class='mb_left identifier id'>mb_left</span>
   <span class='@mb_left ivar id'>@mb_left</span>
@@ -490,33 +576,52 @@ Returns the value of attribute mb_left
       <div class="method_details ">
   <p class="signature " id="name-instance_method">
   
-    - (<tt>Object</tt>) <strong>name</strong> 
+    - (<tt>String</tt>) <strong>name</strong> 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
     <p>
-Returns the value of attribute name
+Name of the current download
 </p>
 
 
   </div>
 </div>
 <div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
   
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Name of the current download
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-4
-5
-6</pre>
+7
+8
+9</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/notify/api/current_status.rb', line 4</span>
+      <pre class="code"><span class="info file"># File 'lib/notify/api/current_status.rb', line 7</span>
 
 <span class='def def kw'>def</span> <span class='name identifier id'>name</span>
   <span class='@name ivar id'>@name</span>
@@ -533,33 +638,43 @@ Returns the value of attribute name
       <div class="method_details ">
   <p class="signature " id="notifier-instance_method">
   
-    - (<tt>Object</tt>) <strong>notifier</strong> 
+    - (<tt><span class='object_link'><a href="../NotifyLibNotify/LibNotify.html" title="NotifyLibNotify::LibNotify (class)">NotifyLibNotify::LibNotify</a></span></tt>) <strong>notifier</strong> 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Returns the value of attribute notifier
-</p>
-
+    
 
   </div>
 </div>
 <div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
   
+    <li>
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../NotifyLibNotify/LibNotify.html" title="NotifyLibNotify::LibNotify (class)">NotifyLibNotify::LibNotify</a></span></tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-5
-6
-7</pre>
+22
+23
+24</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/notify/api/current_status.rb', line 5</span>
+      <pre class="code"><span class="info file"># File 'lib/notify/api/current_status.rb', line 22</span>
 
 <span class='def def kw'>def</span> <span class='notifier identifier id'>notifier</span>
   <span class='@notifier ivar id'>@notifier</span>
@@ -576,33 +691,52 @@ Returns the value of attribute notifier
       <div class="method_details ">
   <p class="signature " id="timeleft-instance_method">
   
-    - (<tt>Object</tt>) <strong>timeleft</strong> 
+    - (<tt>String</tt>) <strong>timeleft</strong> 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
     <p>
-Returns the value of attribute timeleft
+:timeleft The time left in the download
 </p>
 
 
   </div>
 </div>
 <div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
   
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+:timeleft The time left in the download
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-4
-5
-6</pre>
+19
+20
+21</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/notify/api/current_status.rb', line 4</span>
+      <pre class="code"><span class="info file"># File 'lib/notify/api/current_status.rb', line 19</span>
 
 <span class='def def kw'>def</span> <span class='timeleft identifier id'>timeleft</span>
   <span class='@timeleft ivar id'>@timeleft</span>
@@ -623,26 +757,68 @@ Returns the value of attribute timeleft
       <div class="method_details first">
   <p class="signature first" id="process-instance_method">
   
-    - (<tt>Object</tt>) <strong>process</strong> 
+    - (<tt>String</tt>) <strong>process</strong> 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Announce the job status with the name set in the class Returns the message
+announced
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="../NotifyLibNotify/LibNotify.html#send-instance_method" title="NotifyLibNotify::LibNotify#send (method)">NotifyLibNotify::LibNotify#send</a></span></li>
+    
+      <li><span class='object_link'><a href="#name-instance_method" title="NotifyApi::CurrentStatus#name (method)">#name</a></span></li>
+    
+      <li><span class='object_link'><a href="#mb_left-instance_method" title="NotifyApi::CurrentStatus#mb_left (method)">#mb_left</a></span></li>
+    
+      <li><span class='object_link'><a href="#mb-instance_method" title="NotifyApi::CurrentStatus#mb (method)">#mb</a></span></li>
+    
+      <li><span class='object_link'><a href="#kb_per_sec-instance_method" title="NotifyApi::CurrentStatus#kb_per_sec (method)">#kb_per_sec</a></span></li>
+    
+      <li><span class='object_link'><a href="#timeleft-instance_method" title="NotifyApi::CurrentStatus#timeleft (method)">#timeleft</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-11
-12
-13
-14
-15
-16
-17</pre>
+40
+41
+42
+43
+44
+45
+46</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/notify/api/current_status.rb', line 11</span>
+      <pre class="code"><span class="info file"># File 'lib/notify/api/current_status.rb', line 40</span>
 
 <span class='def def kw'>def</span> <span class='process identifier id'>process</span>
   <span class='announce identifier id'>announce</span> <span class='assign token'>=</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='name identifier id'>name</span> <span class='plus op'>+</span> <span class='string val'>&quot; [&quot;</span><span class='plus op'>+</span><span class='self self kw'>self</span><span class='dot token'>.</span><span class='mb_left identifier id'>mb_left</span><span class='plus op'>+</span><span class='string val'>&quot;MB/&quot;</span> <span class='plus op'>+</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='mb identifier id'>mb</span> <span class='plus op'>+</span> <span class='string val'>&quot;MB @ &quot;</span><span class='plus op'>+</span><span class='self self kw'>self</span><span class='dot token'>.</span><span class='kb_per_sec identifier id'>kb_per_sec</span><span class='plus op'>+</span><span class='string val'>&quot;KB/S &quot;</span><span class='plus op'>+</span><span class='self self kw'>self</span><span class='dot token'>.</span><span class='timeleft identifier id'>timeleft</span><span class='plus op'>+</span><span class='string val'>&quot; timeleft]&quot;</span>
@@ -662,7 +838,7 @@ Returns the value of attribute timeleft
 </div>
     
     <div id="footer">
-  Generated on Sun Nov 14 14:11:21 2010 by 
+  Generated on Sun Nov 14 23:26:44 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.8.7).
 </div>

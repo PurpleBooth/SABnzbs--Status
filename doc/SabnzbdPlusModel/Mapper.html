@@ -79,7 +79,18 @@
 </dl>
 <div class="clear"></div>
 
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+Map API calls into useful data getting methods, that return objects
+</p>
 
+
+  </div>
+</div>
+<div class="tags">
+  
+</div>
 
 
   
@@ -93,7 +104,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#current_queue-instance_method" title="#current_queue (instance method)">- (Object) <strong>current_queue</strong> </a>
+      <a href="#current_queue-instance_method" title="#current_queue (instance method)">- (SabnzbdPlusModel::Queue) <strong>current_queue</strong> </a>
     
 
     
@@ -106,7 +117,10 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>
+Get the current items in the queue.
+</p>
+</div></span>
   
 </li>
 
@@ -114,7 +128,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#history-instance_method" title="#history (instance method)">- (Object) <strong>history</strong> </a>
+      <a href="#history-instance_method" title="#history (instance method)">- (SabnzbdPlusModel::History) <strong>history</strong> </a>
     
 
     
@@ -127,7 +141,10 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>
+Get the current items in the history.
+</p>
+</div></span>
   
 </li>
 
@@ -151,7 +168,7 @@
 
   
     <span class="summary_desc"><div class='inline'><p>
-A new instance of Mapper.
+Set the API.
 </p>
 </div></span>
   
@@ -174,26 +191,49 @@ A new instance of Mapper.
 </p><div class="docstring">
   <div class="discussion">
     <p>
-A new instance of Mapper
+Set the API
 </p>
 
 
   </div>
 </div>
 <div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
   
+    <li>
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../SabnzbdPlusModelApi/Api.html" title="SabnzbdPlusModelApi::Api (class)">SabnzbdPlusModelApi::Api</a></span></tt>)</span>
+      
+      
+        <span class='name'>api</span>
+      
+      
+        <em class="default">(defaults to: <tt>SabnzbdPlusModelApi::Api.new</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Defaults to new
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-11
-12
-13</pre>
+17
+18
+19</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/mapper.rb', line 11</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/mapper.rb', line 17</span>
 
 <span class='def def kw'>def</span> <span class='initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='api identifier id'>api</span> <span class='assign token'>=</span> <span class='SabnzbdPlusModelApi constant id'>SabnzbdPlusModelApi</span><span class='colon2 op'>::</span><span class='Api constant id'>Api</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='rparen token'>)</span>
   <span class='@api ivar id'>@api</span> <span class='assign token'>=</span> <span class='api identifier id'>api</span>
@@ -214,23 +254,47 @@ A new instance of Mapper
       <div class="method_details first">
   <p class="signature first" id="current_queue-instance_method">
   
-    - (<tt>Object</tt>) <strong>current_queue</strong> 
+    - (<tt><span class='object_link'><a href="Queue.html" title="SabnzbdPlusModel::Queue (class)">SabnzbdPlusModel::Queue</a></span></tt>) <strong>current_queue</strong> 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Get the current items in the queue
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Queue.html" title="SabnzbdPlusModel::Queue (class)">SabnzbdPlusModel::Queue</a></span></tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-15
-16
-17
-18</pre>
+24
+25
+26
+27</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/mapper.rb', line 15</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/mapper.rb', line 24</span>
 
 <span class='def def kw'>def</span> <span class='current_queue identifier id'>current_queue</span>
   <span class='query identifier id'>query</span> <span class='assign token'>=</span> <span class='@api ivar id'>@api</span><span class='dot token'>.</span><span class='queue identifier id'>queue</span>
@@ -245,23 +309,47 @@ A new instance of Mapper
       <div class="method_details ">
   <p class="signature " id="history-instance_method">
   
-    - (<tt>Object</tt>) <strong>history</strong> 
+    - (<tt><span class='object_link'><a href="History.html" title="SabnzbdPlusModel::History (class)">SabnzbdPlusModel::History</a></span></tt>) <strong>history</strong> 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Get the current items in the history
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><span class='object_link'><a href="History.html" title="SabnzbdPlusModel::History (class)">SabnzbdPlusModel::History</a></span></tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-20
-21
-22
-23</pre>
+32
+33
+34
+35</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/mapper.rb', line 20</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/mapper.rb', line 32</span>
 
 <span class='def def kw'>def</span> <span class='history identifier id'>history</span>
   <span class='query identifier id'>query</span> <span class='assign token'>=</span> <span class='@api ivar id'>@api</span><span class='dot token'>.</span><span class='history identifier id'>history</span>
@@ -278,7 +366,7 @@ A new instance of Mapper
 </div>
     
     <div id="footer">
-  Generated on Sun Nov 14 14:11:21 2010 by 
+  Generated on Sun Nov 14 23:26:44 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.8.7).
 </div>

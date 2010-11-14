@@ -5,7 +5,7 @@ require 'notify/api/completed_nzb'
 require 'notify/api/current_status'
 require 'notify/lib_notify/lib_notify'
 
-
+# Classes for creating an abstraction layer for notifications
 module Notify
   # Make various notifications regarding the state of SABnzbd
   class Api
@@ -47,6 +47,7 @@ module Notify
     # @option options [String] :mb Total MB of file
     # @option options [String] :kb_per_sec Current speed of NZB
     # @option options [String] :timeleft The time left in the download
+    # @see NotifyApi::CurrentStatus
     def current_status(options = {})
       self.call_method(:current_status, options)
     end
@@ -55,6 +56,7 @@ module Notify
     #
     # @param [Hash] options the options to create a announcement with
     # @option options [String] :name
+    # @see NotifyApi::AddedNzb
     def added_nzb(options = {})
       self.call_method(:added_nzb, options)
     end
@@ -64,6 +66,7 @@ module Notify
     # @param [Hash] options the options to create a announcement with
     # @option options [String] :name
     # @option options [String] :status
+    # @see NotifyApi::CompletedNzb
     def completed_nzb(options = {})
       self.call_method(:completed_nzb, options)
     end

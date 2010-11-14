@@ -2,19 +2,96 @@ $:.unshift File.expand_path(File.join(File.dirname(__FILE__),'..','..','..','lib
 
 require 'sabnzbd_plus/model/slot'
 
+# Abstraction layer for interacting with SABnzbd+
 module SabnzbdPlusModel
+  # Basic response from Queue or History requests
   class Verbose
+    # @return [String]
+    attr_accessor :cache_limit
+    # @return [String]
+    attr_accessor :paused
+    # @return [String]
+    attr_accessor :new_rel_url
+    # @return [String]
+    attr_accessor :restart_req
+    # @return [Array<SabnzbdPlusModel::Slot>]
+    attr_accessor :slots
+    # @return [String]
+    attr_accessor :help_uri
+    # @return [String]
+    attr_accessor :uptime
+    # @return [String]
+    attr_accessor :version
+    # @return [String]
+    attr_accessor :disk_space_total_2
+    # @return [String]
+    attr_accessor :color_scheme
+    # @return [String]
+    attr_accessor :darwin
+    # @return [String]
+    attr_accessor :nt
+    # @return [String]
+    attr_accessor :status
+    # @return [String]
+    attr_accessor :last_warning
+    # @return [String]
+    attr_accessor :have_warnings
+    # @return [String]
+    attr_accessor :cache_art
+    # @return [String]
+    attr_accessor :finish_action
+    # @return [String]
+    attr_accessor :no_of_slots
+    # @return [String]
+    attr_accessor :cache_size
+    # @return [String]
+    attr_accessor :new_release
+    # @return [String]
+    attr_accessor :pause_int
+    # @return [String]
+    attr_accessor :mb_left
+    # @return [String]
+    attr_accessor :disk_space_2
+    # @return [String]
+    attr_accessor :disk_space_1
+    # @return [String]
+    attr_accessor :disk_space_total_1
+    # @return [String]
+    attr_accessor :time_left
+    # @return [String]
+    attr_accessor :mb
+    # @return [String]
+    attr_accessor :eta
+    # @return [String]
+    attr_accessor :nzb_quota
+    # @return [String]
+    attr_accessor :load_avg
+    # @return [String]
+    attr_accessor :kb_per_sec
+    # @return [String]
+    attr_accessor :speed_limit
+    # @return [String]
+    attr_accessor :web_dir
+    # @return [String]
+    attr_accessor :active_lang
+    # @return [String]
+    attr_accessor :session
+    # @return [String]
+    attr_accessor :speed
+    # @return [String]
+    attr_accessor :size
+    # @return [String]
+    attr_accessor :cache_max
+    # @return [String]
+    attr_accessor :power_options
+    # @return [String]
+    attr_accessor :paused_all
+    # @return [String]
+    attr_accessor :size_left
+    # @return [String]
+    attr_accessor :is_verbose
 
-    attr_accessor :cache_limit, :paused, :new_rel_url, :restart_req, :slots
-    attr_accessor :help_uri, :uptime, :version, :disk_space_total_2
-    attr_accessor :color_scheme, :darwin, :nt, :status, :last_warning
-    attr_accessor :have_warnings, :cache_art, :finish_action, :no_of_slots
-    attr_accessor :cache_size, :new_release, :pause_int, :mb_left, :disk_space_2
-    attr_accessor :disk_space_1, :disk_space_total_1, :time_left, :mb, :eta
-    attr_accessor :nzb_quota, :load_avg, :kb_per_sec, :speed_limit, :web_dir
-    attr_accessor :active_lang, :session, :speed, :size, :cache_max
-    attr_accessor :power_options, :paused_all, :size_left, :is_verbose
-
+    # Initialise the object
     def initialize
       self.slots = []
       self.cache_limit        = nil
@@ -60,60 +137,43 @@ module SabnzbdPlusModel
       self.size_left          = nil
     end
 
+    # Set the attributes from a hash into the attributes of this object, so
+    # @example
+    #   {"total_size" => "bla"}
+    # is equivalent to 
+    # @example 
+    #   total_size = "bla"
+    #
+    # @param [Hash<String, Hash>, Hash<String, String>]
+    # @return [SabnzbdPlusModel::Verbose]
     def self.from_hash(response)
       item = self.new
-      item.cache_limit        = response["cache_limit"]
-      item.paused             = response["paused"]
-      item.new_rel_url        = response["new_rel_url"]
-      item.restart_req        = response["restart_req"]
+
+      response.each { |key, value|
+        unless self.parameter_mapping.key? key
+          item.send(key.to_s+"=", value)
+        else
+          item.send(self.parameter_mapping[key].to_s+"=", value)
+        end
+        
+      }
 
       unless response["slots"].nil?
+        item.slots = []
+
         response["slots"].each{ |slot|
           item.slots = item.slots << Slot.factory(slot)
         }
       end
 
-      item.is_verbose         = response["isverbose"]
-      item.help_uri           = response["helpuri"]
-      item.uptime             = response["uptime"]
-      item.version            = response["version"]
-      item.disk_space_total_2 = response["diskspacetotal2"]
-      item.color_scheme       = response["color_scheme"]
-      item.darwin             = response["darwin"]
-      item.nt                 = response["nt"]
-      item.status             = response["status"]
-      item.last_warning       = response["last_warning"]
-      item.have_warnings      = response["have_warnings"]
-      item.cache_art          = response["cache_art"]
-      item.finish_action      = response["finishaction"]
-      item.no_of_slots        = response["noofslots"]
-      item.cache_size         = response["cache_size"]
-      item.new_release        = response["new_release"]
-      item.pause_int          = response["pause_int"]
-      item.mb_left            = response["mbleft"]
-      item.disk_space_2       = response["diskspace2"]
-      item.disk_space_1       = response["diskspace1"]
-      item.disk_space_total_1 = response["diskspacetotal1"]
-      item.time_left          = response["timeleft"]
-      item.mb                 = response["mb"]
-      item.eta                = response["eta"]
-      item.nzb_quota          = response["nzb_quota"]
-      item.load_avg           = response["loadavg"]
-      item.kb_per_sec         = response["kbpersec"]
-      item.speed_limit        = response["speedlimit"]
-      item.web_dir            = response["webdir"]
-      item.active_lang        = response["active_lang"]
-      item.session            = response["session"]
-      item.speed              = response["speed"]
-      item.size               = response["size"]
-      item.cache_max          = response["cache_max"]
-      item.power_options      = response["power_options"]
-      item.paused_all         = response["paused_all"]
-      item.size_left          = response["sizeleft"]
-
       return item
     end
 
+    # Compare this object with another slot object comparing only the
+    # values in it's attributes.
+    #
+    # @param [SabnzbdPlusModel::Verbose] item
+    # @return [Boolean]
     def ==(item)
       unless(
         item.is_verbose         == self.is_verbose &&
@@ -165,8 +225,28 @@ module SabnzbdPlusModel
       return true
     end
 
-    def eql?(item)
-      return (item.class == self.class && self == item)
+    # Get the parameter mapping that maps the SABnzbd+ API parameter names to
+    # their Rubyish equivalent
+    #
+    # @return [Hash<String, Label>]
+    def self.parameter_mapping
+      return {
+        "isverbose"       => :is_verbose,
+        "helpuri"         => :help_uri,
+        "diskspacetotal2" => :disk_space_total_2,
+        "finishaction"    => :finish_action,
+        "noofslots"       => :no_of_slots,
+        "mbleft"          => :mb_left,
+        "diskspace2"      => :disk_space_2,
+        "diskspace1"      => :disk_space_1,
+        "diskspacetotal1" => :disk_space_total_1,
+        "timeleft"        => :time_left,
+        "loadavg"         => :load_avg,
+        "kbpersec"        => :kb_per_sec,
+        "speedlimit"      => :speed_limit,
+        "webdir"          => :web_dir,
+        "sizeleft"        => :size_left,
+      }
     end
   end
 end

@@ -4,6 +4,7 @@ $:.unshift File.join(File.expand_path(File.dirname(__FILE__)))
 require 'notify/api'
 require 'sabnzbd_plus/api'
 
+# Number of seconds to poll the API
 CHECK_EVERY_SECONDS = 60*5
 
 @api = SabnzbdPlus::Api.new

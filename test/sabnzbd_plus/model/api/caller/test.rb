@@ -43,7 +43,11 @@ module SabnzbdPlusModelApiCaller
         end
       end
 
-      return JSON.parse(fixture)
+      begin
+         return JSON.parse(fixture)
+      rescue JSON::ParserError => exception
+        return fixture
+      end
     end
   end
 end

@@ -79,7 +79,19 @@
 </dl>
 <div class="clear"></div>
 
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+Get all of the slots which are in history and that have not yet been
+announced
+</p>
 
+
+  </div>
+</div>
+<div class="tags">
+  
+</div>
 
 
   
@@ -109,7 +121,7 @@
 
   
     <span class="summary_desc"><div class='inline'><p>
-A new instance of UnannouncedComplete.
+Load the mapper, empty the list of announced nzo ids.
 </p>
 </div></span>
   
@@ -119,7 +131,7 @@ A new instance of UnannouncedComplete.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#process-instance_method" title="#process (instance method)">- (Object) <strong>process</strong> </a>
+      <a href="#process-instance_method" title="#process (instance method)">- (Array&lt;HistorySlot&gt;) <strong>process</strong> </a>
     
 
     
@@ -132,7 +144,11 @@ A new instance of UnannouncedComplete.
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>
+Get all of the slots which are in history and that have not yet been
+announced.
+</p>
+</div></span>
   
 </li>
 
@@ -153,27 +169,50 @@ A new instance of UnannouncedComplete.
 </p><div class="docstring">
   <div class="discussion">
     <p>
-A new instance of UnannouncedComplete
+Load the mapper, empty the list of announced nzo ids
 </p>
 
 
   </div>
 </div>
 <div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
   
+    <li>
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../SabnzbdPlusModel/Mapper.html" title="SabnzbdPlusModel::Mapper (class)">SabnzbdPlusModel::Mapper</a></span></tt>)</span>
+      
+      
+        <span class='name'>mapper</span>
+      
+      
+        <em class="default">(defaults to: <tt>SabnzbdPlusModel::Mapper.new</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>
+defaults to new SabnzbdPlusModel::Mapper
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-8
-9
-10
-11</pre>
+14
+15
+16
+17</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/api/unannounced_complete.rb', line 8</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/api/unannounced_complete.rb', line 14</span>
 
 <span class='def def kw'>def</span> <span class='initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='mapper identifier id'>mapper</span> <span class='assign token'>=</span> <span class='SabnzbdPlusModel constant id'>SabnzbdPlusModel</span><span class='colon2 op'>::</span><span class='Mapper constant id'>Mapper</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='rparen token'>)</span>
   <span class='@announced_nzos ivar id'>@announced_nzos</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
@@ -195,32 +234,66 @@ A new instance of UnannouncedComplete
       <div class="method_details first">
   <p class="signature first" id="process-instance_method">
   
-    - (<tt>Object</tt>) <strong>process</strong> 
+    - (<tt>Array&lt;HistorySlot&gt;</tt>) <strong>process</strong> 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Get all of the slots which are in history and that have not yet been
+announced
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Array&lt;HistorySlot&gt;</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li>SabnzbdPlusModel::Model#history</li>
+    
+      <li><span class='object_link'><a href="../SabnzbdPlusModel/HistorySlot.html" title="SabnzbdPlusModel::HistorySlot (class)">SabnzbdPlusModel::HistorySlot</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25</pre>
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/api/unannounced_complete.rb', line 13</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/api/unannounced_complete.rb', line 25</span>
 
 <span class='def def kw'>def</span> <span class='process identifier id'>process</span>
   <span class='return_array identifier id'>return_array</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
@@ -246,7 +319,7 @@ A new instance of UnannouncedComplete
 </div>
     
     <div id="footer">
-  Generated on Sun Nov 14 14:11:27 2010 by 
+  Generated on Sun Nov 14 23:26:43 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.8.7).
 </div>

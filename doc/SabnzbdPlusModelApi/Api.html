@@ -79,7 +79,18 @@
 </dl>
 <div class="clear"></div>
 
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+The SABnzbd+ API
+</p>
 
+
+  </div>
+</div>
+<div class="tags">
+  
+</div>
 
 
   
@@ -93,7 +104,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#addid-instance_method" title="#addid (instance method)">- (Object) <strong>addid</strong>(name, pp = nil, script = nil, cat = nil, priority = nil) </a>
+      <a href="#addid-instance_method" title="#addid (instance method)">- (Hash&lt;String, String&gt;, ...) <strong>addid</strong>(options = {}) </a>
     
 
     
@@ -106,7 +117,10 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>
+pp, script, cat and priority are all optional.
+</p>
+</div></span>
   
 </li>
 
@@ -114,7 +128,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#addlocalfile-instance_method" title="#addlocalfile (instance method)">- (Object) <strong>addlocalfile</strong>(name, pp = nil, script = nil, cat = nil, priority = nil) </a>
+      <a href="#addlocalfile-instance_method" title="#addlocalfile (instance method)">- (Hash&lt;String, String&gt;, ...) <strong>addlocalfile</strong>(options = {}) </a>
     
 
     
@@ -127,7 +141,14 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>
+Allows uploading of nzb/rar/zip/gz files by simply providing a local path
+(has to be accessable by the machine running SABnzbd
+</p>
+<p>
+Added in 0.3 Priority added in 0.5.
+</p>
+</div></span>
   
 </li>
 
@@ -135,7 +156,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#addurl-instance_method" title="#addurl (instance method)">- (Object) <strong>addurl</strong>(name, nzbname, pp = nil, script = nil, cat = nil, priority = nil) </a>
+      <a href="#addurl-instance_method" title="#addurl (instance method)">- (Hash&lt;String, String&gt;, ...) <strong>addurl</strong>(options = {}) </a>
     
 
     
@@ -148,7 +169,10 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>
+pp, script, cat and priority are all optional.
+</p>
+</div></span>
   
 </li>
 
@@ -156,7 +180,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#change_cat-instance_method" title="#change_cat (instance method)">- (Object) <strong>change_cat</strong>(value, value2) </a>
+      <a href="#change_cat-instance_method" title="#change_cat (instance method)">- (Hash&lt;String, String&gt;, ...) <strong>change_cat</strong>(options = {}) </a>
     
 
     
@@ -169,7 +193,10 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>
+Added in 0.4.
+</p>
+</div></span>
   
 </li>
 
@@ -177,7 +204,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#change_opts-instance_method" title="#change_opts (instance method)">- (Object) <strong>change_opts</strong>(value, value2) </a>
+      <a href="#change_opts-instance_method" title="#change_opts (instance method)">- (Hash&lt;String, String&gt;, ...) <strong>change_opts</strong>(options = {}) </a>
     
 
     
@@ -190,7 +217,10 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>
+Change value2 to control what post-processing option to use.
+</p>
+</div></span>
   
 </li>
 
@@ -198,7 +228,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#change_script-instance_method" title="#change_script (instance method)">- (Object) <strong>change_script</strong>(value, value2) </a>
+      <a href="#change_script-instance_method" title="#change_script (instance method)">- (Hash&lt;String, String&gt;, ...) <strong>change_script</strong>(options = {}) </a>
     
 
     
@@ -211,7 +241,10 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>
+Added in 0.4.
+</p>
+</div></span>
   
 </li>
 
@@ -219,7 +252,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#config-instance_method" title="#config (instance method)">- (Object) <strong>config</strong>(name, value) </a>
+      <a href="#config-instance_method" title="#config (instance method)">- (Hash&lt;String, String&gt;, ...) <strong>config</strong>(options = {}) </a>
     
 
     
@@ -232,7 +265,11 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>
+Pauses for a set amount of time (value is the time in minutes to pause the
+queue).
+</p>
+</div></span>
   
 </li>
 
@@ -240,7 +277,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_cats-instance_method" title="#get_cats (instance method)">- (Object) <strong>get_cats</strong> </a>
+      <a href="#get_cats-instance_method" title="#get_cats (instance method)">- (Hash&lt;String, String&gt;, ...) <strong>get_cats</strong> </a>
     
 
     
@@ -253,7 +290,10 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>
+Current categories.
+</p>
+</div></span>
   
 </li>
 
@@ -261,7 +301,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_files-instance_method" title="#get_files (instance method)">- (Object) <strong>get_files</strong>(value) </a>
+      <a href="#get_files-instance_method" title="#get_files (instance method)">- (Hash&lt;String, String&gt;, ...) <strong>get_files</strong>(options = {}) </a>
     
 
     
@@ -274,7 +314,10 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>
+Retrieve Contents of Queue item.
+</p>
+</div></span>
   
 </li>
 
@@ -282,7 +325,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_scripts-instance_method" title="#get_scripts (instance method)">- (Object) <strong>get_scripts</strong> </a>
+      <a href="#get_scripts-instance_method" title="#get_scripts (instance method)">- (Hash&lt;String, String&gt;, ...) <strong>get_scripts</strong> </a>
     
 
     
@@ -295,7 +338,10 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>
+Return Scripts.
+</p>
+</div></span>
   
 </li>
 
@@ -303,7 +349,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#history-instance_method" title="#history (instance method)">- (Object) <strong>history</strong>(start = nil, limit = nil, name = nil, value = nil) </a>
+      <a href="#history-instance_method" title="#history (instance method)">- (Hash&lt;String, String&gt;, ...) <strong>history</strong>(params = {}) </a>
     
 
     
@@ -316,7 +362,12 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>
+A verbose output that as well as reporting items in the queue, will report
+on finished items being processed (verify/repaired/extracted) and other
+details such as categories, scripts.
+</p>
+</div></span>
   
 </li>
 
@@ -340,7 +391,7 @@
 
   
     <span class="summary_desc"><div class='inline'><p>
-A new instance of Api.
+Set-up the Caller to use.
 </p>
 </div></span>
   
@@ -350,7 +401,7 @@ A new instance of Api.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#pause-instance_method" title="#pause (instance method)">- (Object) <strong>pause</strong> </a>
+      <a href="#pause-instance_method" title="#pause (instance method)">- (Hash&lt;String, String&gt;, ...) <strong>pause</strong> </a>
     
 
     
@@ -363,7 +414,11 @@ A new instance of Api.
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>
+Pauses the whole queue (do not confuse this will pausing an individual
+download, this is a global pause).
+</p>
+</div></span>
   
 </li>
 
@@ -371,7 +426,7 @@ A new instance of Api.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#qstatus-instance_method" title="#qstatus (instance method)">- (Object) <strong>qstatus</strong> </a>
+      <a href="#qstatus-instance_method" title="#qstatus (instance method)">- (Hash&lt;String, String&gt;, ...) <strong>qstatus</strong> </a>
     
 
     
@@ -384,7 +439,11 @@ A new instance of Api.
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>
+Depreciated now by the advanced queue output, this is the old api that just
+provides limited details on the current queue and state of sabnzbd.
+</p>
+</div></span>
   
 </li>
 
@@ -392,7 +451,7 @@ A new instance of Api.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#queue-instance_method" title="#queue (instance method)">- (Object) <strong>queue</strong>(name = nil, value = nil, value2 = nil) </a>
+      <a href="#queue-instance_method" title="#queue (instance method)">- (Hash&lt;String, String&gt;, ...) <strong>queue</strong>(options = {}) </a>
     
 
     
@@ -405,7 +464,12 @@ A new instance of Api.
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>
+A verbose output that as well as reporting items in the queue, will report
+on finished items being processed (verify/repaired/extracted) and other
+details such as categories, scripts.
+</p>
+</div></span>
   
 </li>
 
@@ -413,7 +477,7 @@ A new instance of Api.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#restart-instance_method" title="#restart (instance method)">- (Object) <strong>restart</strong> </a>
+      <a href="#restart-instance_method" title="#restart (instance method)">- (Hash&lt;String, String&gt;, ...) <strong>restart</strong> </a>
     
 
     
@@ -426,7 +490,10 @@ A new instance of Api.
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>
+Restart SABnzbd.
+</p>
+</div></span>
   
 </li>
 
@@ -434,7 +501,7 @@ A new instance of Api.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#resume-instance_method" title="#resume (instance method)">- (Object) <strong>resume</strong> </a>
+      <a href="#resume-instance_method" title="#resume (instance method)">- (Hash&lt;String, String&gt;, ...) <strong>resume</strong> </a>
     
 
     
@@ -447,7 +514,12 @@ A new instance of Api.
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>
+Resumes the whole queue (do not confuse this will resuming an individual
+download, this is a global resume)Resumes the whole queue (do not confuse
+this will resuming an individual download, this is a global resume).
+</p>
+</div></span>
   
 </li>
 
@@ -455,7 +527,7 @@ A new instance of Api.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#retry-instance_method" title="#retry (instance method)">- (Object) <strong>retry</strong>(value) </a>
+      <a href="#retry-instance_method" title="#retry (instance method)">- (Hash&lt;String, String&gt;, ...) <strong>retry</strong>(options = {}) </a>
     
 
     
@@ -468,7 +540,10 @@ A new instance of Api.
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>
+Added in 0.6.0 Retry a single item.
+</p>
+</div></span>
   
 </li>
 
@@ -476,7 +551,7 @@ A new instance of Api.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#shutdown-instance_method" title="#shutdown (instance method)">- (Object) <strong>shutdown</strong> </a>
+      <a href="#shutdown-instance_method" title="#shutdown (instance method)">- (Hash&lt;String, String&gt;, ...) <strong>shutdown</strong> </a>
     
 
     
@@ -489,7 +564,10 @@ A new instance of Api.
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>
+Shuts down SABnzbd.
+</p>
+</div></span>
   
 </li>
 
@@ -497,7 +575,7 @@ A new instance of Api.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#switch-instance_method" title="#switch (instance method)">- (Object) <strong>switch</strong>(value, value2) </a>
+      <a href="#switch-instance_method" title="#switch (instance method)">- (Hash&lt;String, String&gt;, ...) <strong>switch</strong>(options = {}) </a>
     
 
     
@@ -510,7 +588,10 @@ A new instance of Api.
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>
+Moving two items.
+</p>
+</div></span>
   
 </li>
 
@@ -518,7 +599,7 @@ A new instance of Api.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#version-instance_method" title="#version (instance method)">- (Object) <strong>version</strong> </a>
+      <a href="#version-instance_method" title="#version (instance method)">- (Hash&lt;String, String&gt;, ...) <strong>version</strong> </a>
     
 
     
@@ -531,7 +612,10 @@ A new instance of Api.
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>
+Get the version.
+</p>
+</div></span>
   
 </li>
 
@@ -539,7 +623,7 @@ A new instance of Api.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#warnings-instance_method" title="#warnings (instance method)">- (Object) <strong>warnings</strong> </a>
+      <a href="#warnings-instance_method" title="#warnings (instance method)">- (Hash&lt;String, String&gt;, ...) <strong>warnings</strong> </a>
     
 
     
@@ -552,7 +636,10 @@ A new instance of Api.
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>
+Current warnings.
+</p>
+</div></span>
   
 </li>
 
@@ -573,26 +660,43 @@ A new instance of Api.
 </p><div class="docstring">
   <div class="discussion">
     <p>
-A new instance of Api
+Set-up the Caller to use. Defaults to the HttpJson Caller
 </p>
 
 
   </div>
 </div>
 <div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
   
+    <li>
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../SabnzbdPlusModelApiCaller/HttpJson.html" title="SabnzbdPlusModelApiCaller::HttpJson (class)">SabnzbdPlusModelApiCaller::HttpJson</a></span></tt>)</span>
+      
+      
+        <span class='name'>caller</span>
+      
+      
+        <em class="default">(defaults to: <tt>SabnzbdPlusModelApiCaller::HttpJson.new</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-7
-8
-9</pre>
+12
+13
+14</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 7</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 12</span>
 
 <span class='def def kw'>def</span> <span class='initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='caller identifier id'>caller</span> <span class='assign token'>=</span> <span class='SabnzbdPlusModelApiCaller constant id'>SabnzbdPlusModelApiCaller</span><span class='colon2 op'>::</span><span class='HttpJson constant id'>HttpJson</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='rparen token'>)</span>
   <span class='@caller ivar id'>@caller</span> <span class='assign token'>=</span> <span class='caller identifier id'>caller</span>
@@ -613,39 +717,157 @@ A new instance of Api
       <div class="method_details first">
   <p class="signature first" id="addid-instance_method">
   
-    - (<tt>Object</tt>) <strong>addid</strong>(name, pp = nil, script = nil, cat = nil, priority = nil) 
+    - (<tt>Hash&lt;String, String&gt;</tt>, ...) <strong>addid</strong>(options = {}) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+pp, script, cat and priority are all optional. This example will retrieve
+the newzbin post &quot;33333&quot; and instert it at low priority in the
+queue, assigned with a categoriy of &quot;Example&quot;, to execute
+&quot;customscript.cmd&quot; once
+</p>
+<pre class="code">
+ <span class='finished identifier id'>finished</span><span class='comma token'>,</span> <span class='and and kw'>and</span> <span class='with identifier id'>with</span> <span class='the identifier id'>the</span> <span class='unpacking identifier id'>unpacking</span> <span class='option identifier id'>option</span> <span class='integer val'>3</span> <span class='lparen token'>(</span><span class='Repair constant id'>Repair</span><span class='comma token'>,</span> <span class='Unpack constant id'>Unpack</span> <span class='and and kw'>and</span> <span class='Delete constant id'>Delete</span><span class='rparen token'>)</span>
+</pre>
+<p>
+Added in 0.3 Priority added in 0.5
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'><p>
+Full
+</p>
+</div></h4>
+      <pre class="example code"><span class='addid identifier id'>addid</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='symbol val'>:name=</span><span class='gt op'>&gt;</span><span class='integer val'>333333</span><span class='comma token'>,</span> <span class='symbol val'>:pp=</span><span class='gt op'>&gt;</span> <span class='integer val'>3</span><span class='comma token'>,</span> <span class='symbol val'>:script=</span><span class='gt op'>&gt;</span><span class='string val'>&quot;customscript.cmd&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:cat=</span><span class='gt op'>&gt;</span><span class='string val'>&quot;Example&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:priority=</span><span class='gt op'>&gt;</span><span class='integer val'>-1</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>options</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the options to make the call with.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <h3>Options Hash (<tt>options</tt>):</h3>
+    <ul class="option">
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:name</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:pp</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:script</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:cat</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:priority</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+    </ul>
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash&lt;String, String&gt;</tt>, <tt>Hash&lt;String, Boolean&gt;</tt>, <tt>Hash&lt;String, Integer&gt;</tt>, <tt>Hash&lt;String, Hash&gt;</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-94
-95
-96
-97
-98
-99
-100
-101
-102
-103</pre>
+476
+477
+478</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 94</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 476</span>
 
-<span class='def def kw'>def</span> <span class='addid identifier id'>addid</span><span class='lparen token'>(</span><span class='name identifier id'>name</span><span class='comma token'>,</span> <span class='pp identifier id'>pp</span> <span class='assign token'>=</span> <span class='nil nil kw'>nil</span><span class='comma token'>,</span> <span class='script identifier id'>script</span> <span class='assign token'>=</span> <span class='nil nil kw'>nil</span><span class='comma token'>,</span> <span class='cat identifier id'>cat</span> <span class='assign token'>=</span> <span class='nil nil kw'>nil</span><span class='comma token'>,</span> <span class='priority identifier id'>priority</span> <span class='assign token'>=</span> <span class='nil nil kw'>nil</span><span class='rparen token'>)</span>
-  <span class='params identifier id'>params</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
-  <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:name</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='name identifier id'>name</span>
-  <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:pp</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='pp identifier id'>pp</span> <span class='unless unless_mod kw'>unless</span> <span class='pp identifier id'>pp</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
-  <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:script</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='script identifier id'>script</span> <span class='unless unless_mod kw'>unless</span> <span class='script identifier id'>script</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
-  <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:cat</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='cat identifier id'>cat</span> <span class='unless unless_mod kw'>unless</span> <span class='cat identifier id'>cat</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
-  <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:priority</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='priority identifier id'>priority</span> <span class='unless unless_mod kw'>unless</span> <span class='priority identifier id'>priority</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
-
-  <span class='return return kw'>return</span> <span class='@caller ivar id'>@caller</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='string val'>&quot;addid&quot;</span><span class='comma token'>,</span> <span class='params identifier id'>params</span><span class='rparen token'>)</span>
+<span class='def def kw'>def</span> <span class='addid identifier id'>addid</span><span class='lparen token'>(</span><span class='options identifier id'>options</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='return return kw'>return</span> <span class='@caller ivar id'>@caller</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='string val'>&quot;addid&quot;</span><span class='comma token'>,</span> <span class='options identifier id'>options</span><span class='rparen token'>)</span>
 <span class='end end kw'>end</span>
 </pre>
     </td>
@@ -656,39 +878,152 @@ A new instance of Api
       <div class="method_details ">
   <p class="signature " id="addlocalfile-instance_method">
   
-    - (<tt>Object</tt>) <strong>addlocalfile</strong>(name, pp = nil, script = nil, cat = nil, priority = nil) 
+    - (<tt>Hash&lt;String, String&gt;</tt>, ...) <strong>addlocalfile</strong>(options = {}) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Allows uploading of nzb/rar/zip/gz files by simply providing a local path
+(has to be accessable by the machine running SABnzbd
+</p>
+<p>
+Added in 0.3 Priority added in 0.5
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'><p>
+Example
+</p>
+</div></h4>
+      <pre class="example code"><span class='addlocalfile identifier id'>addlocalfile</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='symbol val'>:name=</span><span class='gt op'>&gt;</span><span class='string val'>&quot;full/local/path/to/file.ext&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:pp=</span><span class='gt op'>&gt;</span> <span class='integer val'>1</span><span class='comma token'>,</span> <span class='symbol val'>:script=</span><span class='gt op'>&gt;</span><span class='string val'>&quot;script.cmd&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:priority=</span><span class='gt op'>&gt;</span><span class='integer val'>-1</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>options</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the options to make the call with.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <h3>Options Hash (<tt>options</tt>):</h3>
+    <ul class="option">
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:name</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:pp</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:script</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:cat</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:priority</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+    </ul>
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash&lt;String, String&gt;</tt>, <tt>Hash&lt;String, Boolean&gt;</tt>, <tt>Hash&lt;String, Integer&gt;</tt>, <tt>Hash&lt;String, Hash&gt;</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-105
-106
-107
-108
-109
-110
-111
-112
-113
-114</pre>
+497
+498
+499</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 105</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 497</span>
 
-<span class='def def kw'>def</span> <span class='addlocalfile identifier id'>addlocalfile</span><span class='lparen token'>(</span><span class='name identifier id'>name</span><span class='comma token'>,</span> <span class='pp identifier id'>pp</span> <span class='assign token'>=</span> <span class='nil nil kw'>nil</span><span class='comma token'>,</span> <span class='script identifier id'>script</span> <span class='assign token'>=</span> <span class='nil nil kw'>nil</span><span class='comma token'>,</span> <span class='cat identifier id'>cat</span> <span class='assign token'>=</span> <span class='nil nil kw'>nil</span><span class='comma token'>,</span> <span class='priority identifier id'>priority</span> <span class='assign token'>=</span> <span class='nil nil kw'>nil</span><span class='rparen token'>)</span>
-  <span class='params identifier id'>params</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
-  <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:name</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='name identifier id'>name</span>
-  <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:pp</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='pp identifier id'>pp</span> <span class='unless unless_mod kw'>unless</span> <span class='pp identifier id'>pp</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
-  <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:script</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='script identifier id'>script</span> <span class='unless unless_mod kw'>unless</span> <span class='script identifier id'>script</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
-  <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:cat</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='cat identifier id'>cat</span> <span class='unless unless_mod kw'>unless</span> <span class='cat identifier id'>cat</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
-  <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:priority</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='priority identifier id'>priority</span> <span class='unless unless_mod kw'>unless</span> <span class='priority identifier id'>priority</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
-
-  <span class='return return kw'>return</span> <span class='@caller ivar id'>@caller</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='string val'>&quot;addlocalfile&quot;</span><span class='comma token'>,</span> <span class='params identifier id'>params</span><span class='rparen token'>)</span>
+<span class='def def kw'>def</span> <span class='addlocalfile identifier id'>addlocalfile</span><span class='lparen token'>(</span><span class='options identifier id'>options</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='return return kw'>return</span> <span class='@caller ivar id'>@caller</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='string val'>&quot;addlocalfile&quot;</span><span class='comma token'>,</span> <span class='options identifier id'>options</span><span class='rparen token'>)</span>
 <span class='end end kw'>end</span>
 </pre>
     </td>
@@ -699,41 +1034,175 @@ A new instance of Api
       <div class="method_details ">
   <p class="signature " id="addurl-instance_method">
   
-    - (<tt>Object</tt>) <strong>addurl</strong>(name, nzbname, pp = nil, script = nil, cat = nil, priority = nil) 
+    - (<tt>Hash&lt;String, String&gt;</tt>, ...) <strong>addurl</strong>(options = {}) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+pp, script, cat and priority are all optional. This example adds the nzb
+into the queue marked as low priority, assigned with a categoriy of
+&quot;Example&quot;, to execute &quot;customscript.cmd&quot; once finished,
+and with the unpacking option 3 (Repair, Unpack and Delete)
+</p>
+<p>
+Allows full newzbin and nzbmatrix links (no need to parse out the ID).
+</p>
+<p>
+Added in 0.3 Priority added in 0.5
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'><p>
+Shortest
+</p>
+</div></h4>
+      <pre class="example code"><span class='addurl identifier id'>addurl</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='symbol val'>:name</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;http://www.example.com/example.nzb&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:nzbname=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;NiceName&quot;</span> <span class='rbrace token'>}</span><span class='rparen token'>)</span>
+</pre>
+    
+      <h4><div class='inline'><p>
+Full
+</p>
+</div></h4>
+      <pre class="example code"><span class='addurl identifier id'>addurl</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='symbol val'>:name=</span><span class='gt op'>&gt;</span><span class='string val'>&quot;http://www.example.com/example.nzb&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:pp=</span><span class='gt op'>&gt;</span> <span class='integer val'>3</span><span class='comma token'>,</span> <span class='symbol val'>:script=</span><span class='gt op'>&gt;</span><span class='string val'>&quot;customscript.cmd&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:cat=</span><span class='gt op'>&gt;</span><span class='string val'>&quot;Example&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:priority=</span><span class='gt op'>&gt;</span><span class='integer val'>-1</span><span class='comma token'>,</span> <span class='symbol val'>:nzbname=</span><span class='gt op'>&gt;</span><span class='string val'>&quot;NiceName&quot;</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>options</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the options to make the call with.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <h3>Options Hash (<tt>options</tt>):</h3>
+    <ul class="option">
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:name</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:nzbname</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:pp</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:script</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:cat</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:priority</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+    </ul>
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash&lt;String, String&gt;</tt>, <tt>Hash&lt;String, Boolean&gt;</tt>, <tt>Hash&lt;String, Integer&gt;</tt>, <tt>Hash&lt;String, Hash&gt;</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-82
-83
-84
-85
-86
-87
-88
-89
-90
-91
-92</pre>
+453
+454
+455</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 82</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 453</span>
 
-<span class='def def kw'>def</span> <span class='addurl identifier id'>addurl</span><span class='lparen token'>(</span><span class='name identifier id'>name</span><span class='comma token'>,</span> <span class='nzbname identifier id'>nzbname</span><span class='comma token'>,</span> <span class='pp identifier id'>pp</span> <span class='assign token'>=</span> <span class='nil nil kw'>nil</span><span class='comma token'>,</span> <span class='script identifier id'>script</span> <span class='assign token'>=</span> <span class='nil nil kw'>nil</span><span class='comma token'>,</span> <span class='cat identifier id'>cat</span> <span class='assign token'>=</span> <span class='nil nil kw'>nil</span><span class='comma token'>,</span> <span class='priority identifier id'>priority</span> <span class='assign token'>=</span> <span class='nil nil kw'>nil</span><span class='rparen token'>)</span>
-  <span class='params identifier id'>params</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
-  <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:name</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='name identifier id'>name</span>
-  <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:nzbname</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='nzbname identifier id'>nzbname</span>
-  <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:pp</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='pp identifier id'>pp</span> <span class='unless unless_mod kw'>unless</span> <span class='pp identifier id'>pp</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
-  <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:script</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='script identifier id'>script</span> <span class='unless unless_mod kw'>unless</span> <span class='script identifier id'>script</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
-  <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:cat</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='cat identifier id'>cat</span> <span class='unless unless_mod kw'>unless</span> <span class='cat identifier id'>cat</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
-  <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:priority</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='priority identifier id'>priority</span> <span class='unless unless_mod kw'>unless</span> <span class='priority identifier id'>priority</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
-
-  <span class='return return kw'>return</span> <span class='@caller ivar id'>@caller</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='string val'>&quot;addurl&quot;</span><span class='comma token'>,</span> <span class='params identifier id'>params</span><span class='rparen token'>)</span>
+<span class='def def kw'>def</span> <span class='addurl identifier id'>addurl</span><span class='lparen token'>(</span><span class='options identifier id'>options</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='return return kw'>return</span> <span class='@caller ivar id'>@caller</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='string val'>&quot;addurl&quot;</span><span class='comma token'>,</span> <span class='options identifier id'>options</span><span class='rparen token'>)</span>
 <span class='end end kw'>end</span>
 </pre>
     </td>
@@ -744,33 +1213,115 @@ A new instance of Api
       <div class="method_details ">
   <p class="signature " id="change_cat-instance_method">
   
-    - (<tt>Object</tt>) <strong>change_cat</strong>(value, value2) 
+    - (<tt>Hash&lt;String, String&gt;</tt>, ...) <strong>change_cat</strong>(options = {}) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Added in 0.4
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'><p>
+Example
+</p>
+</div></h4>
+      <pre class="example code"><span class='change_cat identifier id'>change_cat</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='symbol val'>:value=</span><span class='gt op'>&gt;</span><span class='string val'>&quot;SABnzbd_nzo_zt2syz&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:value2=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;Example&quot;</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>options</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the options to make the call with.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <h3>Options Hash (<tt>options</tt>):</h3>
+    <ul class="option">
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:value</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:value2</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+    </ul>
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash&lt;String, String&gt;</tt>, <tt>Hash&lt;String, Boolean&gt;</tt>, <tt>Hash&lt;String, Integer&gt;</tt>, <tt>Hash&lt;String, Hash&gt;</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-124
-125
-126
-127
-128
-129
-130</pre>
+525
+526
+527</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 124</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 525</span>
 
-<span class='def def kw'>def</span> <span class='change_cat identifier id'>change_cat</span><span class='lparen token'>(</span><span class='value identifier id'>value</span><span class='comma token'>,</span> <span class='value2 identifier id'>value2</span><span class='rparen token'>)</span>
-  <span class='params identifier id'>params</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
-  <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:value</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='value identifier id'>value</span> <span class='unless unless_mod kw'>unless</span> <span class='value identifier id'>value</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
-  <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:value2</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='value2 identifier id'>value2</span> <span class='unless unless_mod kw'>unless</span> <span class='value2 identifier id'>value2</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
-
-  <span class='return return kw'>return</span> <span class='@caller ivar id'>@caller</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='string val'>&quot;change_cat&quot;</span><span class='comma token'>,</span> <span class='params identifier id'>params</span><span class='rparen token'>)</span>
+<span class='def def kw'>def</span> <span class='change_cat identifier id'>change_cat</span><span class='lparen token'>(</span><span class='options identifier id'>options</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='return return kw'>return</span> <span class='@caller ivar id'>@caller</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='string val'>&quot;change_cat&quot;</span><span class='comma token'>,</span> <span class='options identifier id'>options</span><span class='rparen token'>)</span>
 <span class='end end kw'>end</span>
 </pre>
     </td>
@@ -781,33 +1332,121 @@ A new instance of Api
       <div class="method_details ">
   <p class="signature " id="change_opts-instance_method">
   
-    - (<tt>Object</tt>) <strong>change_opts</strong>(value, value2) 
+    - (<tt>Hash&lt;String, String&gt;</tt>, ...) <strong>change_opts</strong>(options = {}) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Change value2 to control what post-processing option to use
+</p>
+<p>
+Added in 0.5
+</p>
+<p>
+Skip: 0 Repair: 1 Repair/Unpack: 2 Repair/Unpack/Delete: 3
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'><p>
+Example
+</p>
+</div></h4>
+      <pre class="example code"><span class='change_opts identifier id'>change_opts</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='symbol val'>:value=</span><span class='gt op'>&gt;</span><span class='string val'>&quot;SABnzbd_nzo_zt2syz&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:value2=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>options</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the options to make the call with.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <h3>Options Hash (<tt>options</tt>):</h3>
+    <ul class="option">
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:value</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:value2</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+    </ul>
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash&lt;String, String&gt;</tt>, <tt>Hash&lt;String, Boolean&gt;</tt>, <tt>Hash&lt;String, Integer&gt;</tt>, <tt>Hash&lt;String, Hash&gt;</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-132
-133
-134
-135
-136
-137
-138</pre>
+546
+547
+548</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 132</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 546</span>
 
-<span class='def def kw'>def</span> <span class='change_opts identifier id'>change_opts</span><span class='lparen token'>(</span><span class='value identifier id'>value</span><span class='comma token'>,</span> <span class='value2 identifier id'>value2</span><span class='rparen token'>)</span>
-  <span class='params identifier id'>params</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
-  <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:value</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='value identifier id'>value</span> <span class='unless unless_mod kw'>unless</span> <span class='value identifier id'>value</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
-  <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:value2</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='value2 identifier id'>value2</span> <span class='unless unless_mod kw'>unless</span> <span class='value2 identifier id'>value2</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
-
-  <span class='return return kw'>return</span> <span class='@caller ivar id'>@caller</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='string val'>&quot;change_opts&quot;</span><span class='comma token'>,</span> <span class='params identifier id'>params</span><span class='rparen token'>)</span>
+<span class='def def kw'>def</span> <span class='change_opts identifier id'>change_opts</span><span class='lparen token'>(</span><span class='options identifier id'>options</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='return return kw'>return</span> <span class='@caller ivar id'>@caller</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='string val'>&quot;change_opts&quot;</span><span class='comma token'>,</span> <span class='options identifier id'>options</span><span class='rparen token'>)</span>
 <span class='end end kw'>end</span>
 </pre>
     </td>
@@ -818,33 +1457,115 @@ A new instance of Api
       <div class="method_details ">
   <p class="signature " id="change_script-instance_method">
   
-    - (<tt>Object</tt>) <strong>change_script</strong>(value, value2) 
+    - (<tt>Hash&lt;String, String&gt;</tt>, ...) <strong>change_script</strong>(options = {}) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Added in 0.4
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'><p>
+Example
+</p>
+</div></h4>
+      <pre class="example code"><span class='change_script identifier id'>change_script</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='symbol val'>:value=</span><span class='gt op'>&gt;</span><span class='string val'>&quot;SABnzbd_nzo_zt2syz&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:value2=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;examplescript.cmd&quot;</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>options</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the options to make the call with.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <h3>Options Hash (<tt>options</tt>):</h3>
+    <ul class="option">
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:value</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:value2</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+    </ul>
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash&lt;String, String&gt;</tt>, <tt>Hash&lt;String, Boolean&gt;</tt>, <tt>Hash&lt;String, Integer&gt;</tt>, <tt>Hash&lt;String, Hash&gt;</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-116
-117
-118
-119
-120
-121
-122</pre>
+511
+512
+513</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 116</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 511</span>
 
-<span class='def def kw'>def</span> <span class='change_script identifier id'>change_script</span><span class='lparen token'>(</span><span class='value identifier id'>value</span><span class='comma token'>,</span> <span class='value2 identifier id'>value2</span><span class='rparen token'>)</span>
-  <span class='params identifier id'>params</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
-  <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:value</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='value identifier id'>value</span> <span class='unless unless_mod kw'>unless</span> <span class='value identifier id'>value</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
-  <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:value2</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='value2 identifier id'>value2</span> <span class='unless unless_mod kw'>unless</span> <span class='value2 identifier id'>value2</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
-
-  <span class='return return kw'>return</span> <span class='@caller ivar id'>@caller</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='string val'>&quot;change_script&quot;</span><span class='comma token'>,</span> <span class='params identifier id'>params</span><span class='rparen token'>)</span>
+<span class='def def kw'>def</span> <span class='change_script identifier id'>change_script</span><span class='lparen token'>(</span><span class='options identifier id'>options</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='return return kw'>return</span> <span class='@caller ivar id'>@caller</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='string val'>&quot;change_script&quot;</span><span class='comma token'>,</span> <span class='options identifier id'>options</span><span class='rparen token'>)</span>
 <span class='end end kw'>end</span>
 </pre>
     </td>
@@ -855,33 +1576,136 @@ A new instance of Api
       <div class="method_details ">
   <p class="signature " id="config-instance_method">
   
-    - (<tt>Object</tt>) <strong>config</strong>(name, value) 
+    - (<tt>Hash&lt;String, String&gt;</tt>, ...) <strong>config</strong>(options = {}) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Pauses for a set amount of time (value is the time in minutes to pause the
+queue)
+</p>
+<p>
+Added in 0.5
+</p>
+<p>
+Returns the new API Key
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'><p>
+Temporary Pause
+</p>
+</div></h4>
+      <pre class="example code"><span class='config identifier id'>config</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='symbol val'>:name</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;set_pause&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:value</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>60</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+</pre>
+    
+      <h4><div class='inline'><p>
+Set Download Speed limit
+</p>
+</div></h4>
+      <pre class="example code"><span class='config identifier id'>config</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='symbol val'>:name</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;speedlimit&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:value</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>400</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+</pre>
+    
+      <h4><div class='inline'><p>
+Regenerate new API Key
+</p>
+</div></h4>
+      <pre class="example code"><span class='config identifier id'>config</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='symbol val'>:name</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;set_apikey&quot;</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>options</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the options to make the call with.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <h3>Options Hash (<tt>options</tt>):</h3>
+    <ul class="option">
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:name</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:value</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+    </ul>
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash&lt;String, String&gt;</tt>, <tt>Hash&lt;String, Boolean&gt;</tt>, <tt>Hash&lt;String, Integer&gt;</tt>, <tt>Hash&lt;String, Hash&gt;</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-66
-67
-68
-69
-70
-71
-72</pre>
+405
+406
+407</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 66</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 405</span>
 
-<span class='def def kw'>def</span> <span class='config identifier id'>config</span><span class='lparen token'>(</span><span class='name identifier id'>name</span><span class='comma token'>,</span> <span class='value identifier id'>value</span><span class='rparen token'>)</span>
-  <span class='params identifier id'>params</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
-  <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:name</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='name identifier id'>name</span>
-  <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:value</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='value identifier id'>value</span>
-
-  <span class='return return kw'>return</span> <span class='@caller ivar id'>@caller</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='string val'>&quot;config&quot;</span><span class='comma token'>,</span> <span class='params identifier id'>params</span><span class='rparen token'>)</span>
+<span class='def def kw'>def</span> <span class='config identifier id'>config</span><span class='lparen token'>(</span><span class='options identifier id'>options</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='return return kw'>return</span> <span class='@caller ivar id'>@caller</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='string val'>&quot;config&quot;</span><span class='comma token'>,</span> <span class='options identifier id'>options</span><span class='rparen token'>)</span>
 <span class='end end kw'>end</span>
 </pre>
     </td>
@@ -892,22 +1716,61 @@ A new instance of Api
       <div class="method_details ">
   <p class="signature " id="get_cats-instance_method">
   
-    - (<tt>Object</tt>) <strong>get_cats</strong> 
+    - (<tt>Hash&lt;String, String&gt;</tt>, ...) <strong>get_cats</strong> 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Current categories
+</p>
+<p>
+Added in 0.4
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'><p>
+Example Return Data
+</p>
+</div></h4>
+      <pre class="example code"><span class='lbrace token'>{</span><span class='string val'>&quot;categories&quot;</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='lbrack token'>[</span><span class='string val'>&quot;None&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;Video&quot;</span><span class='rbrack token'>]</span><span class='rbrace token'>}</span>
+</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash&lt;String, String&gt;</tt>, <tt>Hash&lt;String, Boolean&gt;</tt>, <tt>Hash&lt;String, Integer&gt;</tt>, <tt>Hash&lt;String, Hash&gt;</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-42
-43
-44</pre>
+323
+324
+325</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 323</span>
 
 <span class='def def kw'>def</span> <span class='get_cats identifier id'>get_cats</span>
   <span class='return return kw'>return</span> <span class='@caller ivar id'>@caller</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='string val'>&quot;get_cats&quot;</span><span class='comma token'>,</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
@@ -921,31 +1784,107 @@ A new instance of Api
       <div class="method_details ">
   <p class="signature " id="get_files-instance_method">
   
-    - (<tt>Object</tt>) <strong>get_files</strong>(value) 
+    - (<tt>Hash&lt;String, String&gt;</tt>, ...) <strong>get_files</strong>(options = {}) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Retrieve Contents of Queue item
+</p>
+<p>
+Added in 0.5
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'><p>
+Example
+</p>
+</div></h4>
+      <pre class="example code"><span class='get_files identifier id'>get_files</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='symbol val'>:value=</span><span class='gt op'>&gt;</span><span class='string val'>&quot;SABnzbd_nzo_zt2syz&quot;</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>options</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the options to make the call with.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <h3>Options Hash (<tt>options</tt>):</h3>
+    <ul class="option">
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:value</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+    </ul>
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash&lt;String, String&gt;</tt>, <tt>Hash&lt;String, Boolean&gt;</tt>, <tt>Hash&lt;String, Integer&gt;</tt>, <tt>Hash&lt;String, Hash&gt;</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-140
-141
-142
-143
-144
-145</pre>
+561
+562
+563</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 140</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 561</span>
 
-<span class='def def kw'>def</span> <span class='get_files identifier id'>get_files</span><span class='lparen token'>(</span><span class='value identifier id'>value</span><span class='rparen token'>)</span>
-  <span class='params identifier id'>params</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
-  <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:value</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='value identifier id'>value</span> <span class='unless unless_mod kw'>unless</span> <span class='value identifier id'>value</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
-
-  <span class='return return kw'>return</span> <span class='@caller ivar id'>@caller</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='string val'>&quot;get_files&quot;</span><span class='comma token'>,</span> <span class='params identifier id'>params</span><span class='rparen token'>)</span>
+<span class='def def kw'>def</span> <span class='get_files identifier id'>get_files</span><span class='lparen token'>(</span><span class='options identifier id'>options</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='return return kw'>return</span> <span class='@caller ivar id'>@caller</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='string val'>&quot;get_files&quot;</span><span class='comma token'>,</span> <span class='options identifier id'>options</span><span class='rparen token'>)</span>
 <span class='end end kw'>end</span>
 </pre>
     </td>
@@ -956,22 +1895,61 @@ A new instance of Api
       <div class="method_details ">
   <p class="signature " id="get_scripts-instance_method">
   
-    - (<tt>Object</tt>) <strong>get_scripts</strong> 
+    - (<tt>Hash&lt;String, String&gt;</tt>, ...) <strong>get_scripts</strong> 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Return Scripts
+</p>
+<p>
+Added in 0.4
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'><p>
+Example Return Data
+</p>
+</div></h4>
+      <pre class="example code"><span class='lbrace token'>{</span><span class='string val'>&quot;scripts&quot;</span><span class='symbol val'>:[</span><span class='string val'>&quot;None&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;examplescript.cmd&quot;</span><span class='rbrack token'>]</span><span class='rbrace token'>}</span>
+</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash&lt;String, String&gt;</tt>, <tt>Hash&lt;String, Boolean&gt;</tt>, <tt>Hash&lt;String, Integer&gt;</tt>, <tt>Hash&lt;String, Hash&gt;</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-46
-47
-48</pre>
+334
+335
+336</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 334</span>
 
 <span class='def def kw'>def</span> <span class='get_scripts identifier id'>get_scripts</span>
   <span class='return return kw'>return</span> <span class='@caller ivar id'>@caller</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='string val'>&quot;get_scripts&quot;</span><span class='comma token'>,</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
@@ -985,36 +1963,250 @@ A new instance of Api
       <div class="method_details ">
   <p class="signature " id="history-instance_method">
   
-    - (<tt>Object</tt>) <strong>history</strong>(start = nil, limit = nil, name = nil, value = nil) 
+    - (<tt>Hash&lt;String, String&gt;</tt>, ...) <strong>history</strong>(params = {}) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+A verbose output that as well as reporting items in the queue, will report
+on finished items being processed (verify/repaired/extracted) and other
+details such as categories, scripts.
+</p>
+<p>
+Added in 0.5
+</p>
+<p>
+Added in 0.3
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'><p>
+Listing history
+</p>
+</div></h4>
+      <pre class="example code"><span class='history identifier id'>history</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
+</pre>
+    
+      <h4><div class='inline'><p>
+Deleting a single item
+</p>
+</div></h4>
+      <pre class="example code"><span class='history identifier id'>history</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='symbol val'>:name</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;delete&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:value</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;SABnzbd_nzo_zt2syz&quot;</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+</pre>
+    
+      <h4><div class='inline'><p>
+Deleting multiple items
+</p>
+</div></h4>
+      <pre class="example code"><span class='history identifier id'>history</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='symbol val'>:name</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;delete&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:value</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;SABnzbd_nzo_zt2syz,SABnzbd_nzo_df2hyd,SABnzbd_nzo_op3shf&quot;</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+</pre>
+    
+      <h4><div class='inline'><p>
+Deleting all items
+</p>
+</div></h4>
+      <pre class="example code"><span class='history identifier id'>history</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='symbol val'>:name</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;delete&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:value</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;all&quot;</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+</pre>
+    
+      <h4><div class='inline'><p>
+Retry a single item
+</p>
+</div></h4>
+      <pre class="example code"><span class='history identifier id'>history</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='symbol val'>:name</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;retry&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:value</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;SABnzbd_nzo_zt2syz&quot;</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+</pre>
+    
+      <h4><div class='inline'><p>
+Example Return Data
+</p>
+</div></h4>
+      <pre class="example code"><span class='lbrace token'>{</span>
+    <span class='string val'>&quot;total_size&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span>  <span class='float val'>40.30</span> <span class='GB constant id'>GB</span><span class='comma token'>,</span>       <span class='pow op'>**</span><span class='Since constant id'>Since</span> <span class='integer val'>0</span><span class='float val'>.5.2</span>
+    <span class='string val'>&quot;month_size&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span>  <span class='float val'>20.23</span> <span class='GB constant id'>GB</span><span class='comma token'>,</span>      <span class='pow op'>**</span><span class='Since constant id'>Since</span> <span class='integer val'>0</span><span class='float val'>.5.2</span>
+    <span class='string val'>&quot;week_size&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span>  <span class='float val'>5.12</span> <span class='GB constant id'>GB</span><span class='comma token'>,</span>         <span class='pow op'>**</span><span class='Since constant id'>Since</span> <span class='integer val'>0</span><span class='float val'>.5.2</span>
+    <span class='string val'>&quot;cache_limit&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;-1&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;paused&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='true true kw'>true</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;new_rel_url&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;restart_req&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='false false kw'>false</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;slots&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span>
+    <span class='lbrace token'>{</span>
+        <span class='string val'>&quot;action_line&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;show_details&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;True&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;script_log&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;meta&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='nil nil kw'>nil</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;fail_message&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;loaded&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='false false kw'>false</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;id&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>605</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;size&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;778.1 MB&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;category&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;Apps&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;pp&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;D&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;completeness&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;script&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;nzb_name&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;Ubuntu.nzb&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;download_time&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>567</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;storage&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;X:\\Apps\\Ubuntu&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;status&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;Completed&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;script_line&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;completed&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>1236646078</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;nzo_id&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;SABnzbd_nzo_ipet0h&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;downloaded&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>815878352</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;report&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;000000&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;path&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;Ubuntu&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;postproc_time&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>368</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;name&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;Ubuntu&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;url&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;https://newzbin.com/browse/post/000000/&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;bytes&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>815878352</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;url_info&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;http://google.com&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;stage_log&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span>
+            <span class='lbrace token'>{</span><span class='string val'>&quot;name&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;download&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;actions&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='string val'>&quot;Downloaded in 9 minutes 27 seconds at an average of 1404kB/s&quot;</span><span class='rbrack token'>]</span><span class='rbrace token'>}</span><span class='comma token'>,</span>
+            <span class='lbrace token'>{</span><span class='string val'>&quot;name&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;repair&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;actions&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='string val'>&quot;[ubuntu] Repaired in 4 minutes 24 seconds&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;[ubuntu.sample] Quick Check OK&quot;</span><span class='rbrack token'>]</span><span class='rbrace token'>}</span><span class='comma token'>,</span>
+            <span class='lbrace token'>{</span><span class='string val'>&quot;name&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;unpack&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;actions&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='string val'>&quot;[ubuntu] Unpacked 1 file/folder in 36 seconds&quot;</span><span class='rbrack token'>]</span><span class='rbrace token'>}</span>
+        <span class='rbrack token'>]</span>
+    <span class='rbrace token'>}</span><span class='rbrack token'>]</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;helpuri&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;http://wiki.sabnzbd.org/&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;uptime&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;12m&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;version&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;trunk&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;diskspacetotal2&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;503.32&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;color_scheme&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;darwin&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='false false kw'>false</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;nt&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='true true kw'>true</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;status&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;Paused&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;last_warning&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;have_warnings&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;0&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;cache_art&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;0&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;finishaction&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='null identifier id'>null</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;noofslots&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>516</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;cache_size&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;0&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;new_release&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;pause_int&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;0&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;mbleft&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;785.89&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;diskspace2&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;25.08&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;diskspace1&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;25.08&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;diskspacetotal1&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;503.32&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;timeleft&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;0:00:00&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;mb&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;785.89&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;eta&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;unknown&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;nzb_quota&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;loadavg&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;kbpersec&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;0.00&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;speedlimit&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;0&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;webdir&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;path\\to\\templates&quot;</span>
+<span class='rbrace token'>}</span>
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>params</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the options to create a make the call with.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <h3>Options Hash (<tt>params</tt>):</h3>
+    <ul class="option">
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:name</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:value</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:start</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:limit</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+    </ul>
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash&lt;String, String&gt;</tt>, <tt>Hash&lt;String, Boolean&gt;</tt>, <tt>Hash&lt;String, Integer&gt;</tt>, <tt>Hash&lt;String, Hash&gt;</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-24
-25
-26
-27
-28
-29
-30
-31
-32</pre>
+281
+282
+283</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 24</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 281</span>
 
-<span class='def def kw'>def</span> <span class='history identifier id'>history</span><span class='lparen token'>(</span><span class='start identifier id'>start</span><span class='assign token'>=</span><span class='nil nil kw'>nil</span><span class='comma token'>,</span> <span class='limit identifier id'>limit</span><span class='assign token'>=</span><span class='nil nil kw'>nil</span><span class='comma token'>,</span> <span class='name identifier id'>name</span> <span class='assign token'>=</span> <span class='nil nil kw'>nil</span><span class='comma token'>,</span> <span class='value identifier id'>value</span> <span class='assign token'>=</span> <span class='nil nil kw'>nil</span><span class='rparen token'>)</span>
-  <span class='params identifier id'>params</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
-  <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:start</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='start identifier id'>start</span> <span class='unless unless_mod kw'>unless</span> <span class='start identifier id'>start</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
-  <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:limit</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='limit identifier id'>limit</span> <span class='unless unless_mod kw'>unless</span> <span class='limit identifier id'>limit</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
-  <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:name</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='name identifier id'>name</span> <span class='unless unless_mod kw'>unless</span> <span class='name identifier id'>name</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
-  <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:value</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='value identifier id'>value</span> <span class='unless unless_mod kw'>unless</span> <span class='value identifier id'>value</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
-
+<span class='def def kw'>def</span> <span class='history identifier id'>history</span><span class='lparen token'>(</span><span class='params identifier id'>params</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
   <span class='return return kw'>return</span> <span class='@caller ivar id'>@caller</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='string val'>&quot;history&quot;</span><span class='comma token'>,</span> <span class='params identifier id'>params</span><span class='rparen token'>)</span>
 <span class='end end kw'>end</span>
 </pre>
@@ -1026,22 +2218,50 @@ A new instance of Api
       <div class="method_details ">
   <p class="signature " id="pause-instance_method">
   
-    - (<tt>Object</tt>) <strong>pause</strong> 
+    - (<tt>Hash&lt;String, String&gt;</tt>, ...) <strong>pause</strong> 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Pauses the whole queue (do not confuse this will pausing an individual
+download, this is a global pause)
+</p>
+<p>
+Added in 0.3
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash&lt;String, String&gt;</tt>, <tt>Hash&lt;String, Boolean&gt;</tt>, <tt>Hash&lt;String, Integer&gt;</tt>, <tt>Hash&lt;String, Hash&gt;</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-62
-63
-64</pre>
+381
+382
+383</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 62</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 381</span>
 
 <span class='def def kw'>def</span> <span class='pause identifier id'>pause</span>
   <span class='return return kw'>return</span> <span class='@caller ivar id'>@caller</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='string val'>&quot;pause&quot;</span><span class='comma token'>,</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
@@ -1055,22 +2275,78 @@ A new instance of Api
       <div class="method_details ">
   <p class="signature " id="qstatus-instance_method">
   
-    - (<tt>Object</tt>) <strong>qstatus</strong> 
+    - (<tt>Hash&lt;String, String&gt;</tt>, ...) <strong>qstatus</strong> 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Depreciated now by the advanced queue output, this is the old api that just
+provides limited details on the current queue and state of sabnzbd
+</p>
+<p>
+Added in 0.3
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'><p>
+Example Return Data
+</p>
+</div></h4>
+      <pre class="example code"><span class='lbrace token'>{</span>
+    <span class='string val'>&quot;timeleft&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;0:00:00&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;mb&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='float val'>854.697841</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;noofslots&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>1</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;paused&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='true true kw'>true</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;mbleft&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='float val'>854.697841</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;diskspace2&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='float val'>21.980682</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;diskspace1&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='float val'>21.980682</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;kbpersec&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='integer val'>.000000</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;jobs&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span>
+        <span class='lbrace token'>{</span><span class='string val'>&quot;msgid&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;3066202&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;filename&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span>
+        <span class='string val'>&quot;Ubuntu 8.04 (Hardy Heron) - Desktop CD x64&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;mbleft&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='float val'>854.697841</span><span class='comma token'>,</span><span class='string val'>&quot;id&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;SABnzbd_nzo_zt2syz&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;mb&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='float val'>854.697841</span><span class='rbrace token'>}</span>
+    <span class='rbrack token'>]</span>
+<span class='rbrace token'>}</span>
+</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash&lt;String, String&gt;</tt>, <tt>Hash&lt;String, Boolean&gt;</tt>, <tt>Hash&lt;String, Integer&gt;</tt>, <tt>Hash&lt;String, Hash&gt;</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-11
-12
-13</pre>
+41
+42
+43</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 11</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 41</span>
 
 <span class='def def kw'>def</span> <span class='qstatus identifier id'>qstatus</span>
   <span class='return return kw'>return</span> <span class='@caller ivar id'>@caller</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='string val'>&quot;qstatus&quot;</span><span class='comma token'>,</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
@@ -1084,35 +2360,323 @@ A new instance of Api
       <div class="method_details ">
   <p class="signature " id="queue-instance_method">
   
-    - (<tt>Object</tt>) <strong>queue</strong>(name = nil, value = nil, value2 = nil) 
+    - (<tt>Hash&lt;String, String&gt;</tt>, ...) <strong>queue</strong>(options = {}) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+A verbose output that as well as reporting items in the queue, will report
+on finished items being processed (verify/repaired/extracted) and other
+details such as categories, scripts.
+</p>
+<p>
+Added in 0.5
+</p>
+<p>
+Added in 0.3
+</p>
+<p>
+Added in 0.5
+</p>
+<p>
+Low Priority: -1 Normal Priority: 0 High Priority: 1 Will return the new
+position in the queue if successful.
+</p>
+<p>
+Changes the name of an item in the queue. The name is used for the final
+foldername, and input for any post-processing sorting, if used.
+</p>
+<p>
+Added in 0.5
+</p>
+<p>
+prefix script_ to the script name to execute
+</p>
+<p>
+Added in 0.4
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'><p>
+Listing history
+</p>
+</div></h4>
+      <pre class="example code"><span class='queue identifier id'>queue</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
+</pre>
+    
+      <h4><div class='inline'><p>
+Deleting a single item
+</p>
+</div></h4>
+      <pre class="example code"><span class='queue identifier id'>queue</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='symbol val'>:name</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;delete&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:value</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;SABnzbd_nzo_zt2syz&quot;</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+</pre>
+    
+      <h4><div class='inline'><p>
+Deleting multiple items
+</p>
+</div></h4>
+      <pre class="example code"><span class='queue identifier id'>queue</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='symbol val'>:name</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;delete&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:value</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;SABnzbd_nzo_zt2syz,SABnzbd_nzo_df2hyd,SABnzbd_nzo_op3shf&quot;</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+</pre>
+    
+      <h4><div class='inline'><p>
+Deleting all items
+</p>
+</div></h4>
+      <pre class="example code"><span class='queue identifier id'>queue</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='symbol val'>:name</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;delete&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:value</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;all&quot;</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+</pre>
+    
+      <h4><div class='inline'><p>
+Change Priority
+</p>
+</div></h4>
+      <pre class="example code"><span class='queue identifier id'>queue</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='symbol val'>:name</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;priority&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:value</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;SABnzbd_nzo_zt2syz&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:value2</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+</pre>
+    
+      <h4><div class='inline'><p>
+Change item name
+</p>
+</div></h4>
+      <pre class="example code"><span class='queue identifier id'>queue</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='symbol val'>:name</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;rename&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:value</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;SABnzbd_nzo_zt2syz&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:value2</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;THENEWNAME&quot;</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+</pre>
+    
+      <h4><div class='inline'><p>
+Pause individual download
+</p>
+</div></h4>
+      <pre class="example code"><span class='queue identifier id'>queue</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='symbol val'>:name</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;pause&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:value</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;SABnzbd_nzo_zt2syz&quot;</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+</pre>
+    
+      <h4><div class='inline'><p>
+Resume individual download
+</p>
+</div></h4>
+      <pre class="example code"><span class='queue identifier id'>queue</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='symbol val'>:name</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;resume&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:value</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;SABnzbd_nzo_zt2syz&quot;</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+</pre>
+    
+      <h4><div class='inline'><p>
+Action on queue complete
+</p>
+</div></h4>
+      <pre class="example code"><span class='queue identifier id'>queue</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='symbol val'>:name</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;change_complete_action&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:value</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;hybernate_pc&quot;</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+</pre>
+    
+      <h4><div class='inline'><p>
+Script action on queue complete
+</p>
+</div></h4>
+      <pre class="example code"><span class='queue identifier id'>queue</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='symbol val'>:name</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;change_complete_action&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:value</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;script_examplescript.cmd&quot;</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+</pre>
+    
+      <h4><div class='inline'><p>
+Example Return Data
+</p>
+</div></h4>
+      <pre class="example code"><span class='lbrace token'>{</span>
+    <span class='string val'>&quot;cache_limit&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;-1&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;categories&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span>
+            <span class='string val'>&quot;None&quot;</span><span class='comma token'>,</span>
+            <span class='string val'>&quot;apps&quot;</span><span class='comma token'>,</span>
+            <span class='string val'>&quot;books&quot;</span><span class='comma token'>,</span>
+            <span class='string val'>&quot;consoles&quot;</span><span class='comma token'>,</span>
+            <span class='string val'>&quot;emulation&quot;</span><span class='comma token'>,</span>
+            <span class='string val'>&quot;games&quot;</span><span class='comma token'>,</span>
+            <span class='string val'>&quot;misc&quot;</span><span class='comma token'>,</span>
+            <span class='string val'>&quot;movies&quot;</span><span class='comma token'>,</span>
+            <span class='string val'>&quot;music&quot;</span><span class='comma token'>,</span>
+            <span class='string val'>&quot;pda&quot;</span><span class='comma token'>,</span>
+            <span class='string val'>&quot;resources&quot;</span><span class='comma token'>,</span>
+            <span class='string val'>&quot;tv&quot;</span>
+            <span class='rbrack token'>]</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;scripts&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span>
+            <span class='string val'>&quot;None&quot;</span>
+            <span class='rbrack token'>]</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;paused&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='true true kw'>true</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;new_rel_url&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;restart_req&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='false false kw'>false</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;slots&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span>
+        <span class='lbrace token'>{</span>
+        <span class='string val'>&quot;status&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;Queued&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;index&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;eta&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;unknown&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;timeleft&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;0:00:00&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;avg_age&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;43d&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;script&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;None&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;msgid&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;4295398&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;verbosity&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;mb&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;785.89&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;filename&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;Ubuntu v.8.10&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;priority&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;Normal&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;cat&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;Apps&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;mbleft&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;785.89&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;percentage&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;0&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;nzo_id&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;SABnzbd_nzo_wgmb1m&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;unpackopts&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;3&quot;</span><span class='comma token'>,</span>
+        <span class='string val'>&quot;size&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;785.9 MB&quot;</span>
+        <span class='rbrace token'>}</span><span class='rbrack token'>]</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;helpuri&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;http://wiki.sabnzbd.org/&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;uptime&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;6m&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;refresh_rate&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;isverbose&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='false false kw'>false</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;start&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;version&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;trunk&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;diskspacetotal2&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;503.32&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;color_scheme&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;darwin&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='false false kw'>false</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;nt&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='true true kw'>true</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;status&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;Paused&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;last_warning&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;have_warnings&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;0&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;cache_art&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;0&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;finishaction&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='null identifier id'>null</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;noofslots&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>1</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;cache_size&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;0&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;finish&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;new_release&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;pause_int&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;0&quot;</span>
+    <span class='comma token'>,</span><span class='string val'>&quot;mbleft&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;785.89&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;diskspace2&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;25.08&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;diskspace1&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;25.08&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;diskspacetotal1&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;503.32&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;timeleft&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;0:00:00&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;mb&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;785.89&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;newzbinDetails&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='true true kw'>true</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;eta&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;unknown&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;nzb_quota&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;loadavg&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;limit&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;kbpersec&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;0.00&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;speedlimit&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;0&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;webdir&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;path\\to\\templates&quot;</span><span class='comma token'>,</span>
+    <span class='string val'>&quot;queue_details&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;0&quot;</span>
+<span class='rbrace token'>}</span>
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>options</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the options to make the call with.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <h3>Options Hash (<tt>options</tt>):</h3>
+    <ul class="option">
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:name</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:value</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:value2</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:start</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:limit</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+    </ul>
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash&lt;String, String&gt;</tt>, <tt>Hash&lt;String, Boolean&gt;</tt>, <tt>Hash&lt;String, Integer&gt;</tt>, <tt>Hash&lt;String, Hash&gt;</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-15
-16
-17
-18
-19
-20
-21
-22</pre>
+178
+179
+180</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 15</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 178</span>
 
-<span class='def def kw'>def</span> <span class='queue identifier id'>queue</span><span class='lparen token'>(</span><span class='name identifier id'>name</span><span class='assign token'>=</span><span class='nil nil kw'>nil</span><span class='comma token'>,</span> <span class='value identifier id'>value</span><span class='assign token'>=</span><span class='nil nil kw'>nil</span><span class='comma token'>,</span> <span class='value2 identifier id'>value2</span> <span class='assign token'>=</span> <span class='nil nil kw'>nil</span><span class='rparen token'>)</span>
-  <span class='params identifier id'>params</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
-  <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:name</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='name identifier id'>name</span> <span class='unless unless_mod kw'>unless</span> <span class='name identifier id'>name</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
-  <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:value</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='value identifier id'>value</span> <span class='unless unless_mod kw'>unless</span> <span class='value identifier id'>value</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
-  <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:value2</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='value2 identifier id'>value2</span> <span class='unless unless_mod kw'>unless</span> <span class='value2 identifier id'>value2</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
-
-  <span class='return return kw'>return</span> <span class='@caller ivar id'>@caller</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='string val'>&quot;queue&quot;</span><span class='comma token'>,</span> <span class='params identifier id'>params</span><span class='rparen token'>)</span>
+<span class='def def kw'>def</span> <span class='queue identifier id'>queue</span><span class='lparen token'>(</span><span class='options identifier id'>options</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='return return kw'>return</span> <span class='@caller ivar id'>@caller</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='string val'>&quot;queue&quot;</span><span class='comma token'>,</span> <span class='options identifier id'>options</span><span class='rparen token'>)</span>
 <span class='end end kw'>end</span>
 </pre>
     </td>
@@ -1123,22 +2687,62 @@ A new instance of Api
       <div class="method_details ">
   <p class="signature " id="restart-instance_method">
   
-    - (<tt>Object</tt>) <strong>restart</strong> 
+    - (<tt>Hash&lt;String, String&gt;</tt>, ...) <strong>restart</strong> 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Restart SABnzbd
+</p>
+<p>
+Added in 0.5
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'><p>
+Example Return Data
+</p>
+</div></h4>
+      <pre class="example code"><span class='string val'>&quot;ok
+&quot;</span>
+</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash&lt;String, String&gt;</tt>, <tt>Hash&lt;String, Boolean&gt;</tt>, <tt>Hash&lt;String, Integer&gt;</tt>, <tt>Hash&lt;String, Hash&gt;</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-50
-51
-52</pre>
+346
+347
+348</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 50</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 346</span>
 
 <span class='def def kw'>def</span> <span class='restart identifier id'>restart</span>
   <span class='return return kw'>return</span> <span class='@caller ivar id'>@caller</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='string val'>&quot;restart&quot;</span><span class='comma token'>,</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
@@ -1152,22 +2756,51 @@ A new instance of Api
       <div class="method_details ">
   <p class="signature " id="resume-instance_method">
   
-    - (<tt>Object</tt>) <strong>resume</strong> 
+    - (<tt>Hash&lt;String, String&gt;</tt>, ...) <strong>resume</strong> 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Resumes the whole queue (do not confuse this will resuming an individual
+download, this is a global resume)Resumes the whole queue (do not confuse
+this will resuming an individual download, this is a global resume)
+</p>
+<p>
+Added in 0.3
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash&lt;String, String&gt;</tt>, <tt>Hash&lt;String, Boolean&gt;</tt>, <tt>Hash&lt;String, Integer&gt;</tt>, <tt>Hash&lt;String, Hash&gt;</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-74
-75
-76</pre>
+416
+417
+418</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 74</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 416</span>
 
 <span class='def def kw'>def</span> <span class='resume identifier id'>resume</span>
   <span class='return return kw'>return</span> <span class='@caller ivar id'>@caller</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='string val'>&quot;resume&quot;</span><span class='comma token'>,</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
@@ -1181,31 +2814,104 @@ A new instance of Api
       <div class="method_details ">
   <p class="signature " id="retry-instance_method">
   
-    - (<tt>Object</tt>) <strong>retry</strong>(value) 
+    - (<tt>Hash&lt;String, String&gt;</tt>, ...) <strong>retry</strong>(options = {}) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Added in 0.6.0 Retry a single item
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'><p>
+Example
+</p>
+</div></h4>
+      <pre class="example code"><span class='retry retry kw'>retry</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='symbol val'>:value=</span><span class='gt op'>&gt;</span><span class='string val'>&quot;SABnzbd_nzo_zt2syz&quot;</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>options</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the options to make the call with.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <h3>Options Hash (<tt>options</tt>):</h3>
+    <ul class="option">
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:value</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+    </ul>
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash&lt;String, String&gt;</tt>, <tt>Hash&lt;String, Boolean&gt;</tt>, <tt>Hash&lt;String, Integer&gt;</tt>, <tt>Hash&lt;String, Hash&gt;</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-147
-148
-149
-150
-151
-152</pre>
+575
+576
+577</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 147</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 575</span>
 
-<span class='def def kw'>def</span> <span class='retry retry kw'>retry</span><span class='lparen token'>(</span><span class='value identifier id'>value</span><span class='rparen token'>)</span>
-  <span class='params identifier id'>params</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
-  <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:value</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='value identifier id'>value</span> <span class='unless unless_mod kw'>unless</span> <span class='value identifier id'>value</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
-
-  <span class='return return kw'>return</span> <span class='@caller ivar id'>@caller</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='string val'>&quot;retry&quot;</span><span class='comma token'>,</span> <span class='params identifier id'>params</span><span class='rparen token'>)</span>
+<span class='def def kw'>def</span> <span class='retry retry kw'>retry</span><span class='lparen token'>(</span><span class='options identifier id'>options</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='return return kw'>return</span> <span class='@caller ivar id'>@caller</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='string val'>&quot;retry&quot;</span><span class='comma token'>,</span> <span class='options identifier id'>options</span><span class='rparen token'>)</span>
 <span class='end end kw'>end</span>
 </pre>
     </td>
@@ -1216,22 +2922,49 @@ A new instance of Api
       <div class="method_details ">
   <p class="signature " id="shutdown-instance_method">
   
-    - (<tt>Object</tt>) <strong>shutdown</strong> 
+    - (<tt>Hash&lt;String, String&gt;</tt>, ...) <strong>shutdown</strong> 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Shuts down SABnzbd.
+</p>
+<p>
+Added in 0.3
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash&lt;String, String&gt;</tt>, <tt>Hash&lt;String, Boolean&gt;</tt>, <tt>Hash&lt;String, Integer&gt;</tt>, <tt>Hash&lt;String, Hash&gt;</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-78
-79
-80</pre>
+425
+426
+427</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 78</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 425</span>
 
 <span class='def def kw'>def</span> <span class='shutdown identifier id'>shutdown</span>
   <span class='return return kw'>return</span> <span class='@caller ivar id'>@caller</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='string val'>&quot;shutdown&quot;</span><span class='comma token'>,</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
@@ -1245,33 +2978,132 @@ A new instance of Api
       <div class="method_details ">
   <p class="signature " id="switch-instance_method">
   
-    - (<tt>Object</tt>) <strong>switch</strong>(value, value2) 
+    - (<tt>Hash&lt;String, String&gt;</tt>, ...) <strong>switch</strong>(options = {}) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Moving two items
+</p>
+<p>
+0.5 - Will return the new position and priority (space separated, can be -1
+if error occurs) &quot;value&quot; is the item you want to move,
+&quot;value2&quot; is the name of the item where you want to put value one
+above, shifting value2 down.
+</p>
+<p>
+&quot;value2&quot; is the position in the queue where you wish to move the
+object. 0 is the top of the queue, 1 is the second item, etc..
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'><p>
+Swapping two items
+</p>
+</div></h4>
+      <pre class="example code"><span class='switch identifier id'>switch</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='symbol val'>:value</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;SABnzbd_nzo_zt2syz&quot;</span><span class='comma token'>,</span><span class='symbol val'>:value2</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;SABnzbd_nzo_df2hyd&quot;</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+</pre>
+    
+      <h4><div class='inline'><p>
+Moving to a specific location in the queue.
+</p>
+</div></h4>
+      <pre class="example code"><span class='switch identifier id'>switch</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='symbol val'>:value</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;SABnzbd_nzo_zt2syz&quot;</span><span class='comma token'>,</span><span class='symbol val'>:value2</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+</pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>options</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the options to make the call with.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <h3>Options Hash (<tt>options</tt>):</h3>
+    <ul class="option">
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:value</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:value2</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          
+        </tr>
+      
+    </ul>
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash&lt;String, String&gt;</tt>, <tt>Hash&lt;String, Boolean&gt;</tt>, <tt>Hash&lt;String, Integer&gt;</tt>, <tt>Hash&lt;String, Hash&gt;</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-54
-55
-56
-57
-58
-59
-60</pre>
+371
+372
+373</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 54</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 371</span>
 
-<span class='def def kw'>def</span> <span class='switch identifier id'>switch</span><span class='lparen token'>(</span><span class='value identifier id'>value</span><span class='comma token'>,</span> <span class='value2 identifier id'>value2</span><span class='rparen token'>)</span>
-  <span class='params identifier id'>params</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
-  <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:value</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='value identifier id'>value</span> <span class='unless unless_mod kw'>unless</span> <span class='value identifier id'>value</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
-  <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:value2</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='value2 identifier id'>value2</span> <span class='unless unless_mod kw'>unless</span> <span class='value2 identifier id'>value2</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
-
-  <span class='return return kw'>return</span> <span class='@caller ivar id'>@caller</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='string val'>&quot;switch&quot;</span><span class='comma token'>,</span> <span class='params identifier id'>params</span><span class='rparen token'>)</span>
+<span class='def def kw'>def</span> <span class='switch identifier id'>switch</span><span class='lparen token'>(</span><span class='options identifier id'>options</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='return return kw'>return</span> <span class='@caller ivar id'>@caller</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='string val'>&quot;switch&quot;</span><span class='comma token'>,</span> <span class='options identifier id'>options</span><span class='rparen token'>)</span>
 <span class='end end kw'>end</span>
 </pre>
     </td>
@@ -1282,22 +3114,61 @@ A new instance of Api
       <div class="method_details ">
   <p class="signature " id="version-instance_method">
   
-    - (<tt>Object</tt>) <strong>version</strong> 
+    - (<tt>Hash&lt;String, String&gt;</tt>, ...) <strong>version</strong> 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Get the version
+</p>
+<p>
+Added in 0.4
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'><p>
+Example Return Data
+</p>
+</div></h4>
+      <pre class="example code"><span class='lbrace token'>{</span><span class='string val'>&quot;version&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;0.4.6&quot;</span><span class='rbrace token'>}</span>
+</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash&lt;String, String&gt;</tt>, <tt>Hash&lt;String, Boolean&gt;</tt>, <tt>Hash&lt;String, Integer&gt;</tt>, <tt>Hash&lt;String, Hash&gt;</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-34
-35
-36</pre>
+292
+293
+294</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 34</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 292</span>
 
 <span class='def def kw'>def</span> <span class='version identifier id'>version</span>
   <span class='return return kw'>return</span> <span class='@caller ivar id'>@caller</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='string val'>&quot;version&quot;</span><span class='comma token'>,</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
@@ -1311,22 +3182,70 @@ A new instance of Api
       <div class="method_details ">
   <p class="signature " id="warnings-instance_method">
   
-    - (<tt>Object</tt>) <strong>warnings</strong> 
+    - (<tt>Hash&lt;String, String&gt;</tt>, ...) <strong>warnings</strong> 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Current warnings
+</p>
+<p>
+Added in 0.4
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'><p>
+Example Return Data
+</p>
+</div></h4>
+      <pre class="example code"><span class='lbrace token'>{</span>
+   <span class='string val'>&quot;warnings&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span>
+       <span class='string val'>&quot;2008-12-26 19:53:42,567\nWARNING\n[decoder] Badly formed yEnc article in &lt;Article: article=, bytes=, partnum=, art_id=&gt;&quot;</span><span class='comma token'>,</span>
+       <span class='string val'>&quot;2008-12-26 19:54:45,861\nWARNING\n[assembler] &lt;Article: article=, bytes=, partnum=, art_id=&gt; missing&quot;</span><span class='comma token'>,</span>
+       <span class='string val'>&quot;2008-12-26 20:44:28,336\nWARNING\n[decoder] CRC Error in &lt;Article: article=, bytes=, partnum=, art_id=&gt; (4134546D -&gt; A8F07173)&quot;</span><span class='comma token'>,</span>
+       <span class='string val'>&quot;2008-12-27 01:13:37,349\nWARNING\n[downloader] Thread 3@news.powerusenet.com:119: timed out&quot;</span><span class='comma token'>,</span>
+       <span class='string val'>&quot;2008-12-27 01:13:38,365\nWARNING\n[downloader] Thread 2@news.powerusenet.com:119: timed out&quot;</span><span class='comma token'>,</span>
+       <span class='string val'>&quot;2008-12-27 01:45:34,041\nWARNING\n[downloader] Thread 1@news.powerusenet.com:119: timed out&quot;</span>
+   <span class='rbrack token'>]</span>
+<span class='rbrace token'>}</span>
+</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash&lt;String, String&gt;</tt>, <tt>Hash&lt;String, Boolean&gt;</tt>, <tt>Hash&lt;String, Integer&gt;</tt>, <tt>Hash&lt;String, Hash&gt;</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-38
-39
-40</pre>
+312
+313
+314</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 38</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/api/api.rb', line 312</span>
 
 <span class='def def kw'>def</span> <span class='warnings identifier id'>warnings</span>
   <span class='return return kw'>return</span> <span class='@caller ivar id'>@caller</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='string val'>&quot;warnings&quot;</span><span class='comma token'>,</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
@@ -1342,7 +3261,7 @@ A new instance of Api
 </div>
     
     <div id="footer">
-  Generated on Sun Nov 14 14:11:25 2010 by 
+  Generated on Sun Nov 14 23:26:42 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.8.7).
 </div>

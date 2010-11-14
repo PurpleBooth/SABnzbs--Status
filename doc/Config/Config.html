@@ -285,12 +285,12 @@ Load the configuration file
       <pre class="lines">
 
 
-11
 12
-13</pre>
+13
+14</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/config/config.rb', line 11</span>
+      <pre class="code"><span class="info file"># File 'lib/config/config.rb', line 12</span>
 
 <span class='def def kw'>def</span> <span class='initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
   <span class='@config ivar id'>@config</span> <span class='assign token'>=</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='load identifier id'>load</span>
@@ -345,12 +345,12 @@ Get a value with the given key from the configuration
       <pre class="lines">
 
 
-18
 19
-20</pre>
+20
+21</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/config/config.rb', line 18</span>
+      <pre class="code"><span class="info file"># File 'lib/config/config.rb', line 19</span>
 
 <span class='def def kw'>def</span> <span class='aref op'>[]</span><span class='lparen token'>(</span><span class='key identifier id'>key</span><span class='rparen token'>)</span>
   <span class='return return kw'>return</span> <span class='@config ivar id'>@config</span><span class='lbrack token'>[</span><span class='key identifier id'>key</span><span class='rbrack token'>]</span>
@@ -418,13 +418,13 @@ Set a key value pair in the configuration then saves the configuration
       <pre class="lines">
 
 
-27
 28
 29
-30</pre>
+30
+31</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/config/config.rb', line 27</span>
+      <pre class="code"><span class="info file"># File 'lib/config/config.rb', line 28</span>
 
 <span class='def def kw'>def</span> <span class='aset op'>[]=</span><span class='lparen token'>(</span><span class='key identifier id'>key</span><span class='comma token'>,</span> <span class='value identifier id'>value</span><span class='rparen token'>)</span>
   <span class='@config ivar id'>@config</span><span class='lbrack token'>[</span><span class='key identifier id'>key</span><span class='rbrack token'>]</span><span class='assign token'>=</span> <span class='value identifier id'>value</span><span class='semicolon token'>;</span>
@@ -460,12 +460,12 @@ Load the configuration from file
       <pre class="lines">
 
 
-45
 46
-47</pre>
+47
+48</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/config/config.rb', line 45</span>
+      <pre class="code"><span class="info file"># File 'lib/config/config.rb', line 46</span>
 
 <span class='def def kw'>def</span> <span class='load identifier id'>load</span>
   <span class='@config ivar id'>@config</span> <span class='assign token'>=</span> <span class='YAML constant id'>YAML</span><span class='dot token'>.</span><span class='load_file identifier id'>load_file</span><span class='lparen token'>(</span><span class='Config constant id'>Config</span><span class='colon2 op'>::</span><span class='CONFIG_FILE constant id'>CONFIG_FILE</span><span class='rparen token'>)</span>
@@ -508,16 +508,16 @@ the file
       <pre class="lines">
 
 
-36
 37
 38
 39
 40
 41
-42</pre>
+42
+43</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/config/config.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'lib/config/config.rb', line 37</span>
 
 <span class='def def kw'>def</span> <span class='save identifier id'>save</span>
   <span class='File constant id'>File</span><span class='dot token'>.</span><span class='open identifier id'>open</span><span class='lparen token'>(</span><span class='CONFIG_FILE constant id'>CONFIG_FILE</span><span class='comma token'>,</span> <span class='string val'>'w'</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='file_handle identifier id'>file_handle</span><span class='bitor op'>|</span> 
@@ -537,7 +537,7 @@ the file
 </div>
     
     <div id="footer">
-  Generated on Sun Nov 14 14:11:26 2010 by 
+  Generated on Sun Nov 14 23:26:43 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.8.7).
 </div>
