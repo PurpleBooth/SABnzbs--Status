@@ -1,8 +1,7 @@
 #!/usr/bin/env ruby
 
-$:.unshift File.join(File.expand_path(File.dirname(__FILE__)))
-require 'notify/api'
-require 'sabnzbd_plus/api'
+$:.unshift File.expand_path(File.join(File.dirname(__FILE__), "..", "lib"))
+require 'notifier'
 
 # Number of seconds to poll the API
 CHECK_EVERY_SECONDS = 60*5

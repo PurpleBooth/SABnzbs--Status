@@ -18,6 +18,7 @@ module NotifyLibNotify
     # @param [String] msg Message to display
     def notify(msg)
       system(self.shell_command(msg))
+      puts msg
     end
 
     # Get the full path to the icon to be used on the notification
