@@ -16,7 +16,7 @@ module NotifyLibNotify
     # Execute the shell command, popping up the notification for the user
     #
     # @param [String] msg Message to display
-    def send(msg)
+    def notify(msg)
       system(self.shell_command(msg))
     end
 

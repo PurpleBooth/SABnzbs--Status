@@ -30,7 +30,7 @@ module Notify
     end
 
     def test_current_status
-      actual = @fixture.current_status({:name => "Test Name",:mb_left => "100",:mb => "991",:kb_per_sec => "1212",:timeleft => "Testing"})
+      actual = @fixture.current_status({:name => "Test Name",:mb_left => "100",:mb => "991",:kb_per_sec => "1212",:time_left => "Testing"})
       expected = "Test Name" + " ["+"100"+"MB/" + "991" + "MB @ "+"1212"+"KB/S "+"Testing"+" timeleft]"
 
       assert_equal(expected, actual)

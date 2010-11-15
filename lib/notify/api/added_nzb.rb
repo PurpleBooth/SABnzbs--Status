@@ -22,7 +22,7 @@ module NotifyApi
     def process
       announce = "Added job " + self.name
       
-      self.notifier.send announce
+      self.notifier.notify(announce)
 
       return announce
     end

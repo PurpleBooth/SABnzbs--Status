@@ -14,19 +14,19 @@ while true
   added = @api.unannounced_added
 
   added.each { |slot|
-    Notify::Api.new.added_nzb slot.name
+    Notify::Api.new.added_nzb({:name => slot.name})
   }
 
   queue = @api.current_queue
   
   queue.slots.each { |slot|
-    Notify::Api.new.current_status(slot.name, slot.mb_left, slot.mb, queue.kb_per_sec, slot.time_left)
+    Notify::Api.new.current_status({:name => slot.name, :mb_left => slot.mb_left, :mb => slot.mb, :kb_per_sec => queue.kb_per_sec, :time_left => slot.time_left})
   }
 
   complete = @api.unannounced_complete
 
   complete.each { |slot|
-    Notify::Api.new.completed_nzb(slot.name, slot.status)
+    Notify::Api.new.completed_nzb({:name => slot.name, :status => slot.status})
   }
   
   sleep CHECK_EVERY_SECONDS

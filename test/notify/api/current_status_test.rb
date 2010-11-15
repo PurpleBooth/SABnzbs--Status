@@ -15,7 +15,7 @@ module NotifyApi
       fixture.mb_left = "Test MB Left"
       fixture.mb = "Test MB"
       fixture.kb_per_sec = "Test KB Per Sec"
-      fixture.timeleft = "Test Timeleft"
+      fixture.time_left = "Test Timeleft"
 
       actual = fixture.process
       expected = "Test Name" + " ["+"Test MB Left"+"MB/" + "Test MB" + "MB @ "+"Test KB Per Sec"+"KB/S "+"Test Timeleft"+" timeleft]"

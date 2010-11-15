@@ -7,7 +7,7 @@ module NotifyTest
       
     end
 
-    def send(message)
+    def notify(message)
       return message
     end
   end

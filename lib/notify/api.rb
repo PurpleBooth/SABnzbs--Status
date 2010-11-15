@@ -46,7 +46,7 @@ module Notify
     # @option options [String] :mb_left MB left to download
     # @option options [String] :mb Total MB of file
     # @option options [String] :kb_per_sec Current speed of NZB
-    # @option options [String] :timeleft The time left in the download
+    # @option options [String] :time_left The time left in the download
     # @see NotifyApi::CurrentStatus
     def current_status(options = {})
       self.call_method(:current_status, options)

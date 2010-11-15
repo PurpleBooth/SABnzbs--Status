@@ -16,7 +16,7 @@ module NotifyApi
     attr_accessor :kb_per_sec
 
     # @return [String] :timeleft The time left in the download
-    attr_accessor :timeleft
+    attr_accessor :time_left
 
     # @return [NotifyLibNotify::LibNotify]
     attr_accessor :notifier
@@ -35,12 +35,12 @@ module NotifyApi
     # @see NotifyApi::CurrentStatus#mb_left
     # @see NotifyApi::CurrentStatus#mb
     # @see NotifyApi::CurrentStatus#kb_per_sec
-    # @see NotifyApi::CurrentStatus#timeleft
+    # @see NotifyApi::CurrentStatus#time_left
     # @return [String]
     def process
-      announce = self.name + " ["+self.mb_left+"MB/" + self.mb + "MB @ "+self.kb_per_sec+"KB/S "+self.timeleft+" timeleft]"
+      announce = self.name + " ["+self.mb_left+"MB/" + self.mb + "MB @ "+self.kb_per_sec+"KB/S "+self.time_left+" timeleft]"
 
-      self.notifier.send announce
+      self.notifier.notify(announce)
 
       return announce
     end
