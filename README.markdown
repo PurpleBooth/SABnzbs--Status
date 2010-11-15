@@ -73,3 +73,25 @@ endpoint will be http://127.0.0.1:8880/api
 * complete - Announce when an item completes
 
 Delete what you don't wish to receive notifications about
+
+Run Me
+------
+Run the main application
+<pre>
+bin/notify
+</pre>
+
+Run the tests
+<pre>
+rake test
+</pre>
+
+Run the code smells detector
+<pre>
+rake reek
+</pre>
+
+Run the documentation generator
+<pre>
+rake yard
+</pre>
