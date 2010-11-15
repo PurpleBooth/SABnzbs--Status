@@ -50,6 +50,7 @@ log:
 notify:
   lib_notify:
     icon: "favicon.ico"
+notify_for: [added, active, current, complete]
 </pre>
 
 Parameters you probably want to change are
