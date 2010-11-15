@@ -62,6 +62,9 @@ sabnzbd_plus -> model -> api -> caller -> http_json -> api_key
 
 sabnzbd_plus -> model -> api -> caller -> http_json -> api_key
 
+So for example if your SAB url is http://127.0.0.1:8880/sabnzbd your API
+endpoint will be http://127.0.0.1:8880/api
+
 ### What to notify for
     notify_for: [added, active, current, complete]
 * added - Announce when a new nzb is added to the queue
@@ -70,6 +73,3 @@ sabnzbd_plus -> model -> api -> caller -> http_json -> api_key
 * complete - Announce when an item completes
 
 Delete what you don't wish to receive notifications about
-
-So for example if your SAB url is http://127.0.0.1:8880/sabnzbd your API
-endpoint will be http://127.0.0.1:8880/api
