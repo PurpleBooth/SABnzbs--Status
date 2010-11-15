@@ -10,7 +10,7 @@ module NotifyApi
   class CompletedNzbTest < Test::Unit::TestCase
 
     def test_completed_nzb
-      fixture = NotifyApi::CompletedNzb.new
+      fixture = NotifyApi::CompletedNzb.new(NotifyTest::TestNotifier.new)
       fixture.name = "Test Name"
       fixture.status = "Test Status"
 

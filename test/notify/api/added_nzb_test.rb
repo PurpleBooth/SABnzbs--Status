@@ -10,7 +10,7 @@ module NotifyApi
   class AddedNzbTest < Test::Unit::TestCase
 
     def test_added_nzb
-      fixture = NotifyApi::AddedNzb.new
+      fixture = NotifyApi::AddedNzb.new(NotifyTest::TestNotifier.new)
       fixture.name = "Test"
 
       actual = fixture.process

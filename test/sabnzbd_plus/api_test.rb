@@ -7,6 +7,7 @@ require 'lib/sabnzbd_plus/model/queue_slot'
 require 'lib/sabnzbd_plus/model/history_slot'
 require 'lib/sabnzbd_plus/model/slot'
 require 'test/sabnzbd_plus/model/api/caller/test'
+require 'json'
 
 module SabnzbdPlus
   class ApiTest < Test::Unit::TestCase
@@ -174,6 +175,38 @@ module SabnzbdPlus
       assert_equal(expected, actual)
 
       actual = @fixture.unannounced_complete
+      assert_equal([], actual)
+    end
+
+    def test_unannounced_active
+      @caller.fixture_name = "unannounced_active"
+      actual = @fixture.unannounced_active
+
+      hash = JSON.parse("{\"status\":\"Downloading\",
+         \"index\":0,
+         \"eta\":\"unknown\",
+         \"timeleft\":\"0:00:00\",
+         \"avg_age\":\"18m\",
+         \"script\":\"None\",
+         \"msgid\":\"\",
+         \"verbosity\":\"\",
+         \"mb\":\"5075.93\",
+         \"sizeleft\":\"4.96 GB\",
+         \"filename\":\"Example\",
+         \"priority\":\"Normal\",
+         \"cat\":\"None\",
+         \"mbleft\":\"5075.93\",
+         \"percentage\":\"0\",
+         \"nzo_id\":\"SABnzbd_nzo_gT3l7L\",
+         \"unpackopts\":\"3\",
+         \"size\":\"4.96 GB\"}")
+
+      expected = [SabnzbdPlusModel::QueueSlot.from_hash(hash)]
+  
+
+      assert_equal(expected, actual)
+
+      actual = @fixture.unannounced_active
       assert_equal([], actual)
     end
   end

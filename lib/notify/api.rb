@@ -1,6 +1,7 @@
 $:.unshift File.join(File.expand_path(File.dirname(__FILE__)),'..','..','lib')
 
 require 'notify/api/added_nzb'
+require 'notify/api/started_nzb'
 require 'notify/api/completed_nzb'
 require 'notify/api/current_status'
 require 'notify/lib_notify/lib_notify'
@@ -59,6 +60,20 @@ module Notify
     # @see NotifyApi::AddedNzb
     def added_nzb(options = {})
       self.call_method(:added_nzb, options)
+    end
+
+    # Announce that SABnzbd+ has started downloading the NZB
+    #
+    # @param [Hash] options the options to create a announcement with
+    # @option options [String] :name Name of the current download
+    # @option options [String] :mb_left MB left to download
+    # @option options [String] :mb Total MB of file
+    # @option options [String] :kb_per_sec Current speed of NZB
+    # @option options [String] :time_left The time left in the download
+    #
+    # @see NotifyApi::AddedNzb
+    def started_nzb(options = {})
+      self.call_method(:started_nzb, options)
     end
 
     # Announce that a file has been completed

@@ -7,26 +7,41 @@ require 'notifier'
 CHECK_EVERY_SECONDS = 60*5
 
 @api = SabnzbdPlus::Api.new
+notify_for = Config::Config.new["notify_for"]
 
-## Tick Tock
+# Tick Tock
 while true
-  added = @api.unannounced_added
+  if notify_for.include?("added")
+    added = @api.unannounced_added
 
-  added.each { |slot|
-    Notify::Api.new.added_nzb({:name => slot.name})
-  }
+    added.each { |slot|
+      Notify::Api.new.added_nzb({:name => slot.name})
+    }
+  end
 
-  queue = @api.current_queue
-  
-  queue.slots.each { |slot|
-    Notify::Api.new.current_status({:name => slot.name, :mb_left => slot.mb_left, :mb => slot.mb, :kb_per_sec => queue.kb_per_sec, :time_left => slot.time_left})
-  }
+  if notify_for.include?("active")
+    active = @api.unannounced_active
 
-  complete = @api.unannounced_complete
+    active.each { |slot|
+      Notify::Api.new.started_nzb({:name => slot.name, :mb_left => slot.mb_left, :mb => slot.mb, :time_left => slot.time_left})
+    }
+  end
 
-  complete.each { |slot|
-    Notify::Api.new.completed_nzb({:name => slot.name, :status => slot.status})
-  }
+  if notify_for.include?("current")
+    queue = @api.current_queue
+
+    queue.slots.each { |slot|
+      Notify::Api.new.current_status({:name => slot.name, :mb_left => slot.mb_left, :mb => slot.mb, :kb_per_sec => queue.kb_per_sec, :time_left => slot.time_left})
+    }
+  end
+
+  if notify_for.include?("complete")
+    complete = @api.unannounced_complete
+
+    complete.each { |slot|
+      Notify::Api.new.completed_nzb({:name => slot.name, :status => slot.status})
+    }
+  end
   
   sleep CHECK_EVERY_SECONDS
 end

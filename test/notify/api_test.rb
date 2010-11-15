@@ -35,5 +35,12 @@ module Notify
 
       assert_equal(expected, actual)
     end
+
+    def test_started_nzb
+      actual = @fixture.started_nzb({:name => "Test Name",:mb_left => "100",:mb => "991",:time_left => "Testing"})
+      expected = "Downloading Test Name" + " ["+"100"+"MB/" + "991" + "MB "+"Testing"+" timeleft]"
+
+      assert_equal(expected, actual)
+    end
   end
 end

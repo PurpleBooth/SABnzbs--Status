@@ -17,7 +17,7 @@ module NotifyApi
     # Announce the job name with the name set in the class
     # Returns the message announced
     #
-    # @see NotifyLibNotify::LibNotify#send
+    # @see NotifyLibNotify::LibNotify#notify
     # @see NotifyApi::AddedNzb#name
     def process
       announce = "Added job " + self.name

@@ -1,7 +1,7 @@
 # Classes for creating an abstraction layer for notifications
 module NotifyApi
   # Announce the current speed, mb left, kb per sec, and time left
-  class CurrentStatus
+  class StartedNzb
 
     # @return [String] Name of the current download
     attr_accessor :name
@@ -11,9 +11,6 @@ module NotifyApi
 
     # @return [String] :mb Total MB of file
     attr_accessor :mb
-
-    # @return [String] :kb_per_sec Current speed of NZB
-    attr_accessor :kb_per_sec
 
     # @return [String] :timeleft The time left in the download
     attr_accessor :time_left
@@ -30,7 +27,7 @@ module NotifyApi
     # Announce the job status with the name set in the class
     # Returns the message announced
     #
-    # @see NotifyLibNotify::LibNotify#notify
+    # @see NotifyLibNotify::LibNotify#send
     # @see NotifyApi::CurrentStatus#name
     # @see NotifyApi::CurrentStatus#mb_left
     # @see NotifyApi::CurrentStatus#mb
@@ -38,7 +35,7 @@ module NotifyApi
     # @see NotifyApi::CurrentStatus#time_left
     # @return [String]
     def process
-      announce = self.name + " ["+self.mb_left+"MB/" + self.mb + "MB @ "+self.kb_per_sec+"KB/S "+self.time_left+" timeleft]"
+      announce = "Downloading " + self.name + " ["+self.mb_left+"MB/" + self.mb + "MB "+self.time_left+" timeleft]"
 
       self.notifier.notify(announce)
 

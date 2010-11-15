@@ -2,6 +2,7 @@ $:.unshift File.join(File.expand_path(File.dirname(__FILE__)),'..','..','lib')
 
 require 'sabnzbd_plus/api/current_queue'
 require 'sabnzbd_plus/api/unannounced_added'
+require 'sabnzbd_plus/api/unannounced_active'
 require 'sabnzbd_plus/api/unannounced_complete'
 require 'sabnzbd_plus/model/mapper'
 
@@ -62,6 +63,14 @@ module SabnzbdPlus
     # @return [Slot]
     def unannounced_complete
       return self.call_method "unannounced_complete"
+    end
+
+    # Get all of the slots which are in the queue, have a status of Downloading 
+    #
+    # @see SabnzbdPlusApi::UnannouncedComplete
+    # @return [Slot]
+    def unannounced_active
+      return self.call_method "unannounced_active"
     end
   end
 end
