@@ -154,6 +154,30 @@ Set up the mapper.
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#unannounced_active-instance_method" title="#unannounced_active (instance method)">- (Slot) <strong>unannounced_active</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Get all of the slots which are in the queue, have a status of Downloading.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#unannounced_added-instance_method" title="#unannounced_added (instance method)">- (Slot) <strong>unannounced_added</strong> </a>
     
 
@@ -261,13 +285,13 @@ Defaults to new instance of SabnzbdPlusModel::Mapper
       <pre class="lines">
 
 
-36
 37
 38
-39</pre>
+39
+40</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/api.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/api.rb', line 37</span>
 
 <span class='def def kw'>def</span> <span class='initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='mapper identifier id'>mapper</span> <span class='assign token'>=</span> <span class='SabnzbdPlusModel constant id'>SabnzbdPlusModel</span><span class='colon2 op'>::</span><span class='Mapper constant id'>Mapper</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='rparen token'>)</span>
   <span class='@api ivar id'>@api</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
@@ -330,15 +354,75 @@ Get the current items that are being processed by SABnzbd+
       <pre class="lines">
 
 
-45
 46
-47</pre>
+47
+48</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/api.rb', line 45</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/api.rb', line 46</span>
 
 <span class='def def kw'>def</span> <span class='current_queue identifier id'>current_queue</span>
   <span class='return return kw'>return</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='call_method identifier id'>call_method</span> <span class='string val'>&quot;current_queue&quot;</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="unannounced_active-instance_method">
+  
+    - (<tt>Slot</tt>) <strong>unannounced_active</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Get all of the slots which are in the queue, have a status of Downloading
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Slot</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="../SabnzbdPlusApi/UnannouncedComplete.html" title="SabnzbdPlusApi::UnannouncedComplete (class)">SabnzbdPlusApi::UnannouncedComplete</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+72
+73
+74</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/api.rb', line 72</span>
+
+<span class='def def kw'>def</span> <span class='unannounced_active identifier id'>unannounced_active</span>
+  <span class='return return kw'>return</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='call_method identifier id'>call_method</span> <span class='string val'>&quot;unannounced_active&quot;</span>
 <span class='end end kw'>end</span>
 </pre>
     </td>
@@ -391,12 +475,12 @@ been announced
       <pre class="lines">
 
 
-54
 55
-56</pre>
+56
+57</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/api.rb', line 54</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/api.rb', line 55</span>
 
 <span class='def def kw'>def</span> <span class='unannounced_added identifier id'>unannounced_added</span>
   <span class='return return kw'>return</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='call_method identifier id'>call_method</span> <span class='string val'>&quot;unannounced_added&quot;</span>
@@ -452,12 +536,12 @@ announced
       <pre class="lines">
 
 
-63
 64
-65</pre>
+65
+66</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/api.rb', line 63</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/api.rb', line 64</span>
 
 <span class='def def kw'>def</span> <span class='unannounced_complete identifier id'>unannounced_complete</span>
   <span class='return return kw'>return</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='call_method identifier id'>call_method</span> <span class='string val'>&quot;unannounced_complete&quot;</span>
@@ -473,7 +557,7 @@ announced
 </div>
     
     <div id="footer">
-  Generated on Sun Nov 14 23:26:36 2010 by 
+  Generated on Mon Nov 15 22:28:13 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.8.7).
 </div>

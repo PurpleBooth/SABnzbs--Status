@@ -1,6 +1,3 @@
-# To change this template, choose Tools | Templates
-# and open the template in the editor.
-
 require 'test/unit'
 
 $:.unshift File.join(File.dirname(__FILE__),'..','..')

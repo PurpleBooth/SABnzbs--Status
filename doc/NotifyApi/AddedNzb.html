@@ -408,7 +408,7 @@ announced
   <h3>See Also:</h3>
   <ul class="see">
     
-      <li><span class='object_link'><a href="../NotifyLibNotify/LibNotify.html#send-instance_method" title="NotifyLibNotify::LibNotify#send (method)">NotifyLibNotify::LibNotify#send</a></span></li>
+      <li><span class='object_link'><a href="../NotifyLibNotify/LibNotify.html#notify-instance_method" title="NotifyLibNotify::LibNotify#notify (method)">NotifyLibNotify::LibNotify#notify</a></span></li>
     
       <li><span class='object_link'><a href="#name-instance_method" title="NotifyApi::AddedNzb#name (method)">#name</a></span></li>
     
@@ -434,7 +434,7 @@ announced
 <span class='def def kw'>def</span> <span class='process identifier id'>process</span>
   <span class='announce identifier id'>announce</span> <span class='assign token'>=</span> <span class='string val'>&quot;Added job &quot;</span> <span class='plus op'>+</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='name identifier id'>name</span>
   
-  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='notifier identifier id'>notifier</span><span class='dot token'>.</span><span class='send identifier id'>send</span> <span class='announce identifier id'>announce</span>
+  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='notifier identifier id'>notifier</span><span class='dot token'>.</span><span class='notify identifier id'>notify</span><span class='lparen token'>(</span><span class='announce identifier id'>announce</span><span class='rparen token'>)</span>
 
   <span class='return return kw'>return</span> <span class='announce identifier id'>announce</span>
 <span class='end end kw'>end</span>
@@ -449,7 +449,7 @@ announced
 </div>
     
     <div id="footer">
-  Generated on Sun Nov 14 23:26:38 2010 by 
+  Generated on Mon Nov 15 22:28:05 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.8.7).
 </div>

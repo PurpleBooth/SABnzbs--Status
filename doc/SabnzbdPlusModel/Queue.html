@@ -58,6 +58,8 @@
         <ul class="fullTree">
           <li>Object</li>
           
+            <li class="next"><span class='object_link'><a href="Response.html" title="SabnzbdPlusModel::Response (class)">Response</a></span></li>
+          
             <li class="next"><span class='object_link'><a href="Verbose.html" title="SabnzbdPlusModel::Verbose (class)">Verbose</a></span></li>
           
             <li class="next">SabnzbdPlusModel::Queue</li>
@@ -94,6 +96,10 @@ Queue object returned by the SAB API
   
 </div>
 
+  
+  
+  
+  
   
   
   
@@ -498,6 +504,16 @@ Alias for is_verbose.
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Verbose.html" title="SabnzbdPlusModel::Verbose (class)">Verbose</a></span></h3>
   <p class="inherited"><span class='object_link'><a href="Verbose.html#from_hash-class_method" title="SabnzbdPlusModel::Verbose.from_hash (method)">from_hash</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Response.html" title="SabnzbdPlusModel::Response (class)">Response</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Response.html#eql%3F-instance_method" title="SabnzbdPlusModel::Response#eql? (method)">#eql?</a></span>, <span class='object_link'><a href="Response.html#from_hash-class_method" title="SabnzbdPlusModel::Response.from_hash (method)">from_hash</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
@@ -1200,14 +1216,14 @@ their Rubyish equivalent
       <pre class="lines">
 
 
-97
-98
-99
-100
-101</pre>
+71
+72
+73
+74
+75</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/queue.rb', line 97</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/queue.rb', line 71</span>
 
 <span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='parameter_mapping identifier id'>parameter_mapping</span>
   <span class='return return kw'>return</span> <span class='super super kw'>super</span><span class='dot token'>.</span><span class='merge identifier id'>merge</span><span class='lparen token'>(</span><span class='lbrace token'>{</span>
@@ -1286,28 +1302,28 @@ it&#8217;s attributes.
       <pre class="lines">
 
 
-66
-67
-68
-69
-70
-71
-72
-73
-74
-75
-76
-77
-78
-79
-80
-81
-82
 83
-84</pre>
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/queue.rb', line 66</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/queue.rb', line 83</span>
 
 <span class='def def kw'>def</span> <span class='eq op'>==</span><span class='lparen token'>(</span><span class='item identifier id'>item</span><span class='rparen token'>)</span>
   <span class='unless unless kw'>unless</span><span class='lparen token'>(</span>
@@ -1378,12 +1394,12 @@ Alias for is_verbose
       <pre class="lines">
 
 
-89
-90
-91</pre>
+63
+64
+65</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/queue.rb', line 89</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/queue.rb', line 63</span>
 
 <span class='def def kw'>def</span> <span class='verbose? fid id'>verbose?</span>
   <span class='return return kw'>return</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='is_verbose identifier id'>is_verbose</span>
@@ -1399,7 +1415,7 @@ Alias for is_verbose
 </div>
     
     <div id="footer">
-  Generated on Sun Nov 14 23:26:40 2010 by 
+  Generated on Mon Nov 15 22:28:06 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.8.7).
 </div>

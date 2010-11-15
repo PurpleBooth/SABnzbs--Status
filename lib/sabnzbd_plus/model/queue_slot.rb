@@ -105,5 +105,6 @@ module SabnzbdPlusModel
 
       return super item
     end
+
   end
 end

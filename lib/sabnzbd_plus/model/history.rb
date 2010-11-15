@@ -32,24 +32,22 @@ module SabnzbdPlusModel
       super
     end
 
-    # Compare this object with another history object comparing only the values
-    # in it's attributes.
+    # Compare this object with another slot object comparing only the
+    # values in it's attributes.
     #
-    # @see SabnzbdPlusModel::Verbose#==
     # @param [SabnzbdPlusModel::Verbose] item
     # @return [Boolean]
     def ==(item)
-      unless(
-        item.total_size   == self.total_size &&
-        item.month_size   == self.month_size &&
-        item.week_size    == self.week_size &&
-        item.color_scheme == self.color_scheme)
+      unless (self.slots == item.slots &&
+        self.total_size == item.total_size &&
+        self.month_size == item.month_size &&
+        self.week_size == item.week_size &&
+        self.color_scheme == item.color_scheme)
 
         return false
       end
 
-      return super item
+      return super(item)
     end
-
   end
 end

@@ -230,7 +230,7 @@ Name of the current download.
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#timeleft-instance_method" title="#timeleft (instance method)">- (String) <strong>timeleft</strong> </a>
+      <a href="#time_left-instance_method" title="#time_left (instance method)">- (String) <strong>time_left</strong> </a>
     
 
     
@@ -686,12 +686,12 @@ Name of the current download
 </div>
     
       
-      <span id="timeleft=-instance_method"></span>
-      <span id="timeleft-instance_method"></span>
+      <span id="time_left=-instance_method"></span>
+      <span id="time_left-instance_method"></span>
       <div class="method_details ">
-  <p class="signature " id="timeleft-instance_method">
+  <p class="signature " id="time_left-instance_method">
   
-    - (<tt>String</tt>) <strong>timeleft</strong> 
+    - (<tt>String</tt>) <strong>time_left</strong> 
   
 
   
@@ -738,8 +738,8 @@ Name of the current download
     <td>
       <pre class="code"><span class="info file"># File 'lib/notify/api/current_status.rb', line 19</span>
 
-<span class='def def kw'>def</span> <span class='timeleft identifier id'>timeleft</span>
-  <span class='@timeleft ivar id'>@timeleft</span>
+<span class='def def kw'>def</span> <span class='time_left identifier id'>time_left</span>
+  <span class='@time_left ivar id'>@time_left</span>
 <span class='end end kw'>end</span>
 </pre>
     </td>
@@ -789,7 +789,7 @@ announced
   <h3>See Also:</h3>
   <ul class="see">
     
-      <li><span class='object_link'><a href="../NotifyLibNotify/LibNotify.html#send-instance_method" title="NotifyLibNotify::LibNotify#send (method)">NotifyLibNotify::LibNotify#send</a></span></li>
+      <li><span class='object_link'><a href="../NotifyLibNotify/LibNotify.html#notify-instance_method" title="NotifyLibNotify::LibNotify#notify (method)">NotifyLibNotify::LibNotify#notify</a></span></li>
     
       <li><span class='object_link'><a href="#name-instance_method" title="NotifyApi::CurrentStatus#name (method)">#name</a></span></li>
     
@@ -799,7 +799,7 @@ announced
     
       <li><span class='object_link'><a href="#kb_per_sec-instance_method" title="NotifyApi::CurrentStatus#kb_per_sec (method)">#kb_per_sec</a></span></li>
     
-      <li><span class='object_link'><a href="#timeleft-instance_method" title="NotifyApi::CurrentStatus#timeleft (method)">#timeleft</a></span></li>
+      <li><span class='object_link'><a href="#time_left-instance_method" title="NotifyApi::CurrentStatus#time_left (method)">#time_left</a></span></li>
     
   </ul>
 
@@ -821,9 +821,9 @@ announced
       <pre class="code"><span class="info file"># File 'lib/notify/api/current_status.rb', line 40</span>
 
 <span class='def def kw'>def</span> <span class='process identifier id'>process</span>
-  <span class='announce identifier id'>announce</span> <span class='assign token'>=</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='name identifier id'>name</span> <span class='plus op'>+</span> <span class='string val'>&quot; [&quot;</span><span class='plus op'>+</span><span class='self self kw'>self</span><span class='dot token'>.</span><span class='mb_left identifier id'>mb_left</span><span class='plus op'>+</span><span class='string val'>&quot;MB/&quot;</span> <span class='plus op'>+</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='mb identifier id'>mb</span> <span class='plus op'>+</span> <span class='string val'>&quot;MB @ &quot;</span><span class='plus op'>+</span><span class='self self kw'>self</span><span class='dot token'>.</span><span class='kb_per_sec identifier id'>kb_per_sec</span><span class='plus op'>+</span><span class='string val'>&quot;KB/S &quot;</span><span class='plus op'>+</span><span class='self self kw'>self</span><span class='dot token'>.</span><span class='timeleft identifier id'>timeleft</span><span class='plus op'>+</span><span class='string val'>&quot; timeleft]&quot;</span>
+  <span class='announce identifier id'>announce</span> <span class='assign token'>=</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='name identifier id'>name</span> <span class='plus op'>+</span> <span class='string val'>&quot; [&quot;</span><span class='plus op'>+</span><span class='self self kw'>self</span><span class='dot token'>.</span><span class='mb_left identifier id'>mb_left</span><span class='plus op'>+</span><span class='string val'>&quot;MB/&quot;</span> <span class='plus op'>+</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='mb identifier id'>mb</span> <span class='plus op'>+</span> <span class='string val'>&quot;MB @ &quot;</span><span class='plus op'>+</span><span class='self self kw'>self</span><span class='dot token'>.</span><span class='kb_per_sec identifier id'>kb_per_sec</span><span class='plus op'>+</span><span class='string val'>&quot;KB/S &quot;</span><span class='plus op'>+</span><span class='self self kw'>self</span><span class='dot token'>.</span><span class='time_left identifier id'>time_left</span><span class='plus op'>+</span><span class='string val'>&quot; timeleft]&quot;</span>
 
-  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='notifier identifier id'>notifier</span><span class='dot token'>.</span><span class='send identifier id'>send</span> <span class='announce identifier id'>announce</span>
+  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='notifier identifier id'>notifier</span><span class='dot token'>.</span><span class='notify identifier id'>notify</span><span class='lparen token'>(</span><span class='announce identifier id'>announce</span><span class='rparen token'>)</span>
 
   <span class='return return kw'>return</span> <span class='announce identifier id'>announce</span>
 <span class='end end kw'>end</span>
@@ -838,7 +838,7 @@ announced
 </div>
     
     <div id="footer">
-  Generated on Sun Nov 14 23:26:44 2010 by 
+  Generated on Mon Nov 15 22:28:12 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.8.7).
 </div>

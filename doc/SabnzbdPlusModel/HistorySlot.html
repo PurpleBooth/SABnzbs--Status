@@ -58,6 +58,8 @@
         <ul class="fullTree">
           <li>Object</li>
           
+            <li class="next"><span class='object_link'><a href="Response.html" title="SabnzbdPlusModel::Response (class)">Response</a></span></li>
+          
             <li class="next"><span class='object_link'><a href="Slot.html" title="SabnzbdPlusModel::Slot (class)">Slot</a></span></li>
           
             <li class="next">SabnzbdPlusModel::HistorySlot</li>
@@ -94,6 +96,10 @@ Represents a single item in the slot field of a history
   
 </div>
 
+  
+  
+  
+  
   
   
   
@@ -790,8 +796,8 @@ their Rubyish equivalent.
 
   
     <span class="summary_desc"><div class='inline'><p>
-Compare this object with another history slot object comparing only the
-values in it&#8217;s attributes.
+Compare this object with another slot object comparing only the values in
+it&#8217;s attributes.
 </p>
 </div></span>
   
@@ -837,6 +843,16 @@ Set the stage_log to an empty array.
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Slot.html" title="SabnzbdPlusModel::Slot (class)">Slot</a></span></h3>
   <p class="inherited"><span class='object_link'><a href="Slot.html#factory-class_method" title="SabnzbdPlusModel::Slot.factory (method)">factory</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Response.html" title="SabnzbdPlusModel::Response (class)">Response</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Response.html#eql%3F-instance_method" title="SabnzbdPlusModel::Response#eql? (method)">#eql?</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
@@ -2388,8 +2404,8 @@ their Rubyish equivalent
 </p><div class="docstring">
   <div class="discussion">
     <p>
-Compare this object with another history slot object comparing only the
-values in it&#8217;s attributes.
+Compare this object with another slot object comparing only the values in
+it&#8217;s attributes.
 </p>
 
 
@@ -2425,19 +2441,13 @@ values in it&#8217;s attributes.
   
 </ul>
 
-  <h3>See Also:</h3>
-  <ul class="see">
-    
-      <li><span class='object_link'><a href="Slot.html#%3D%3D-instance_method" title="SabnzbdPlusModel::Slot#== (method)">Slot#==</a></span></li>
-    
-  </ul>
-
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+123
 124
 125
 126
@@ -2468,45 +2478,42 @@ values in it&#8217;s attributes.
 151
 152
 153
-154
-155
-156</pre>
+154</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/history_slot.rb', line 124</span>
+      <pre class="code"><span class="info file"># File 'lib/sabnzbd_plus/model/history_slot.rb', line 123</span>
 
 <span class='def def kw'>def</span> <span class='eq op'>==</span><span class='lparen token'>(</span><span class='item identifier id'>item</span><span class='rparen token'>)</span>
-  <span class='unless unless kw'>unless</span><span class='lparen token'>(</span>
-    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='action_line identifier id'>action_line</span>    <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='action_line identifier id'>action_line</span> <span class='andop op'>&amp;&amp;</span>
-    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='show_details identifier id'>show_details</span>   <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='show_details identifier id'>show_details</span> <span class='andop op'>&amp;&amp;</span>
-    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='script_log identifier id'>script_log</span>     <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='script_log identifier id'>script_log</span> <span class='andop op'>&amp;&amp;</span>
-    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='meta identifier id'>meta</span>           <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='meta identifier id'>meta</span> <span class='andop op'>&amp;&amp;</span>
-    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='loaded identifier id'>loaded</span>         <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='loaded identifier id'>loaded</span> <span class='andop op'>&amp;&amp;</span>
-    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='id identifier id'>id</span>             <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='id identifier id'>id</span> <span class='andop op'>&amp;&amp;</span>
-    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='category identifier id'>category</span>       <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='category identifier id'>category</span> <span class='andop op'>&amp;&amp;</span>
-    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='filename identifier id'>filename</span>       <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='filename identifier id'>filename</span> <span class='andop op'>&amp;&amp;</span>
-    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='pp identifier id'>pp</span>             <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='pp identifier id'>pp</span> <span class='andop op'>&amp;&amp;</span>
-    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='completeness identifier id'>completeness</span>   <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='completeness identifier id'>completeness</span> <span class='andop op'>&amp;&amp;</span>
-    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='fail_message identifier id'>fail_message</span>   <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='fail_message identifier id'>fail_message</span> <span class='andop op'>&amp;&amp;</span>
-    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='nzb_name identifier id'>nzb_name</span>       <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='nzb_name identifier id'>nzb_name</span> <span class='andop op'>&amp;&amp;</span>
-    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='download_time identifier id'>download_time</span>  <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='download_time identifier id'>download_time</span> <span class='andop op'>&amp;&amp;</span>
-    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='script_line identifier id'>script_line</span>    <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='script_line identifier id'>script_line</span> <span class='andop op'>&amp;&amp;</span>
-    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='completed identifier id'>completed</span>      <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='completed identifier id'>completed</span> <span class='andop op'>&amp;&amp;</span>
-    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='downloaded identifier id'>downloaded</span>     <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='downloaded identifier id'>downloaded</span> <span class='andop op'>&amp;&amp;</span>
-    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='report identifier id'>report</span>         <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='report identifier id'>report</span> <span class='andop op'>&amp;&amp;</span>
-    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='path identifier id'>path</span>           <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='path identifier id'>path</span> <span class='andop op'>&amp;&amp;</span>
-    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='stage_log identifier id'>stage_log</span>      <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='stage_log identifier id'>stage_log</span> <span class='andop op'>&amp;&amp;</span>
-    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='post_proc_time identifier id'>post_proc_time</span> <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='post_proc_time identifier id'>post_proc_time</span> <span class='andop op'>&amp;&amp;</span>
-    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='name identifier id'>name</span>           <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='name identifier id'>name</span> <span class='andop op'>&amp;&amp;</span>
-    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='url identifier id'>url</span>            <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='url identifier id'>url</span> <span class='andop op'>&amp;&amp;</span>
-    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='bytes identifier id'>bytes</span>          <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='bytes identifier id'>bytes</span> <span class='andop op'>&amp;&amp;</span>
-    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='url_info identifier id'>url_info</span>       <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='url_info identifier id'>url_info</span> <span class='andop op'>&amp;&amp;</span>
-    <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='storage identifier id'>storage</span>        <span class='eq op'>==</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='storage identifier id'>storage</span><span class='rparen token'>)</span>
+  <span class='unless unless kw'>unless</span> <span class='lparen token'>(</span><span class='self self kw'>self</span><span class='dot token'>.</span><span class='action_line identifier id'>action_line</span> <span class='eq op'>==</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='action_line identifier id'>action_line</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='self self kw'>self</span><span class='dot token'>.</span><span class='show_details identifier id'>show_details</span> <span class='eq op'>==</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='show_details identifier id'>show_details</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='self self kw'>self</span><span class='dot token'>.</span><span class='script_log identifier id'>script_log</span> <span class='eq op'>==</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='script_log identifier id'>script_log</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='self self kw'>self</span><span class='dot token'>.</span><span class='meta identifier id'>meta</span> <span class='eq op'>==</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='meta identifier id'>meta</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='self self kw'>self</span><span class='dot token'>.</span><span class='loaded identifier id'>loaded</span> <span class='eq op'>==</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='loaded identifier id'>loaded</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='self self kw'>self</span><span class='dot token'>.</span><span class='id identifier id'>id</span> <span class='eq op'>==</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='id identifier id'>id</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='self self kw'>self</span><span class='dot token'>.</span><span class='category identifier id'>category</span> <span class='eq op'>==</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='category identifier id'>category</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='self self kw'>self</span><span class='dot token'>.</span><span class='pp identifier id'>pp</span>  <span class='eq op'>==</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='pp identifier id'>pp</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='self self kw'>self</span><span class='dot token'>.</span><span class='completeness identifier id'>completeness</span> <span class='eq op'>==</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='completeness identifier id'>completeness</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='self self kw'>self</span><span class='dot token'>.</span><span class='fail_message identifier id'>fail_message</span> <span class='eq op'>==</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='fail_message identifier id'>fail_message</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='self self kw'>self</span><span class='dot token'>.</span><span class='nzb_name identifier id'>nzb_name</span> <span class='eq op'>==</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='nzb_name identifier id'>nzb_name</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='self self kw'>self</span><span class='dot token'>.</span><span class='download_time identifier id'>download_time</span> <span class='eq op'>==</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='download_time identifier id'>download_time</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='self self kw'>self</span><span class='dot token'>.</span><span class='storage identifier id'>storage</span> <span class='eq op'>==</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='storage identifier id'>storage</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='self self kw'>self</span><span class='dot token'>.</span><span class='script_line identifier id'>script_line</span> <span class='eq op'>==</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='script_line identifier id'>script_line</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='self self kw'>self</span><span class='dot token'>.</span><span class='filename identifier id'>filename</span> <span class='eq op'>==</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='filename identifier id'>filename</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='self self kw'>self</span><span class='dot token'>.</span><span class='completed identifier id'>completed</span> <span class='eq op'>==</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='completed identifier id'>completed</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='self self kw'>self</span><span class='dot token'>.</span><span class='downloaded identifier id'>downloaded</span> <span class='eq op'>==</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='downloaded identifier id'>downloaded</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='self self kw'>self</span><span class='dot token'>.</span><span class='report identifier id'>report</span> <span class='eq op'>==</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='report identifier id'>report</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='self self kw'>self</span><span class='dot token'>.</span><span class='path identifier id'>path</span> <span class='eq op'>==</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='path identifier id'>path</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='self self kw'>self</span><span class='dot token'>.</span><span class='stage_log identifier id'>stage_log</span> <span class='eq op'>==</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='stage_log identifier id'>stage_log</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='self self kw'>self</span><span class='dot token'>.</span><span class='post_proc_time identifier id'>post_proc_time</span> <span class='eq op'>==</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='post_proc_time identifier id'>post_proc_time</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='self self kw'>self</span><span class='dot token'>.</span><span class='name identifier id'>name</span> <span class='eq op'>==</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='name identifier id'>name</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='self self kw'>self</span><span class='dot token'>.</span><span class='url identifier id'>url</span> <span class='eq op'>==</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='url identifier id'>url</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='self self kw'>self</span><span class='dot token'>.</span><span class='bytes identifier id'>bytes</span> <span class='eq op'>==</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='bytes identifier id'>bytes</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='self self kw'>self</span><span class='dot token'>.</span><span class='url_info identifier id'>url_info</span> <span class='eq op'>==</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='url_info identifier id'>url_info</span><span class='rparen token'>)</span>
 
     <span class='return return kw'>return</span> <span class='false false kw'>false</span>
   <span class='end end kw'>end</span>
 
-  <span class='return return kw'>return</span> <span class='super super kw'>super</span> <span class='item identifier id'>item</span>
+  <span class='return return kw'>return</span> <span class='super super kw'>super</span><span class='lparen token'>(</span><span class='item identifier id'>item</span><span class='rparen token'>)</span>
 <span class='end end kw'>end</span>
 </pre>
     </td>
@@ -2519,7 +2526,7 @@ values in it&#8217;s attributes.
 </div>
     
     <div id="footer">
-  Generated on Sun Nov 14 23:26:48 2010 by 
+  Generated on Mon Nov 15 22:28:07 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.8.7).
 </div>

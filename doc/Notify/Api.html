@@ -228,6 +228,30 @@ Set the notifier to use.
 </li>
 
       
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#started_nzb-instance_method" title="#started_nzb (instance method)">- (Object) <strong>started_nzb</strong>(options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Announce that SABnzbd+ has started downloading the NZB.
+</p>
+</div></span>
+  
+</li>
+
+      
     </ul>
   
 
@@ -265,12 +289,12 @@ Set the notifier to use. Defaults to LibNotify
       <pre class="lines">
 
 
-38
 39
-40</pre>
+40
+41</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/notify/api.rb', line 38</span>
+      <pre class="code"><span class="info file"># File 'lib/notify/api.rb', line 39</span>
 
 <span class='def def kw'>def</span> <span class='initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='notifier identifier id'>notifier</span> <span class='assign token'>=</span> <span class='NotifyLibNotify constant id'>NotifyLibNotify</span><span class='colon2 op'>::</span><span class='LibNotify constant id'>LibNotify</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='rparen token'>)</span>
   <span class='self self kw'>self</span><span class='dot token'>.</span><span class='notifier identifier id'>notifier</span> <span class='assign token'>=</span> <span class='notifier identifier id'>notifier</span>
@@ -323,12 +347,12 @@ Set the notifier to use. Defaults to LibNotify
       <pre class="lines">
 
 
-33
 34
-35</pre>
+35
+36</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/notify/api.rb', line 33</span>
+      <pre class="code"><span class="info file"># File 'lib/notify/api.rb', line 34</span>
 
 <span class='def def kw'>def</span> <span class='notifier identifier id'>notifier</span>
   <span class='@notifier ivar id'>@notifier</span>
@@ -420,12 +444,12 @@ the options to create a announcement with
       <pre class="lines">
 
 
-60
 61
-62</pre>
+62
+63</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/notify/api.rb', line 60</span>
+      <pre class="code"><span class="info file"># File 'lib/notify/api.rb', line 61</span>
 
 <span class='def def kw'>def</span> <span class='added_nzb identifier id'>added_nzb</span><span class='lparen token'>(</span><span class='options identifier id'>options</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
   <span class='self self kw'>self</span><span class='dot token'>.</span><span class='call_method identifier id'>call_method</span><span class='lparen token'>(</span><span class='symbol val'>:added_nzb</span><span class='comma token'>,</span> <span class='options identifier id'>options</span><span class='rparen token'>)</span>
@@ -521,12 +545,12 @@ the options to create a announcement with
       <pre class="lines">
 
 
-70
-71
-72</pre>
+85
+86
+87</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/notify/api.rb', line 70</span>
+      <pre class="code"><span class="info file"># File 'lib/notify/api.rb', line 85</span>
 
 <span class='def def kw'>def</span> <span class='completed_nzb identifier id'>completed_nzb</span><span class='lparen token'>(</span><span class='options identifier id'>options</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
   <span class='self self kw'>self</span><span class='dot token'>.</span><span class='call_method identifier id'>call_method</span><span class='lparen token'>(</span><span class='symbol val'>:completed_nzb</span><span class='comma token'>,</span> <span class='options identifier id'>options</span><span class='rparen token'>)</span>
@@ -642,7 +666,7 @@ Current speed of NZB
       
         <li>
           <span class="type">(<tt>String</tt>)</span>
-          <span class="name">:timeleft</span>
+          <span class="name">:time_left</span>
           <span class="default">
             
               <span class="na">N/A</span>
@@ -670,15 +694,164 @@ The time left in the download
       <pre class="lines">
 
 
-51
 52
-53</pre>
+53
+54</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/notify/api.rb', line 51</span>
+      <pre class="code"><span class="info file"># File 'lib/notify/api.rb', line 52</span>
 
 <span class='def def kw'>def</span> <span class='current_status identifier id'>current_status</span><span class='lparen token'>(</span><span class='options identifier id'>options</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
   <span class='self self kw'>self</span><span class='dot token'>.</span><span class='call_method identifier id'>call_method</span><span class='lparen token'>(</span><span class='symbol val'>:current_status</span><span class='comma token'>,</span> <span class='options identifier id'>options</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="started_nzb-instance_method">
+  
+    - (<tt>Object</tt>) <strong>started_nzb</strong>(options = {}) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Announce that SABnzbd+ has started downloading the NZB
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>options</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the options to create a announcement with
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <h3>Options Hash (<tt>options</tt>):</h3>
+    <ul class="option">
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:name</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;<div class='inline'><p>
+Name of the current download
+</p>
+</div>
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:mb_left</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;<div class='inline'><p>
+MB left to download
+</p>
+</div>
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:mb</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;<div class='inline'><p>
+Total MB of file
+</p>
+</div>
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:kb_per_sec</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;<div class='inline'><p>
+Current speed of NZB
+</p>
+</div>
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:time_left</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;<div class='inline'><p>
+The time left in the download
+</p>
+</div>
+        </tr>
+      
+    </ul>
+  
+
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="../NotifyApi/AddedNzb.html" title="NotifyApi::AddedNzb (class)">NotifyApi::AddedNzb</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+75
+76
+77</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/notify/api.rb', line 75</span>
+
+<span class='def def kw'>def</span> <span class='started_nzb identifier id'>started_nzb</span><span class='lparen token'>(</span><span class='options identifier id'>options</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='call_method identifier id'>call_method</span><span class='lparen token'>(</span><span class='symbol val'>:started_nzb</span><span class='comma token'>,</span> <span class='options identifier id'>options</span><span class='rparen token'>)</span>
 <span class='end end kw'>end</span>
 </pre>
     </td>
@@ -691,7 +864,7 @@ The time left in the download
 </div>
     
     <div id="footer">
-  Generated on Sun Nov 14 23:26:37 2010 by 
+  Generated on Mon Nov 15 22:28:13 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.8.7).
 </div>

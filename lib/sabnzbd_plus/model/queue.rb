@@ -57,6 +57,23 @@ module SabnzbdPlusModel
       super
     end
 
+    # Alias for is_verbose
+    # @see SabnzbdPlusModel::Verbose#is_verbose
+    # @return [Boolean]
+    def verbose?
+      return self.is_verbose
+    end
+
+    # Get the parameter mapping that maps the SABnzbd+ API parameter names to
+    # their Rubyish equivalent
+    #
+    # @return [Hash<String, Label>]
+    def self.parameter_mapping
+      return super.merge({
+          "newzbinDetails" => :newzbin_details
+        })
+    end
+
     # Compare this object with another queue object comparing only the
     # values in it's attributes.
     #
@@ -81,23 +98,6 @@ module SabnzbdPlusModel
       end
 
       return super item
-    end
-
-    # Alias for is_verbose
-    # @see SabnzbdPlusModel::Verbose#is_verbose
-    # @return [Boolean]
-    def verbose?
-      return self.is_verbose
-    end
-
-    # Get the parameter mapping that maps the SABnzbd+ API parameter names to
-    # their Rubyish equivalent
-    #
-    # @return [Hash<String, Label>]
-    def self.parameter_mapping
-      return super.merge({
-          "newzbinDetails" => :newzbin_details
-        })
     end
   end
 end

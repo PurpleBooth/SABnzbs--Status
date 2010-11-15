@@ -115,44 +115,42 @@ module SabnzbdPlusModel
         })
     end
 
-    # Compare this object with another history slot object comparing only the
+    # Compare this object with another slot object comparing only the
     # values in it's attributes.
     #
-    # @see SabnzbdPlusModel::Slot#==
     # @param [SabnzbdPlusModel::HistorySlot] item
     # @return [Boolean]
     def ==(item)
-      unless(
-        item.action_line    == self.action_line &&
-        item.show_details   == self.show_details &&
-        item.script_log     == self.script_log &&
-        item.meta           == self.meta &&
-        item.loaded         == self.loaded &&
-        item.id             == self.id &&
-        item.category       == self.category &&
-        item.filename       == self.filename &&
-        item.pp             == self.pp &&
-        item.completeness   == self.completeness &&
-        item.fail_message   == self.fail_message &&
-        item.nzb_name       == self.nzb_name &&
-        item.download_time  == self.download_time &&
-        item.script_line    == self.script_line &&
-        item.completed      == self.completed &&
-        item.downloaded     == self.downloaded &&
-        item.report         == self.report &&
-        item.path           == self.path &&
-        item.stage_log      == self.stage_log &&
-        item.post_proc_time == self.post_proc_time &&
-        item.name           == self.name &&
-        item.url            == self.url &&
-        item.bytes          == self.bytes &&
-        item.url_info       == self.url_info &&
-        item.storage        == self.storage)
+      unless (self.action_line == item.action_line &&
+        self.show_details == item.show_details &&
+        self.script_log == item.script_log &&
+        self.meta == item.meta &&
+        self.loaded == item.loaded &&
+        self.id == item.id &&
+        self.category == item.category &&
+        self.pp  == item.pp &&
+        self.completeness == item.completeness &&
+        self.fail_message == item.fail_message &&
+        self.nzb_name == item.nzb_name &&
+        self.download_time == item.download_time &&
+        self.storage == item.storage &&
+        self.script_line == item.script_line &&
+        self.filename == item.filename &&
+        self.completed == item.completed &&
+        self.downloaded == item.downloaded &&
+        self.report == item.report &&
+        self.path == item.path &&
+        self.stage_log == item.stage_log &&
+        self.post_proc_time == item.post_proc_time &&
+        self.name == item.name &&
+        self.url == item.url &&
+        self.bytes == item.bytes &&
+        self.url_info == item.url_info)
 
         return false
       end
 
-      return super item
+      return super(item)
     end
   end
 end

@@ -1,9 +1,11 @@
 $:.unshift File.expand_path(File.join(File.dirname(__FILE__),'..','..','..','lib'))
 
+require 'sabnzbd_plus/model/response'
+
 # Abstraction layer for interacting with SABnzbd+
 module SabnzbdPlusModel
   # Single slot that could be returned by the API
-  class Slot
+  class Slot < Response
 
     # @return [String]
     attr_accessor :size
@@ -47,7 +49,7 @@ module SabnzbdPlusModel
     # @param [Hash] slot
     # @return [SabnzbdPlusModel::Slot]
     def self.from_hash(slot)
-      item = self.new
+      item = super slot
 
       slot.each { |key, value|
         unless self.parameter_mapping.key? key

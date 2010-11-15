@@ -41,14 +41,88 @@
     
     <iframe id="search_frame"></iframe>
     
-    <div id="content"><div id='filecontents'><h2>notifier</h2>
-<p>
-You should document your project here.
-</p>
-</div></div>
+    <div id="content"><div id='filecontents'><h1>Notifier</h1>
+
+<h2>Description</h2>
+
+<p>Puts pop-up notifications about the current status of SABnzbd+ on your screen
+using notify-send (libnotify).</p>
+
+<p>Currently notifies when SABnzbd+ adds an item to a queue, when an item is
+completed, and when an item begins being processed (i.e. starts being
+downloaded).</p>
+
+<h2>Requires</h2>
+
+<p>notify-send from the (on debian based systems libnotify-bin).</p>
+
+<pre class="code">
+    <span class='sudo identifier id'>sudo</span> <span class='apt identifier id'>apt</span><span class='minus op'>-</span><span class='get identifier id'>get</span> <span class='install identifier id'>install</span> <span class='libnotify identifier id'>libnotify</span><span class='minus op'>-</span><span class='bin identifier id'>bin</span>
+</pre>
+
+
+<p>In order to run the rake tasks for generating the documentation you'll need YARD
+and Reek installed. These can be installed using ruby's gem.</p>
+
+<pre class="code">
+    <span class='sudo identifier id'>sudo</span> <span class='gem identifier id'>gem</span> <span class='install identifier id'>install</span> <span class='reek identifier id'>reek</span>
+    <span class='sudo identifier id'>sudo</span> <span class='gem identifier id'>gem</span> <span class='install identifier id'>install</span> <span class='yard identifier id'>yard</span>
+</pre>
+
+
+<h2>Configuration</h2>
+
+<p>For configuration we use the YAML syntax.</p>
+
+<pre class="code">
+<span class='sabnzbd_plus identifier id'>sabnzbd_plus</span><span class='colon op'>:</span>
+  <span class='model identifier id'>model</span><span class='colon op'>:</span>
+    <span class='api identifier id'>api</span><span class='colon op'>:</span>
+      <span class='caller identifier id'>caller</span><span class='colon op'>:</span>
+        <span class='http_json identifier id'>http_json</span><span class='colon op'>:</span>
+          <span class='api_key identifier id'>api_key</span><span class='colon op'>:</span> <span class='string val'>&quot;48e93e8b1aaf946f541cc5118a531f48&quot;</span>
+          <span class='api_endpoint identifier id'>api_endpoint</span><span class='colon op'>:</span> <span class='string val'>&quot;http://127.0.0.1:8880/api&quot;</span>
+          <span class='api_output identifier id'>api_output</span><span class='colon op'>:</span> <span class='string val'>&quot;json&quot;</span>
+        <span class='test identifier id'>test</span><span class='colon op'>:</span>
+          <span class='api_key identifier id'>api_key</span><span class='colon op'>:</span> <span class='string val'>&quot;Mock API Key&quot;</span>
+          <span class='fixtures_directory identifier id'>fixtures_directory</span><span class='colon op'>:</span> <span class='string val'>&quot;test/fixtures/SABnzbd+&quot;</span>
+<span class='log identifier id'>log</span><span class='colon op'>:</span>
+  <span class='log identifier id'>log</span><span class='colon op'>:</span>
+    <span class='file identifier id'>file</span><span class='colon op'>:</span> <span class='string val'>&quot;log/application.log&quot;</span>
+<span class='notify identifier id'>notify</span><span class='colon op'>:</span>
+  <span class='lib_notify identifier id'>lib_notify</span><span class='colon op'>:</span>
+    <span class='icon identifier id'>icon</span><span class='colon op'>:</span> <span class='string val'>&quot;favicon.ico&quot;</span>
+</pre>
+
+
+<p>Parameters you probably want to change are</p>
+
+<h3>Your API key</h3>
+
+<p>sabnzbd_plus -> model -> api -> caller -> http_json -> api_key</p>
+
+<h3>Your SABnzbd+ API endpoint</h3>
+
+<p>sabnzbd_plus -> model -> api -> caller -> http_json -> api_key</p>
+
+<h3>What to notify for</h3>
+
+<pre class="code"><span class='notify_for identifier id'>notify_for</span><span class='colon op'>:</span> <span class='lbrack token'>[</span><span class='added identifier id'>added</span> <span class='active identifier id'>active</span> <span class='current identifier id'>current</span> <span class='complete identifier id'>complete</span><span class='rbrack token'>]</span>
+</pre>
+
+<ul>
+<li>added - Announce when a new nzb is added to the queue</li>
+<li>active - Announce when a nzb starts downloading, and if it stops downloading and starts again it'll be announced again</li>
+<li>current - Announce current items in the queue every 5min</li>
+<li>complete - Announce when an item completes</li>
+</ul>
+
+
+<p>So for example if your SAB url is http://127.0.0.1:8880/sabnzbd your API
+endpoint will be http://127.0.0.1:8880/api</p></div></div>
     
     <div id="footer">
-  Generated on Sun Nov 14 23:26:36 2010 by 
+  Generated on Mon Nov 15 22:28:04 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.8.7).
 </div>

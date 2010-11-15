@@ -1,11 +1,12 @@
 $:.unshift File.expand_path(File.join(File.dirname(__FILE__),'..','..','..','lib'))
 
 require 'sabnzbd_plus/model/slot'
+require 'sabnzbd_plus/model/response'
 
 # Abstraction layer for interacting with SABnzbd+
 module SabnzbdPlusModel
   # Basic response from Queue or History requests
-  class Verbose
+  class Verbose < Response
     # @return [String]
     attr_accessor :cache_limit
     # @return [String]
@@ -140,23 +141,14 @@ module SabnzbdPlusModel
     # Set the attributes from a hash into the attributes of this object, so
     # @example
     #   {"total_size" => "bla"}
-    # is equivalent to 
-    # @example 
+    # is equivalent to
+    # @example
     #   total_size = "bla"
     #
     # @param [Hash<String, Hash>, Hash<String, String>]
     # @return [SabnzbdPlusModel::Verbose]
     def self.from_hash(response)
-      item = self.new
-
-      response.each { |key, value|
-        unless self.parameter_mapping.key? key
-          item.send(key.to_s+"=", value)
-        else
-          item.send(self.parameter_mapping[key].to_s+"=", value)
-        end
-        
-      }
+      item = super response
 
       unless response["slots"].nil?
         item.slots = []
@@ -167,6 +159,30 @@ module SabnzbdPlusModel
       end
 
       return item
+    end
+
+    # Get the parameter mapping that maps the SABnzbd+ API parameter names to
+    # their Rubyish equivalent
+    #
+    # @return [Hash<String, Label>]
+    def self.parameter_mapping
+      return {
+        "isverbose"       => :is_verbose,
+        "helpuri"         => :help_uri,
+        "diskspacetotal2" => :disk_space_total_2,
+        "finishaction"    => :finish_action,
+        "noofslots"       => :no_of_slots,
+        "mbleft"          => :mb_left,
+        "diskspace2"      => :disk_space_2,
+        "diskspace1"      => :disk_space_1,
+        "diskspacetotal1" => :disk_space_total_1,
+        "timeleft"        => :time_left,
+        "loadavg"         => :load_avg,
+        "kbpersec"        => :kb_per_sec,
+        "speedlimit"      => :speed_limit,
+        "webdir"          => :web_dir,
+        "sizeleft"        => :size_left,
+      }
     end
 
     # Compare this object with another slot object comparing only the
@@ -223,30 +239,6 @@ module SabnzbdPlusModel
       end
 
       return true
-    end
-
-    # Get the parameter mapping that maps the SABnzbd+ API parameter names to
-    # their Rubyish equivalent
-    #
-    # @return [Hash<String, Label>]
-    def self.parameter_mapping
-      return {
-        "isverbose"       => :is_verbose,
-        "helpuri"         => :help_uri,
-        "diskspacetotal2" => :disk_space_total_2,
-        "finishaction"    => :finish_action,
-        "noofslots"       => :no_of_slots,
-        "mbleft"          => :mb_left,
-        "diskspace2"      => :disk_space_2,
-        "diskspace1"      => :disk_space_1,
-        "diskspacetotal1" => :disk_space_total_1,
-        "timeleft"        => :time_left,
-        "loadavg"         => :load_avg,
-        "kbpersec"        => :kb_per_sec,
-        "speedlimit"      => :speed_limit,
-        "webdir"          => :web_dir,
-        "sizeleft"        => :size_left,
-      }
     end
   end
 end
