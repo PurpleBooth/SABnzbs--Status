@@ -14,7 +14,7 @@ module SabnzbdPlusModel
     #   total_size = "bla"
     #
     # @param [Hash<String, Hash>, Hash<String, String>]
-    # @return [SabnzbdPlusModel::Verbose]
+    # @return [SabnzbdPlusModel::Response]
     def self.from_hash(response)
       item = self.new
 
