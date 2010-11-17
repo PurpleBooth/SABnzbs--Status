@@ -2,46 +2,7 @@
 
 $:.unshift File.expand_path(File.join(File.dirname(__FILE__), "..", "lib"))
 require 'notifier'
-
-# Number of seconds to poll the API
-CHECK_EVERY_SECONDS = 60*5
-
-@api = SabnzbdPlus::Api.new
-notify_for = Config::Config.new["notify_for"]
+require "scheduler/api"
 
 # Tick Tock
-while true
-  if notify_for.include?("added")
-    added = @api.unannounced_added
-
-    added.each { |slot|
-      Notify::Api.new.added_nzb({:name => slot.name})
-    }
-  end
-
-  if notify_for.include?("active")
-    active = @api.unannounced_active
-
-    active.each { |slot|
-      Notify::Api.new.started_nzb({:name => slot.name, :mb_left => slot.mb_left, :mb => slot.mb, :time_left => slot.time_left})
-    }
-  end
-
-  if notify_for.include?("current")
-    queue = @api.current_queue
-
-    queue.slots.each { |slot|
-      Notify::Api.new.current_status({:name => slot.name, :mb_left => slot.mb_left, :mb => slot.mb, :kb_per_sec => queue.kb_per_sec, :time_left => slot.time_left})
-    }
-  end
-
-  if notify_for.include?("complete")
-    complete = @api.unannounced_complete
-
-    complete.each { |slot|
-      Notify::Api.new.completed_nzb({:name => slot.name, :status => slot.status})
-    }
-  end
-  
-  sleep CHECK_EVERY_SECONDS
-end
+Scheduler::Api.new.clock();
