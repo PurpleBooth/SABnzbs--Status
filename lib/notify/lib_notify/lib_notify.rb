@@ -23,11 +23,16 @@ module NotifyLibNotify
       
       process_id = fork do
         Notify.init("SABnzbd+ Status")
-        notif = Notify::Notification.new("SABnzbd+ Status", msg, self.icon, nil)
-        notif.timeout = 5000
-        notif.show
-        sleep 6
-        notif.close
+        notifier_lib = Notify::Notification.new("SABnzbd+ Status",
+                                                msg,
+                                                self.icon,
+                                                nil)
+                                              
+        notifier_lib.timeout = 5000
+        notifier_lib.show
+        sleep 5
+        notifier_lib.close
+        sleep 1
         Notify.uninit()
       end
 
