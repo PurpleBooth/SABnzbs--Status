@@ -1,4 +1,5 @@
-require 'escape'
+require 'glib2'
+require 'rnotify'
 
 # Classes for creating an abstraction layer for notifications
 module NotifyLibNotify
@@ -9,16 +10,27 @@ module NotifyLibNotify
     NOTIFY_LIB_NOTIFY_ICON_DIRECTORY = File.expand_path(File.join(File.dirname(__FILE__), '..', '..', '..', 'resources', 'images'))
 
     # Load the configuration, defaults to notify -> lib_notify
-    def initialize(config = Config::Config.new["notify"]["lib_notify"])
+    def initialize(config = Config::Config.new["notify"]["lib_notify"], log = Log::Log.new)
       @config = config
+      @log = log
     end
 
     # Execute the shell command, popping up the notification for the user
     #
     # @param [String] msg Message to display
     def notify(msg)
-      system(self.shell_command(msg))
-      puts msg
+      @log.log("NotifyLibNotify", "LibNotify", "Announcing \""+msg+"\"")
+      
+      process_id = fork do
+        Notify.init("SABnzbd+ Status")
+        notif = Notify::Notification.new("SABnzbd+ Status", msg, self.icon, nil)
+        notif.timeout = 5000
+        notif.show
+        sleep 5
+        Notify.uninit()
+      end
+
+      Process.detach(process_id)
     end
 
     # Get the full path to the icon to be used on the notification
@@ -26,14 +38,6 @@ module NotifyLibNotify
     # @return [String]
     def icon
       return File.join(NOTIFY_LIB_NOTIFY_ICON_DIRECTORY, @config["icon"])
-    end
-
-    # Get the shell command escaped and as a string that will be executed to
-    # generate the pop-up.
-    #
-    # @return [String]
-    def shell_command(msg)
-      return "notify-send -i "+Escape.shell_command(self.icon).to_s+" "+Escape.shell_command("SABnzbd+ Status").to_s+" "+ Escape.shell_command(msg).to_s
     end
   end
 end

@@ -18,14 +18,5 @@ module NotifyLibNotify
 
       assert_equal(expected, actual)
     end
-
-    def test_shell_command
-      icon = File.expand_path(File.dirname(__FILE__) + '/../../../resources/images/favicon.ico')
-
-      expected = "notify-send -i "+icon+" "+"'SABnzbd+ Status'"+" "+ "'Test Message'"
-      actual = @fixture.shell_command("Test Message")
-
-      assert_equal(expected, actual)
-    end
   end
 end
