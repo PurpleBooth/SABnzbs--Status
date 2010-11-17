@@ -26,7 +26,8 @@ module NotifyLibNotify
         notif = Notify::Notification.new("SABnzbd+ Status", msg, self.icon, nil)
         notif.timeout = 5000
         notif.show
-        sleep 5
+        sleep 6
+        notif.close
         Notify.uninit()
       end
 
