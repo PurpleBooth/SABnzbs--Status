@@ -1,0 +1,655 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="Content-Type" content="text/html; charset=utf8" />
+<title>Class: Scheduler::Api</title>
+<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '..';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (A)</a> &raquo; 
+    <span class='title'><span class='object_link'><a href="../Scheduler.html" title="Scheduler (module)">Scheduler</a></span></span>
+     &raquo; 
+    <span class="title">Api</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Scheduler::Api
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Scheduler::Api</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/scheduler/api.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+Contains the clock ticker and the main activity
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div>
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="SCHEDULER_API_CHECK_EVERY_SECONDS-constant" class="">SCHEDULER_API_CHECK_EVERY_SECONDS =
+          <div class="docstring">
+  <div class="discussion">
+    <p>
+Number of seconds to pause between triggering
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div>
+        </dt>
+        <dd><pre class="code"><span class='integer val'>60</span><span class='mult op'>*</span><span class='integer val'>5</span>
+</pre></dd>
+      
+    </dl>
+  
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#active-instance_method" title="#active (instance method)">- (Object) <strong>active</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Triggers a new process that displays a message every time SABnzbd+ gets a
+NZB in the queue moving to downloading from any other status.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#added-instance_method" title="#added (instance method)">- (Object) <strong>added</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Triggers a new process that displays a message every time SABnzbd+ gets a
+new NZB added to it that has never been seen before (In the history or in
+the queue).
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clock-instance_method" title="#clock (instance method)">- (Object) <strong>clock</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Spawn a new detached a new process for each of the methods that are defined
+in here and also defined in the configuration file (under notify_for).
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#complete-instance_method" title="#complete (instance method)">- (Object) <strong>complete</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Triggers a new process that displays a message every time SABnzbd+ sees an
+item in the history for the first time.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#current-instance_method" title="#current (instance method)">- (Object) <strong>current</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Triggers a new process that displays a message every time SABnzbd+ queries
+the queue and lists all the items in it.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Api) <strong>initialize</strong>(sabnzbd_plus_api = SabnzbdPlus::Api.new, notify_api = Notify::Api.new, config = Config::Config.new[&quot;notify_for&quot;], log = Log::Log.new) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Set the SABnzbd+ API, Notify API, Configuration.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Scheduler::Api (class)">Api</a></span></tt>) <strong>initialize</strong>(sabnzbd_plus_api = SabnzbdPlus::Api.new, notify_api = Notify::Api.new, config = Config::Config.new[&quot;notify_for&quot;], log = Log::Log.new) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Set the SABnzbd+ API, Notify API, Configuration
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/scheduler/api.rb', line 9</span>
+
+<span class='def def kw'>def</span> <span class='initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='sabnzbd_plus_api identifier id'>sabnzbd_plus_api</span> <span class='assign token'>=</span> <span class='SabnzbdPlus constant id'>SabnzbdPlus</span><span class='colon2 op'>::</span><span class='Api constant id'>Api</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='comma token'>,</span>
+               <span class='notify_api identifier id'>notify_api</span> <span class='assign token'>=</span> <span class='Notify constant id'>Notify</span><span class='colon2 op'>::</span><span class='Api constant id'>Api</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='comma token'>,</span>
+               <span class='config identifier id'>config</span> <span class='assign token'>=</span> <span class='Config constant id'>Config</span><span class='colon2 op'>::</span><span class='Config constant id'>Config</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lbrack token'>[</span><span class='string val'>&quot;notify_for&quot;</span><span class='rbrack token'>]</span><span class='comma token'>,</span>
+               <span class='log identifier id'>log</span> <span class='assign token'>=</span> <span class='Log constant id'>Log</span><span class='colon2 op'>::</span><span class='Log constant id'>Log</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='rparen token'>)</span>
+
+  <span class='@sabnzbd_plus_api ivar id'>@sabnzbd_plus_api</span> <span class='assign token'>=</span> <span class='sabnzbd_plus_api identifier id'>sabnzbd_plus_api</span>
+  <span class='@notify_api ivar id'>@notify_api</span> <span class='assign token'>=</span> <span class='notify_api identifier id'>notify_api</span>
+  <span class='@config ivar id'>@config</span> <span class='assign token'>=</span> <span class='config identifier id'>config</span>
+  <span class='@log ivar id'>@log</span> <span class='assign token'>=</span> <span class='log identifier id'>log</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="active-instance_method">
+  
+    - (<tt>Object</tt>) <strong>active</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Triggers a new process that displays a message every time SABnzbd+ gets a
+NZB in the queue moving to downloading from any other status
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="../SabnzbdPlus/Api.html#unannounced_active-instance_method" title="SabnzbdPlus::Api#unannounced_active (method)">SabnzbdPlus::Api#unannounced_active</a></span></li>
+    
+      <li><span class='object_link'><a href="../Notify/Api.html#started_nzb-instance_method" title="Notify::Api#started_nzb (method)">Notify::Api#started_nzb</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+59
+60
+61
+62
+63</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/scheduler/api.rb', line 59</span>
+
+<span class='def def kw'>def</span> <span class='active identifier id'>active</span>
+  <span class='@sabnzbd_plus_api ivar id'>@sabnzbd_plus_api</span><span class='dot token'>.</span><span class='unannounced_active identifier id'>unannounced_active</span><span class='dot token'>.</span><span class='each identifier id'>each</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='slot identifier id'>slot</span><span class='bitor op'>|</span>
+    <span class='@notify_api ivar id'>@notify_api</span><span class='dot token'>.</span><span class='started_nzb identifier id'>started_nzb</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='symbol val'>:name</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='slot identifier id'>slot</span><span class='dot token'>.</span><span class='name identifier id'>name</span><span class='comma token'>,</span> <span class='symbol val'>:mb_left</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='slot identifier id'>slot</span><span class='dot token'>.</span><span class='mb_left identifier id'>mb_left</span><span class='comma token'>,</span> <span class='symbol val'>:mb</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='slot identifier id'>slot</span><span class='dot token'>.</span><span class='mb identifier id'>mb</span><span class='comma token'>,</span> <span class='symbol val'>:time_left</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='slot identifier id'>slot</span><span class='dot token'>.</span><span class='time_left identifier id'>time_left</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='end end kw'>end</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="added-instance_method">
+  
+    - (<tt>Object</tt>) <strong>added</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Triggers a new process that displays a message every time SABnzbd+ gets a
+new NZB added to it that has never been seen before (In the history or in
+the queue)
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="../SabnzbdPlus/Api.html#unannounced_added-instance_method" title="SabnzbdPlus::Api#unannounced_added (method)">SabnzbdPlus::Api#unannounced_added</a></span></li>
+    
+      <li><span class='object_link'><a href="../Notify/Api.html#added_nzb-instance_method" title="Notify::Api#added_nzb (method)">Notify::Api#added_nzb</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+48
+49
+50
+51
+52</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/scheduler/api.rb', line 48</span>
+
+<span class='def def kw'>def</span> <span class='added identifier id'>added</span>
+  <span class='@sabnzbd_plus_api ivar id'>@sabnzbd_plus_api</span><span class='dot token'>.</span><span class='unannounced_added identifier id'>unannounced_added</span><span class='dot token'>.</span><span class='each identifier id'>each</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='slot identifier id'>slot</span><span class='bitor op'>|</span>
+    <span class='@notify_api ivar id'>@notify_api</span><span class='dot token'>.</span><span class='added_nzb identifier id'>added_nzb</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='symbol val'>:name</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='slot identifier id'>slot</span><span class='dot token'>.</span><span class='name identifier id'>name</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='end end kw'>end</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="clock-instance_method">
+  
+    - (<tt>Object</tt>) <strong>clock</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Spawn a new detached a new process for each of the methods that are defined
+in here and also defined in the configuration file (under notify_for)
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#added-instance_method" title="Scheduler::Api#added (method)">#added</a></span></li>
+    
+      <li><span class='object_link'><a href="#active-instance_method" title="Scheduler::Api#active (method)">#active</a></span></li>
+    
+      <li><span class='object_link'><a href="#current-instance_method" title="Scheduler::Api#current (method)">#current</a></span></li>
+    
+      <li><span class='object_link'><a href="#complete-instance_method" title="Scheduler::Api#complete (method)">#complete</a></span></li>
+    
+      <li>#SCHEDULER_API_CHECK_EVERY_SECONDS</li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/scheduler/api.rb', line 29</span>
+
+<span class='def def kw'>def</span> <span class='clock identifier id'>clock</span>
+  <span class='@config ivar id'>@config</span><span class='dot token'>.</span><span class='each identifier id'>each</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='method identifier id'>method</span><span class='bitor op'>|</span>
+    <span class='Process constant id'>Process</span><span class='dot token'>.</span><span class='detach identifier id'>detach</span><span class='lparen token'>(</span><span class='fork identifier id'>fork</span> <span class='lbrace token'>{</span>
+      <span class='@log ivar id'>@log</span><span class='dot token'>.</span><span class='log identifier id'>log</span><span class='lparen token'>(</span><span class='string val'>&quot;Scheduler&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;Api&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;Detaching &quot;</span><span class='plus op'>+</span><span class='method identifier id'>method</span><span class='rparen token'>)</span>
+      
+      <span class='loop identifier id'>loop</span> <span class='do do kw'>do</span>
+        <span class='self self kw'>self</span><span class='dot token'>.</span><span class='send identifier id'>send</span><span class='lparen token'>(</span><span class='method identifier id'>method</span><span class='rparen token'>)</span>
+        <span class='sleep identifier id'>sleep</span> <span class='SCHEDULER_API_CHECK_EVERY_SECONDS constant id'>SCHEDULER_API_CHECK_EVERY_SECONDS</span>
+      <span class='end end kw'>end</span>
+    <span class='rbrace token'>}</span><span class='rparen token'>)</span> <span class='unless unless_mod kw'>unless</span> <span class='lparen token'>(</span><span class='method identifier id'>method</span> <span class='eq op'>==</span> <span class='string val'>&quot;clock&quot;</span> <span class='orop op'>||</span> <span class='notop op'>!</span><span class='self self kw'>self</span><span class='dot token'>.</span><span class='respond_to? fid id'>respond_to?</span><span class='lparen token'>(</span><span class='method identifier id'>method</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+  <span class='end end kw'>end</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="complete-instance_method">
+  
+    - (<tt>Object</tt>) <strong>complete</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Triggers a new process that displays a message every time SABnzbd+ sees an
+item in the history for the first time
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="../SabnzbdPlus/Api.html#unannounced_complete-instance_method" title="SabnzbdPlus::Api#unannounced_complete (method)">SabnzbdPlus::Api#unannounced_complete</a></span></li>
+    
+      <li><span class='object_link'><a href="../Notify/Api.html#completed_nzb-instance_method" title="Notify::Api#completed_nzb (method)">Notify::Api#completed_nzb</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+84
+85
+86
+87
+88</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/scheduler/api.rb', line 84</span>
+
+<span class='def def kw'>def</span> <span class='complete identifier id'>complete</span>
+  <span class='@sabnzbd_plus_api ivar id'>@sabnzbd_plus_api</span><span class='dot token'>.</span><span class='unannounced_complete identifier id'>unannounced_complete</span><span class='dot token'>.</span><span class='each identifier id'>each</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='slot identifier id'>slot</span><span class='bitor op'>|</span>
+    <span class='@notify_api ivar id'>@notify_api</span><span class='dot token'>.</span><span class='completed_nzb identifier id'>completed_nzb</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='symbol val'>:name</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='slot identifier id'>slot</span><span class='dot token'>.</span><span class='name identifier id'>name</span><span class='comma token'>,</span> <span class='symbol val'>:status</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='slot identifier id'>slot</span><span class='dot token'>.</span><span class='status identifier id'>status</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='end end kw'>end</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="current-instance_method">
+  
+    - (<tt>Object</tt>) <strong>current</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Triggers a new process that displays a message every time SABnzbd+ queries
+the queue and lists all the items in it
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li>SabnzbdPlus::Api#current_status</li>
+    
+      <li><span class='object_link'><a href="../Notify/Api.html#current_status-instance_method" title="Notify::Api#current_status (method)">Notify::Api#current_status</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+70
+71
+72
+73
+74
+75
+76
+77</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/scheduler/api.rb', line 70</span>
+
+<span class='def def kw'>def</span> <span class='current identifier id'>current</span>
+  <span class='@log ivar id'>@log</span><span class='dot token'>.</span><span class='log identifier id'>log</span><span class='lparen token'>(</span><span class='string val'>&quot;Scheduler&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;Api&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;current tick&quot;</span><span class='rparen token'>)</span>
+  <span class='queue identifier id'>queue</span> <span class='assign token'>=</span> <span class='@sabnzbd_plus_api ivar id'>@sabnzbd_plus_api</span><span class='dot token'>.</span><span class='current_queue identifier id'>current_queue</span>
+
+  <span class='queue identifier id'>queue</span><span class='dot token'>.</span><span class='slots identifier id'>slots</span><span class='dot token'>.</span><span class='each identifier id'>each</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='slot identifier id'>slot</span><span class='bitor op'>|</span>
+    <span class='@notify_api ivar id'>@notify_api</span><span class='dot token'>.</span><span class='current_status identifier id'>current_status</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='symbol val'>:name</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='slot identifier id'>slot</span><span class='dot token'>.</span><span class='name identifier id'>name</span><span class='comma token'>,</span> <span class='symbol val'>:mb_left</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='slot identifier id'>slot</span><span class='dot token'>.</span><span class='mb_left identifier id'>mb_left</span><span class='comma token'>,</span> <span class='symbol val'>:mb</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='slot identifier id'>slot</span><span class='dot token'>.</span><span class='mb identifier id'>mb</span><span class='comma token'>,</span> <span class='symbol val'>:kb_per_sec</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='queue identifier id'>queue</span><span class='dot token'>.</span><span class='kb_per_sec identifier id'>kb_per_sec</span><span class='comma token'>,</span> <span class='symbol val'>:time_left</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='slot identifier id'>slot</span><span class='dot token'>.</span><span class='time_left identifier id'>time_left</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='end end kw'>end</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Wed Nov 17 23:04:43 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.1 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

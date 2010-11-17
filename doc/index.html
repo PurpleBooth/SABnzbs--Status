@@ -46,7 +46,7 @@
 <h2>Description</h2>
 
 <p>Puts pop-up notifications about the current status of SABnzbd+ on your screen
-using notify-send (libnotify).</p>
+using libnotify-ruby (libnotify).</p>
 
 <p>Currently notifies when SABnzbd+ adds an item to a queue, when an item is
 completed, and when an item begins being processed (i.e. starts being
@@ -54,10 +54,17 @@ downloaded).</p>
 
 <h2>Requires</h2>
 
-<p>notify-send from the (on debian based systems libnotify-bin).</p>
+<p>ruby-libnotify gem.</p>
 
 <pre class="code">
-    <span class='sudo identifier id'>sudo</span> <span class='apt identifier id'>apt</span><span class='minus op'>-</span><span class='get identifier id'>get</span> <span class='install identifier id'>install</span> <span class='libnotify identifier id'>libnotify</span><span class='minus op'>-</span><span class='bin identifier id'>bin</span>
+    <span class='sudo identifier id'>sudo</span> <span class='gem identifier id'>gem</span> <span class='install identifier id'>install</span> <span class='ruby identifier id'>ruby</span><span class='minus op'>-</span><span class='libnotify identifier id'>libnotify</span>
+</pre>
+
+
+<p>I also had to install notify ruby-gnome2-dev to install ruby-libnotify</p>
+
+<pre class="code">
+    <span class='sudo identifier id'>sudo</span> <span class='apt identifier id'>apt</span><span class='minus op'>-</span><span class='get identifier id'>get</span> <span class='install identifier id'>install</span> <span class='ruby identifier id'>ruby</span><span class='minus op'>-</span><span class='gnome2 identifier id'>gnome2</span><span class='minus op'>-</span><span class='dev identifier id'>dev</span>
 </pre>
 
 
@@ -92,6 +99,7 @@ and Reek installed. These can be installed using ruby's gem.</p>
 <span class='notify identifier id'>notify</span><span class='colon op'>:</span>
   <span class='lib_notify identifier id'>lib_notify</span><span class='colon op'>:</span>
     <span class='icon identifier id'>icon</span><span class='colon op'>:</span> <span class='string val'>&quot;favicon.ico&quot;</span>
+<span class='notify_for identifier id'>notify_for</span><span class='colon op'>:</span> <span class='lbrack token'>[</span><span class='added identifier id'>added</span><span class='comma token'>,</span> <span class='active identifier id'>active</span><span class='comma token'>,</span> <span class='current identifier id'>current</span><span class='comma token'>,</span> <span class='complete identifier id'>complete</span><span class='rbrack token'>]</span>
 </pre>
 
 
@@ -105,9 +113,12 @@ and Reek installed. These can be installed using ruby's gem.</p>
 
 <p>sabnzbd_plus -> model -> api -> caller -> http_json -> api_key</p>
 
+<p>So for example if your SAB url is http://127.0.0.1:8880/sabnzbd your API
+endpoint will be http://127.0.0.1:8880/api</p>
+
 <h3>What to notify for</h3>
 
-<pre class="code"><span class='notify_for identifier id'>notify_for</span><span class='colon op'>:</span> <span class='lbrack token'>[</span><span class='added identifier id'>added</span> <span class='active identifier id'>active</span> <span class='current identifier id'>current</span> <span class='complete identifier id'>complete</span><span class='rbrack token'>]</span>
+<pre class="code"><span class='notify_for identifier id'>notify_for</span><span class='colon op'>:</span> <span class='lbrack token'>[</span><span class='added identifier id'>added</span><span class='comma token'>,</span> <span class='active identifier id'>active</span><span class='comma token'>,</span> <span class='current identifier id'>current</span><span class='comma token'>,</span> <span class='complete identifier id'>complete</span><span class='rbrack token'>]</span>
 </pre>
 
 <ul>
@@ -118,11 +129,40 @@ and Reek installed. These can be installed using ruby's gem.</p>
 </ul>
 
 
-<p>So for example if your SAB url is http://127.0.0.1:8880/sabnzbd your API
-endpoint will be http://127.0.0.1:8880/api</p></div></div>
+<p>Delete what you don't wish to receive notifications about</p>
+
+<h2>Run Me</h2>
+
+<p>Run the main application</p>
+
+<pre class="code">
+<span class='bin identifier id'>bin</span><span class='div op'>/</span><span class='notify identifier id'>notify</span>
+</pre>
+
+
+<p>Run the tests</p>
+
+<pre class="code">
+<span class='rake identifier id'>rake</span> <span class='test identifier id'>test</span>
+</pre>
+
+
+<p>Run the code smells detector</p>
+
+<pre class="code">
+<span class='rake identifier id'>rake</span> <span class='reek identifier id'>reek</span>
+</pre>
+
+
+<p>Run the documentation generator</p>
+
+<pre class="code">
+<span class='rake identifier id'>rake</span> <span class='yard identifier id'>yard</span>
+</pre>
+</div></div>
     
     <div id="footer">
-  Generated on Mon Nov 15 22:28:04 2010 by 
+  Generated on Wed Nov 17 23:04:32 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.8.7).
 </div>

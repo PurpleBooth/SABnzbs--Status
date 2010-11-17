@@ -4,7 +4,7 @@ Description
 -----------
 
 Puts pop-up notifications about the current status of SABnzbd+ on your screen
-using notify-send (libnotify).
+using libnotify-ruby (libnotify).
 
 Currently notifies when SABnzbd+ adds an item to a queue, when an item is
 completed, and when an item begins being processed (i.e. starts being
@@ -13,10 +13,16 @@ downloaded).
 Requires
 --------
 
-notify-send from the (on debian based systems libnotify-bin).
+ruby-libnotify gem.
 
 <pre>
-    sudo apt-get install libnotify-bin
+    sudo gem install ruby-libnotify
+</pre>
+
+I also had to install notify ruby-gnome2-dev to install ruby-libnotify
+
+<pre>
+    sudo apt-get install ruby-gnome2-dev
 </pre>
 
 In order to run the rake tasks for generating the documentation you'll need YARD

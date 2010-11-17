@@ -17,8 +17,9 @@ module Scheduler
       @log = log
     end
 
-    # Spawn a new detached process that itself triggers off the methods listed
-    # in the configuration file every X seconds
+    # Spawn a new detached a new process for each of the methods that are
+    # defined in here and also defined in the configuration file (under
+    # notify_for)
     #
     # @see Scheduler::Api#added
     # @see Scheduler::Api#active

@@ -152,7 +152,7 @@ Get the full path to the icon to be used on the notification.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (LibNotify) <strong>initialize</strong>(config = Config::Config.new[&quot;notify&quot;][&quot;lib_notify&quot;]) </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (LibNotify) <strong>initialize</strong>(config = Config::Config.new[&quot;notify&quot;][&quot;lib_notify&quot;], log = Log::Log.new) </a>
     
 
     
@@ -199,31 +199,6 @@ Execute the shell command, popping up the notification for the user.
 </li>
 
       
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#shell_command-instance_method" title="#shell_command (instance method)">- (String) <strong>shell_command</strong>(msg) </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>
-Get the shell command escaped and as a string that will be executed to
-generate the pop-up.
-</p>
-</div></span>
-  
-</li>
-
-      
     </ul>
   
 
@@ -233,7 +208,7 @@ generate the pop-up.
     <div class="method_details first">
   <p class="signature first" id="initialize-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="NotifyLibNotify::LibNotify (class)">LibNotify</a></span></tt>) <strong>initialize</strong>(config = Config::Config.new[&quot;notify&quot;][&quot;lib_notify&quot;]) 
+    - (<tt><span class='object_link'><a href="" title="NotifyLibNotify::LibNotify (class)">LibNotify</a></span></tt>) <strong>initialize</strong>(config = Config::Config.new[&quot;notify&quot;][&quot;lib_notify&quot;], log = Log::Log.new) 
   
 
   
@@ -254,15 +229,17 @@ Load the configuration, defaults to notify -&gt; lib_notify
       <pre class="lines">
 
 
-12
 13
-14</pre>
+14
+15
+16</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/notify/lib_notify/lib_notify.rb', line 12</span>
+      <pre class="code"><span class="info file"># File 'lib/notify/lib_notify/lib_notify.rb', line 13</span>
 
-<span class='def def kw'>def</span> <span class='initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='config identifier id'>config</span> <span class='assign token'>=</span> <span class='Config constant id'>Config</span><span class='colon2 op'>::</span><span class='Config constant id'>Config</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lbrack token'>[</span><span class='string val'>&quot;notify&quot;</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>&quot;lib_notify&quot;</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+<span class='def def kw'>def</span> <span class='initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='config identifier id'>config</span> <span class='assign token'>=</span> <span class='Config constant id'>Config</span><span class='colon2 op'>::</span><span class='Config constant id'>Config</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lbrack token'>[</span><span class='string val'>&quot;notify&quot;</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>&quot;lib_notify&quot;</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='log identifier id'>log</span> <span class='assign token'>=</span> <span class='Log constant id'>Log</span><span class='colon2 op'>::</span><span class='Log constant id'>Log</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='rparen token'>)</span>
   <span class='@config ivar id'>@config</span> <span class='assign token'>=</span> <span class='config identifier id'>config</span>
+  <span class='@log ivar id'>@log</span> <span class='assign token'>=</span> <span class='log identifier id'>log</span>
 <span class='end end kw'>end</span>
 </pre>
     </td>
@@ -314,12 +291,12 @@ Get the full path to the icon to be used on the notification
       <pre class="lines">
 
 
-27
-28
-29</pre>
+40
+41
+42</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/notify/lib_notify/lib_notify.rb', line 27</span>
+      <pre class="code"><span class="info file"># File 'lib/notify/lib_notify/lib_notify.rb', line 40</span>
 
 <span class='def def kw'>def</span> <span class='icon identifier id'>icon</span>
   <span class='return return kw'>return</span> <span class='File constant id'>File</span><span class='dot token'>.</span><span class='join identifier id'>join</span><span class='lparen token'>(</span><span class='NOTIFY_LIB_NOTIFY_ICON_DIRECTORY constant id'>NOTIFY_LIB_NOTIFY_ICON_DIRECTORY</span><span class='comma token'>,</span> <span class='@config ivar id'>@config</span><span class='lbrack token'>[</span><span class='string val'>&quot;icon&quot;</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
@@ -375,71 +352,39 @@ Message to display
       <pre class="lines">
 
 
-19
-20
 21
-22</pre>
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/notify/lib_notify/lib_notify.rb', line 19</span>
+      <pre class="code"><span class="info file"># File 'lib/notify/lib_notify/lib_notify.rb', line 21</span>
 
 <span class='def def kw'>def</span> <span class='notify identifier id'>notify</span><span class='lparen token'>(</span><span class='msg identifier id'>msg</span><span class='rparen token'>)</span>
-  <span class='system identifier id'>system</span><span class='lparen token'>(</span><span class='self self kw'>self</span><span class='dot token'>.</span><span class='shell_command identifier id'>shell_command</span><span class='lparen token'>(</span><span class='msg identifier id'>msg</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
-  <span class='puts identifier id'>puts</span> <span class='msg identifier id'>msg</span>
-<span class='end end kw'>end</span>
-</pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <p class="signature " id="shell_command-instance_method">
+  <span class='@log ivar id'>@log</span><span class='dot token'>.</span><span class='log identifier id'>log</span><span class='lparen token'>(</span><span class='string val'>&quot;NotifyLibNotify&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;LibNotify&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;Announcing \&quot;&quot;</span><span class='plus op'>+</span><span class='msg identifier id'>msg</span><span class='plus op'>+</span><span class='string val'>&quot;\&quot;&quot;</span><span class='rparen token'>)</span>
   
-    - (<tt>String</tt>) <strong>shell_command</strong>(msg) 
-  
+  <span class='process_id identifier id'>process_id</span> <span class='assign token'>=</span> <span class='fork identifier id'>fork</span> <span class='do do kw'>do</span>
+    <span class='Notify constant id'>Notify</span><span class='dot token'>.</span><span class='init identifier id'>init</span><span class='lparen token'>(</span><span class='string val'>&quot;SABnzbd+ Status&quot;</span><span class='rparen token'>)</span>
+    <span class='notif identifier id'>notif</span> <span class='assign token'>=</span> <span class='Notify constant id'>Notify</span><span class='colon2 op'>::</span><span class='Notification constant id'>Notification</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;SABnzbd+ Status&quot;</span><span class='comma token'>,</span> <span class='msg identifier id'>msg</span><span class='comma token'>,</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='icon identifier id'>icon</span><span class='comma token'>,</span> <span class='nil nil kw'>nil</span><span class='rparen token'>)</span>
+    <span class='notif identifier id'>notif</span><span class='dot token'>.</span><span class='timeout identifier id'>timeout</span> <span class='assign token'>=</span> <span class='integer val'>5000</span>
+    <span class='notif identifier id'>notif</span><span class='dot token'>.</span><span class='show identifier id'>show</span>
+    <span class='sleep identifier id'>sleep</span> <span class='integer val'>6</span>
+    <span class='notif identifier id'>notif</span><span class='dot token'>.</span><span class='close identifier id'>close</span>
+    <span class='Notify constant id'>Notify</span><span class='dot token'>.</span><span class='uninit identifier id'>uninit</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
+  <span class='end end kw'>end</span>
 
-  
-</p><div class="docstring">
-  <div class="discussion">
-    <p>
-Get the shell command escaped and as a string that will be executed to
-generate the pop-up.
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <h3>Returns:</h3>
-<ul class="return">
-  
-    <li>
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-35
-36
-37</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/notify/lib_notify/lib_notify.rb', line 35</span>
-
-<span class='def def kw'>def</span> <span class='shell_command identifier id'>shell_command</span><span class='lparen token'>(</span><span class='msg identifier id'>msg</span><span class='rparen token'>)</span>
-  <span class='return return kw'>return</span> <span class='string val'>&quot;notify-send -i &quot;</span><span class='plus op'>+</span><span class='Escape constant id'>Escape</span><span class='dot token'>.</span><span class='shell_command identifier id'>shell_command</span><span class='lparen token'>(</span><span class='self self kw'>self</span><span class='dot token'>.</span><span class='icon identifier id'>icon</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='plus op'>+</span><span class='string val'>&quot; &quot;</span><span class='plus op'>+</span><span class='Escape constant id'>Escape</span><span class='dot token'>.</span><span class='shell_command identifier id'>shell_command</span><span class='lparen token'>(</span><span class='string val'>&quot;SABnzbd+ Status&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='plus op'>+</span><span class='string val'>&quot; &quot;</span><span class='plus op'>+</span> <span class='Escape constant id'>Escape</span><span class='dot token'>.</span><span class='shell_command identifier id'>shell_command</span><span class='lparen token'>(</span><span class='msg identifier id'>msg</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span>
+  <span class='Process constant id'>Process</span><span class='dot token'>.</span><span class='detach identifier id'>detach</span><span class='lparen token'>(</span><span class='process_id identifier id'>process_id</span><span class='rparen token'>)</span>
 <span class='end end kw'>end</span>
 </pre>
     </td>
@@ -452,7 +397,7 @@ generate the pop-up.
 </div>
     
     <div id="footer">
-  Generated on Mon Nov 15 22:28:10 2010 by 
+  Generated on Wed Nov 17 23:04:43 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.8.7).
 </div>
