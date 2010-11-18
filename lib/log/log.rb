@@ -18,7 +18,7 @@ module Log
     # @param [String] class_name
     # @param [String] message
     def log(module_name, class_name, message)
-      File.open(@config["file"], 'a') { |file_handle|
+      File.open(File.expand_path(File.join(File.dirname(__FILE__), '..', '..',@config["file"])), 'a') { |file_handle|
         file_handle.puts "["+Time.now.iso8601+"]["+module_name+"]["+class_name+"] "+message
       }
     end
