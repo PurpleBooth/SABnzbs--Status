@@ -19,10 +19,10 @@ module NotifyLibNotify
     #
     # @param [String] msg Message to display
     def notify(msg)
-      @log.log("NotifyLibNotify", "LibNotify", "Announcing \""+msg+"\"")
+      @log.log("NotifyLibNotify", "LibNotify", "Announcing \""+msg+"\" on "+Process.pid.to_s)
       
       process_id = fork do
-        Notify.init("SABnzbd+ Status")
+        Notify.init("SABnzbd+ Status "+Process.pid.to_s)
         notifier_lib = Notify::Notification.new("SABnzbd+ Status",
                                                 msg,
                                                 self.icon,
@@ -33,6 +33,7 @@ module NotifyLibNotify
         sleep 5
         notifier_lib.close
         sleep 1
+
         Notify.uninit()
       end
 

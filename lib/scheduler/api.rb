@@ -30,11 +30,7 @@ module Scheduler
       @config.each do |method|
         Process.detach(fork {
           @log.log("Scheduler", "Api", "Detaching "+method)
-          
-          loop do
-            self.send(method)
-            sleep SCHEDULER_API_CHECK_EVERY_SECONDS
-          end
+          self.send(method)
         }) unless (method == "clock" || !self.respond_to?(method))
       end
     end
@@ -46,8 +42,15 @@ module Scheduler
     # @see SabnzbdPlus::Api#unannounced_added
     # @see Notify::Api#added_nzb
     def added
-      @sabnzbd_plus_api.unannounced_added.each do |slot|
-        @notify_api.added_nzb({:name => slot.name})
+      # Skip announcing when we first load
+      @sabnzbd_plus_api.unannounced_added
+
+      loop do
+        @sabnzbd_plus_api.unannounced_added.each do |slot|
+          @notify_api.added_nzb({:name => slot.name})
+        end
+
+        sleep SCHEDULER_API_CHECK_EVERY_SECONDS
       end
     end
 
@@ -57,8 +60,12 @@ module Scheduler
     # @see SabnzbdPlus::Api#unannounced_active
     # @see Notify::Api#started_nzb
     def active
-      @sabnzbd_plus_api.unannounced_active.each do |slot|
-        @notify_api.started_nzb({:name => slot.name, :mb_left => slot.mb_left, :mb => slot.mb, :time_left => slot.time_left})
+      loop do
+        @sabnzbd_plus_api.unannounced_active.each do |slot|
+          @notify_api.started_nzb({:name => slot.name, :mb_left => slot.mb_left, :mb => slot.mb, :time_left => slot.time_left})
+        end
+
+        sleep SCHEDULER_API_CHECK_EVERY_SECONDS
       end
     end
 
@@ -68,11 +75,14 @@ module Scheduler
     # @see SabnzbdPlus::Api#current_status
     # @see Notify::Api#current_status
     def current
-      @log.log("Scheduler", "Api", "current tick")
-      queue = @sabnzbd_plus_api.current_queue
+      loop do
+        queue = @sabnzbd_plus_api.current_queue
 
-      queue.slots.each do |slot|
-        @notify_api.current_status({:name => slot.name, :mb_left => slot.mb_left, :mb => slot.mb, :kb_per_sec => queue.kb_per_sec, :time_left => slot.time_left})
+        queue.slots.each do |slot|
+          @notify_api.current_status({:name => slot.name, :mb_left => slot.mb_left, :mb => slot.mb, :kb_per_sec => queue.kb_per_sec, :time_left => slot.time_left})
+        end
+
+        sleep SCHEDULER_API_CHECK_EVERY_SECONDS
       end
     end
 
@@ -82,8 +92,14 @@ module Scheduler
     # @see SabnzbdPlus::Api#unannounced_complete
     # @see Notify::Api#completed_nzb
     def complete
-      @sabnzbd_plus_api.unannounced_complete.each do |slot|
-        @notify_api.completed_nzb({:name => slot.name, :status => slot.status})
+      @sabnzbd_plus_api.unannounced_complete
+
+      loop do
+        @sabnzbd_plus_api.unannounced_complete.each do |slot|
+          @notify_api.completed_nzb({:name => slot.name, :status => slot.status})
+        end
+
+        sleep SCHEDULER_API_CHECK_EVERY_SECONDS
       end
     end
   end
