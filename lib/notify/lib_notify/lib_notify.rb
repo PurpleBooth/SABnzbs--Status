@@ -13,6 +13,8 @@ module NotifyLibNotify
     def initialize(config = Config::Config.new["notify"]["lib_notify"], log = Log::Log.new)
       @config = config
       @log = log
+
+      Notify.init("SABnzbd+ Status ") unless Notify.init?
     end
 
     # Execute the shell command, popping up the notification for the user
@@ -21,8 +23,7 @@ module NotifyLibNotify
     def notify(msg)
       @log.log("NotifyLibNotify", "LibNotify", "Announcing \""+msg+"\" on "+Process.pid.to_s)
       
-      process_id = fork do
-        Notify.init("SABnzbd+ Status "+Process.pid.to_s)
+      Process.detach(fork do
         notifier_lib = Notify::Notification.new("SABnzbd+ Status",
                                                 msg,
                                                 self.icon,
@@ -34,10 +35,7 @@ module NotifyLibNotify
         notifier_lib.close
         sleep 1
 
-        Notify.uninit()
-      end
-
-      Process.detach(process_id)
+      end)
     end
 
     # Get the full path to the icon to be used on the notification
