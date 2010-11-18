@@ -1,3 +1,4 @@
+require 'rubygems'
 require 'glib2'
 require 'rnotify'
 
